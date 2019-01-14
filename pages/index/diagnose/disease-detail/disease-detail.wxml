@@ -1,0 +1,21 @@
+<!--pages/index/diagnose/disease-detail/disease-detail.wxml-->
+<view class="zan-panel">
+  <view style="padding: 15px; font-size:34rpx">{{data.name}}</view>
+</view>
+<view class="zan-panel-title">症状</view>
+<view class="zan-panel">
+  <view style="padding: 15px;" class='font-15'>{{data.represent}}</view>
+</view>
+
+<view class="zan-panel-title">简述</view>
+<view class="zan-panel">
+  <view style="padding: 15px;" class='font-15'>{{data.resume}}</view>
+</view>
+
+<view class="zan-panel-title">所属科室</view>
+<view class="zan-panel">
+  <view class="zan-cell zan-cell--access" wx:for="{{data.matchedDepts}}">
+    <view class="zan-cell__bd" class='font-15'>{{item.name}}</view>
+  </view>
+</view>
+<button class='am-btn' bindtap='backMan'>返回首页</button>

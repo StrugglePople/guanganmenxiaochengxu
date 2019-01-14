@@ -1,0 +1,9 @@
+/* pages/into-hospital/dept/deptList.wxss */
+.index-item{
+background:#f4f4f4;
+padding-left:20px;
+color:#a5a5a5;
+font-size:17px;
+height:30px;
+line-height:30px;
+}

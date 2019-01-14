@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="55px" height="55px" viewBox="0 0 55 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>个人中心</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M19.4668004,0.147644401 C23.117633,0.0492148004 25.7953662,2.11739684e-16 27.5,0 C29.2016566,0 31.8730165,0.0490430404 35.5140796,0.147129121 L35.5140796,0.14712955 C46.0560424,0.431117983 54.5380204,8.90457968 54.8325987,19.4462518 C54.9441996,23.4399605 55,26.1245432 55,27.5 C55,28.8729935 54.9443992,31.5504282 54.8331977,35.532304 L54.8331972,35.5323039 C54.5390245,46.0659656 46.0694078,54.5362213 35.5357684,54.8311888 C31.516801,54.9437296 28.8382115,55 27.5,55 C26.1596858,55 23.4747783,54.9435526 19.4452775,54.8306579 L19.4452774,54.8306583 C8.90442322,54.5353346 0.431911765,46.0539538 0.147616919,35.5127964 C0.0492056398,31.8638776 0,29.1929455 0,27.5 C1.03867567e-16,25.8037139 0.0494000219,23.1255777 0.148200066,19.4655915 L0.14820115,19.4655915 C0.432969148,8.91653794 8.91773727,0.432056261 19.4668004,0.147644401 Z" id="path-1"></path>
+        <linearGradient x1="50%" y1="50%" x2="96.2090255%" y2="105.302957%" id="linearGradient-3">
+            <stop stop-color="#41DD87" offset="0%"></stop>
+            <stop stop-color="#58ED9B" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="个人中心">
+            <g id="Group-3-Copy">
+                <g id="Oval">
+                    <g id="Group-4">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#41DD87" xlink:href="#path-1"></use>
+                        <path d="M29.7916667,30.5555556 L48.125,30.5555556 L48.125,35.9027778 C48.125,43.0748089 42.31092,48.8888889 35.1388889,48.8888889 L29.7916667,48.8888889 L29.7916667,30.5555556 Z" id="Rectangle-4" fill="url(#linearGradient-3)" mask="url(#mask-2)"></path>
+                        <path d="M6.875,30.5555556 L25.2083333,30.5555556 L25.2083333,35.9027778 C25.2083333,43.0748089 19.3942533,48.8888889 12.2222222,48.8888889 L6.875,48.8888889 L6.875,30.5555556 Z" id="Rectangle-4" fill="url(#linearGradient-3)" mask="url(#mask-2)" transform="translate(16.041667, 39.722222) scale(-1, 1) translate(-16.041667, -39.722222) "></path>
+                        <g id="Group-8" mask="url(#mask-2)">
+                            <g transform="translate(6.875000, 14.513889)">
+                                <circle id="Oval-6" fill="#DEFFFA" cx="9.93055556" cy="6.11111111" r="6.11111111"></circle>
+                                <circle id="Oval-6" fill="#DEFFFA" cx="31.3194444" cy="6.11111111" r="6.11111111"></circle>
+                                <path d="M20.625,0 L20.625,0 C29.3482573,-1.60243637e-15 36.7017168,6.50564638 37.765006,15.1638583 L41.25,43.5416667 L0,43.5416667 L3.484994,15.1638583 C4.54828319,6.50564638 11.9017427,1.60243637e-15 20.625,0 Z" id="Rectangle-14" fill="#F6FFFE"></path>
+                                <circle id="Oval-8" fill="#FFEAEA" opacity="0.5" cx="11.0763889" cy="25.5902778" r="3.4375"></circle>
+                                <circle id="Oval-8" fill="#FFEAEA" opacity="0.5" cx="30.1736111" cy="25.5902778" r="3.4375"></circle>
+                                <circle id="Oval-7" fill="#656565" cx="13.75" cy="15.2777778" r="1.52777778"></circle>
+                                <circle id="Oval-7" fill="#656565" cx="27.5" cy="15.2777778" r="1.52777778"></circle>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

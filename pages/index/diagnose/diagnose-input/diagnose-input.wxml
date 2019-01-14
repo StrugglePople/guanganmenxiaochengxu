@@ -1,0 +1,46 @@
+<!--pages/index/diagnose/diagnose-input/diagnose-input.wxml-->
+<view class="zan-panel-title">选择男女</view>
+<view class="zan-panel control-item-list">
+  <view class='control-item' bindtap='chooseSex' data-item="MAN">
+    <view wx:if='{{sex=="MAN"}}' class='am-ctr-chk-2'>
+      <image src='/style/svg/choice_active.svg' class='checked'></image>
+      <text>男</text>
+    </view>
+    <view class='am-ctr-chk' wx:else>
+      <text>男</text>
+    </view>
+  </view>
+  <view class='control-item' bindtap='chooseSex' data-item="WOMAN">
+    <view wx:if='{{sex=="WOMAN"}}' class='am-ctr-chk-2'>
+      <image src='/style/svg/choice_active.svg' class='checked'></image>
+      <text>女</text>
+    </view>
+    <view class='am-ctr-chk' wx:else>
+      <text>女</text>
+    </view>
+  </view>
+</view>
+
+<view class="zan-panel-title">选择年龄段</view>
+<view class="zan-panel  control-item-list">
+  <view class='control-item' wx:for="{{items}}" bindtap='chooseAge' data-item="{{item.value}}">
+    <view class='am-ctr-chk-2' wx:if='{{age==item.value}}'>
+      <image src='/style/svg/choice_active.svg' class='checked'></image>
+      <text>{{item.name}}</text>
+    </view>
+    <view class='am-ctr-chk' wx:else>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+</view>
+<view class='index-ft'>
+  <view class='am-btn-block-success am-mt-10' bindtap='showNext'>确定</view>
+</view>
+<!-- <view class='zan-row'>
+      <view class='zan-col zan-col-12'>
+        <image src="" style='max-height:160px;width:100%;' src='../../../../style/image/hubing-1.jpg' bindtap='showNext' data-id='10356'></image>
+      </view>
+      <view class='zan-col zan-col-12'>
+        <image src="" style='max-height:160px;width:100%;' src='../../../../style/image/binjiang-1.jpg' bindtap='showNext' data-id='10361'></image>
+      </view>
+    </view> -->

@@ -1,0 +1,23 @@
+<!--pages/more/more.wxml-->
+  <view class="zan-panel">
+    <!-- <view class="zan-cell zan-cell--access" bindtap='call'>
+      <view class="zan-cell__bd">联系客服</view>
+      <view class="zan-cell__ft"></view>
+    </view> -->
+    <view class="zan-cell zan-cell--access" bindtap='showHtml' data-type="ABOUT_US">
+      <view class="zan-cell__bd">关于我们</view>
+      <view class="zan-cell__ft"></view>
+    </view>
+    <view class="zan-cell zan-cell--access" bindtap='showHtml' data-type="DISCLAIMER">
+      <view class="zan-cell__bd">免责声明</view>
+      <view class="zan-cell__ft"></view>
+    </view>
+    <navigator class="zan-cell zan-cell--access" url='faq/faq'>
+      <view class="zan-cell__bd">常见问题</view>
+      <view class="zan-cell__ft"></view>
+    </navigator>
+    <navigator class="zan-cell zan-cell--access" url='feed-back/feed-back'>
+      <view class="zan-cell__bd">意见反馈</view>
+      <view class="zan-cell__ft"></view>
+    </navigator>
+  </view>

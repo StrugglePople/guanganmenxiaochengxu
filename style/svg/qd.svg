@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>home/icon/navigation</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#EF4CF6" offset="0%"></stop>
+            <stop stop-color="#DA25EA" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="14.1450845%" y1="96.5917646%" x2="19.1792521%" y2="4.33354059%" id="linearGradient-2">
+            <stop stop-color="#9A05A0" offset="0%"></stop>
+            <stop stop-color="#ED4AF5" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home/icon/navigation">
+            <g id="i-院内导航" transform="translate(5.000000, 3.000000)">
+                <path d="M14.0696525,27.2118715 C21.0720956,21.389633 24.5,16.4664336 24.5,12.6080787 C24.5,6.31906192 19.459579,1.5 13,1.5 C6.540421,1.5 1.5,6.31906192 1.5,12.6080787 C1.5,16.4664325 4.92790245,21.3896302 11.9303463,27.2118705 C12.5502951,27.7273364 13.4496986,27.7273372 14.0696525,27.2118715 Z" id="Oval-12" stroke="url(#linearGradient-1)" stroke-width="3"></path>
+                <path d="M16.0813223,0.341792534 C21.7736983,1.63288563 26,6.45364167 26,12.6080787 C26,16.852576 22.6325921,21.8604774 15.8977762,27.6317828 C14.8103481,27.2742552 13.8505932,26.7628213 13.0185114,26.097481 C13.0514738,26.0939469 13.0836294,26.0809456 13.1106529,26.0584766 C19.8013071,20.4954775 23,15.9014746 23,12.6080787 C23,7.53407058 19.2191714,3.57344261 14.13548,3.05710705 L14.2041529,2.20216521 L16.0813223,0.341792534 Z" id="Combined-Shape" fill="url(#linearGradient-2)" fill-rule="nonzero"></path>
+                <circle id="Oval-13" fill="#B21FE1" cx="13" cy="13" r="5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

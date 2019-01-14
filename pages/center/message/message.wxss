@@ -1,0 +1,30 @@
+/* pages/center/message/message.wxss */
+
+.item {
+  margin: 15rpx 30rpx;
+  background: #fff;
+  border-radius: 7px;
+   /* padding: 0 20rpx  */
+}
+
+.item .title {
+  height: 41px;
+  line-height: 41px;
+  color: #4d4d4d;
+  font-size: 32rpx;
+  text-align: center
+}
+
+.item .time{
+  height: 12px;
+  line-height: 12px;
+  color: #b1b1b1;
+  font-size: 24rpx;
+  text-align: center
+}
+
+.item .content {
+   padding: 10px 15px 15px; 
+  font-size: 30rpx;
+  color: #4d4d4d;
+}

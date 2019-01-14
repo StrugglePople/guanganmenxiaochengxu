@@ -1,0 +1,10 @@
+<import src="../../../utils/wxParse/wxParse.wxml"/>
+<view class='tab-View'>
+<li  class='{{type=="HOSPITAL_INFO"?"active":""}}' data-type="HOSPITAL_INFO" data-id='0' bindtap='tabChange'>医院简介</li>
+<li class='{{type=="TRAFFIC"?"active":""}}' data-type="TRAFFIC" bindtap='tabChange'  data-id = '1' >医院交通</li>
+<li class='{{type=="WEBSITE"?"active":""}}' data-type="WEBSITE" bindtap='tabChange' data-id = '2'>官方网站</li>
+<li class='{{type=="PHONE_NUMBER"?"active":""}}' data-type="PHONE_NUMBER" bindtap='tabChange' data-id = '3'>医院电话</li>
+</view>
+<view class="containerView" style="padding:20rpx;">
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>

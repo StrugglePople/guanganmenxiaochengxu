@@ -1,0 +1,29 @@
+ <view class='search-lside'>
+  <view class='index-list'>
+    <block wx:for="{{searchDepts}}">
+      <view class='index'>{{item.key}}</view>
+      <ul>
+        <li wx:for="{{item.list}}" wx:for-item="item1" class="{{item1.id == selectDept.id ? 'active' : ''}}"
+        bindtap="clickDept" data-dept="{{item1.id}}">{{item1.name}}</li>
+      </ul>
+    </block>
+  </view>
+</view>
+
+<view class='search-rcont'>
+  <view class='item-img-multitxt-list'>
+    <view class='item-img-multitxt' wx:for="{{doctors}}" bindtap='doctorDetial' data-id="{{item.id}}">
+      <image  style='border-radius:92rpx;' class='img-face-lg'  src='{{item.picName}}'  wx:if="{{item.picName}}"></image> 
+       <image style='border-radius:92rpx;' class='img-face-lg' src='/style/svg/expert.svg' wx:else></image> 
+      <view class='am-flex-item'>
+        <view class='am-flex-title'>
+          <text class='h5'>{{item.name}}</text>
+          <text class='small'>{{item.title}}</text>
+        </view>
+      </view>
+      <view class='p' style="max-height: 72rpx;overflow:hidden">擅长：{{item.speciality || '暂无'}}</view>
+    </view>
+  </view>
+</view> 
+
+

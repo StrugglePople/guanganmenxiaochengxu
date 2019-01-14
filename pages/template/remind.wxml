@@ -1,0 +1,12 @@
+<template name="remind">
+  <view class="baner-panel-link baner-panel-warn">
+    温馨提示： 体检日
+    <text style="color: #ff7d22">48小时</text>内不允许线上
+    <text style="color: #ff7d22">取消预约</text>及
+    <text style="color: #ff7d22">改期</text>， 如需
+    <text style="color: #ff7d22">改期</text>请致电体检中心，电话：0571-88873562,88873563；如需
+    <text style="color: #ff7d22">取消预约</text>，请在“我的订单”—点击“在线申请退款”，退款审核需3~5个工作日，审核通过后，系统原渠道退款。
+    <view>体检地点：湖滨院区住院部二楼 健康管理中心</view>
+    <view>时间：体检当日 8点之后10点半之前</view>
+  </view>
+</template>

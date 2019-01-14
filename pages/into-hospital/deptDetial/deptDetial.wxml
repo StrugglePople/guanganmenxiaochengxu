@@ -1,0 +1,42 @@
+
+<view class="reg">
+  <view class='tt clearfix'>
+    <view class='pic'>
+      <image src='../../../style/image/logo.png'></image>
+    </view>
+    <view class='content-content color-1' style='height:80px;line-height:80px;font-size:18px'>
+       <text>{{dept.name}}</text>
+    </view>
+  </view>
+        <view style='height:20rpx'></view>
+
+  <view  class='bg-light' style='font-size:32rpx;'>
+    <block>
+      <view class='content-title'>
+        <image src='../../../style/image/position.png'></image>
+        <text>执业点</text>
+      </view>
+      <view class='content-content color-1'>
+        <text>{{dept.location}}</text>
+      </view>
+    </block>
+        <block>
+      <view class='content-title'>
+        <image src='../../../style/image/specialize.png'></image>
+        <text>擅长</text>
+      </view>
+      <view class='content-content color-1'>
+        <text>{{dept.speciality}}</text>
+      </view>
+    </block>
+    <block>
+      <view class='content-title'>
+        <image src='../../../style/image/abstract.png'></image>
+        <text>简介</text>
+      </view>
+      <view class='content-content color-1'>
+        <text>{{dept.introduction}}</text>
+      </view>
+    </block>
+    </view>
+  </view>

@@ -1,0 +1,7 @@
+/* pages/index/medical-tools/medical-tools.wxss */
+
+.item-top-font{
+  display: block;
+  text-align: center;
+  
+}

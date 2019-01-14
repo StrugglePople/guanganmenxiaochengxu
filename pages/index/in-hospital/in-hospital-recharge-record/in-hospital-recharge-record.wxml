@@ -1,0 +1,43 @@
+<!--pages/index/in-hospital/in-hospital-recharge-record/in-hospital-recharge-record.wxml-->
+<view class='zan-row bg-light' style='height:88rpx'>
+  <view class='zan-col zan-col-8'>
+    <view class='time-wrapper'>
+      <picker mode="date" value="{{beginDate}}" bindchange="bindDateChange" data-id='beginDate'>
+        <view class="picker">
+          {{beginDate}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='zan-col zan-col-3 text-center' style='line-height:88rpx'>至</view>
+  <view class='zan-col zan-col-8'>
+    <view class='time-wrapper'>
+      <picker mode="date" value="{{endDate}}" bindchange="bindDateChange" data-id='endDate'>
+        <view class="picker">
+          {{endDate}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='zan-col zan-col-5'>
+    <button class="zan-btn zan-btn--primary" type="theme-1" style='height:70rpx;line-height:70rpx;margin:10rpx' bindtap='loadData'>确定</button>
+
+  </view>
+</view>
+<view class="zan-panel">
+  <block wx:for="{{list}}">
+    <view class="zan-cell" wx:for="{{item.items}}" wx:for-item="item1">
+      <view class="zan-cell__bd">
+        <view class="zan-cell__text">{{item1.chargeTime}}(
+          <text wx:if="{{item1.status=='SUCCESS'}}">充值成功</text>
+          <text wx:elif="{{item1.status=='FAIL'}}">充值失败</text>
+          <text wx:elif="{{item1.status=='CLOSED'}}">交易关闭</text>
+          <text wx:elif="{{item1.status=='INIT'}}">未支付</text> 
+          <text wx:else>充值异常</text>)
+        </view>
+        <view class="zan-cell__desc">交易流水 {{item1.businessNo}}</view>
+      </view>
+      <view class="zan-cell__ft">{{item1.fee}}</view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,16 @@
+
+
+<view class="containerView">
+<scroll-view scroll-y="true"> 
+    <block wx:for="{{deptList}}" >
+      <view class='index-item' style='padding-left:20px;'>{{item.key}}</view>
+      <ul>
+        <li wx:for="{{item.list}}" wx:for-item="item1" class="zan-cell zan-cell--access" data-id="{{item1}}"
+       bindtap="toDetialView">
+         <view class="zan-cell__bd">{{item1.name}}</view>
+            <view class="zan-cell__ft"></view>
+       </li>
+      </ul>
+    </block>
+ </scroll-view> 
+</view>

@@ -1,0 +1,23 @@
+<view class='containerView'>
+  <scroll-view scroll-y="true">
+
+    <view>
+      <view class='news-imgtxt-list'>
+        <view class='news-imgtxt link-active'  wx:for="{{moreList}}" bindtap='toDetialView' data-news-id="{{item.id}}" data-title="{{item.title}}">
+          <view class='news-imgtxt-txt'>
+            <text class='h5'>{{item.title}}</text>
+            <text class='h6'>{{item.subtitle}}</text>
+            <text class='time'>{{item.publishTime}}</text>
+          </view>
+          <view class='news-imgtxt-img'>
+            <image src="{{item.picURL}}" binderror='imageError'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="loading" hidden="{{!loading}}">正在载入更多...</view>
+    <view class="loading complete" hidden="{{!loadingComplete}}">已加载全部</view>
+  </scroll-view>
+
+</view>

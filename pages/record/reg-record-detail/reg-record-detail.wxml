@@ -1,0 +1,207 @@
+<!--pages/record/reg-record-detail/reg-record-detail.wxml-->
+<!--pages/record/appointment-record-detail/appointment-record-detail.wxml-->
+<import src="../../../utils/toast/index.wxml" />
+<block wx:if="{{data}}">
+
+  <!-- 去支付 -->
+  <block wx:if="{{data.status === 'APPOINTTING' && data.timeoutSec > 0}}">
+    <view class='banner-notice baner-notice-zf'>
+      <view class='h4'>
+        请尽快完成支付</view>
+    </view>
+    <view class='am-panel fee-panel' style='margin-top: -140rpx;'>
+      <view class='hd am-flex-item'>
+        <view class='am-flex-title h5-text'>挂号费用</view>
+        <view class='am-flex-after'>
+          <text class='rmb-unit'>¥</text>
+          <text class='rmb-value'>{{data.price}}</text>
+        </view>
+      </view>
+      <view class='bd b-sh-t'>
+        <!-- form-fee-item -->
+        <view class='form-fee-item'>
+          <view class='form-fee-label'>就诊人</view>
+          <view class='form-fee-control'>
+            <text class='am-mr-10'>{{data.name}}</text>
+            <text class="am-txt-muted">{{data.medicalCardNo}}</text>
+          </view>
+        </view>
+        <!-- form-fee-item end-->
+        <!-- form-fee-item -->
+        <view class='form-fee-item'>
+          <view class='form-fee-label'>院区</view>
+          <view class='form-fee-control'>
+            <text>{{data.hospitalId == 10356 ? '湖滨院区' : '滨江院区'}}</text>
+          </view>
+        </view>
+        <!-- form-fee-item end-->
+        <!-- form-fee-item -->
+        <view class='form-fee-item'>
+          <view class='form-fee-label'>科室</view>
+          <view class='form-fee-control'>
+            <text>{{data.dept}}</text>
+          </view>
+        </view>
+        <!-- form-fee-item end-->
+        <!-- form-fee-item -->
+        <view class='form-fee-item'>
+          <view class='form-fee-label'>科室位置</view>
+          <view class='form-fee-control' bindtap='map'  wx:if="{{data.hospitalId == 10361}}">
+            <text class='am-mr-10'>{{data.wind}}</text>
+            <i class="i-map-location"></i>
+          </view>
+          <view class='form-fee-control' wx:else>
+            <text class='am-mr-10'>{{data.wind}}</text>
+          </view>
+        </view>
+        <!-- form-fee-item end-->
+        <view class='form-fee-item'>
+          <view class='form-fee-label'>医生</view>
+          <view class='form-fee-control'>
+            <text>{{data.expertName}}</text>
+          </view>
+        </view>
+        <!-- form-fee-item -->
+        <view class='form-fee-item'>
+          <view class='form-fee-label'>就诊日期</view>
+          <view class='form-fee-control'>
+            <text>{{data.regDate}}</text>
+            <text wx:if="{{data.regTime=='MORNING'}}">上午</text>
+            <text wx:elif="{{data.regTime=='AFTERNOON'}}">下午</text>
+            <text wx:else>晚上</text>
+          </view>
+        </view>
+        <!-- form-fee-item end-->
+        <!-- form-fee-item -->
+        <view class='form-fee-item'>
+          <view class='form-fee-label'>门诊号</view>
+          <view class='form-fee-control'>
+            <text>{{data.visitNo}}</text>
+          </view>
+        </view>
+        <!-- form-fee-item end-->
+      </view>
+      <view class='ft b-sh-t'>
+        <!-- form-fee-item -->
+        <view class='form-fee-item'>
+          <view class='form-fee-label'>交易单号</view>
+          <view class='form-fee-control'>
+            <text>{{data.zhpTradeId}}</text>
+          </view>
+        </view>
+        <!-- form-fee-item end-->
+      </view>
+    </view>
+    <view class='payTishi'>温馨提示：请尽快完成支付，抢号过程中可能出现支付成功但挂号失败的情况，费用将会原路退回您的支付账户 。</view>
+
+    <view class='index-ft' bindtap='confirm'>
+      <a class="am-btn-block-ljzf">立即支付</a>
+    </view>
+  </block>
+
+
+
+  <!-- 预约详情 -->
+  <block wx:else>
+    <view class='am-panel fee-panel'>
+      <view class='hd scanning-qrcode-fee'>
+        <canvas canvas-id="barcode-show" style="width: 250px; height: 70px;margin: 0 auto" />
+        <view class='txt am-mt-10'>
+          <text class='am-txt-light am-mr-10'>门诊号</text>{{data.medicalCardNo}}
+        </view>
+      </view>
+      <view class='ft b-sh-t'>
+        <!-- form-fee-item -->
+        <view class='form-fee-item am-flex-item'>
+          <view class='am-flex-title form-fee-label'>就诊人</view>
+          <view class='am-flex-after'>{{data.name}}</view>
+        </view>
+        <!-- form-fee-item end-->
+      </view>
+    </view>
+
+    <view class='am-panel fee-panel'>
+      <view class='bd'>
+        <!-- form-fee-item -->
+        <view class='form-fee-item am-flex-item'>
+          <view class='form-fee-label form-fee-label'>院区</view>
+          <view class='am-flex-after'>
+            <text>{{data.hospitalId == 10356 ? '湖滨院区' : '滨江院区'}}</text>
+          </view>
+        </view>
+        <!-- form-fee-item end-->
+        <!-- form-fee-item -->
+        <view class='form-fee-item am-flex-item'>
+          <view class='form-fee-label form-fee-label'>科室</view>
+          <view class='am-flex-after'>
+            <text>{{data.dept}}</text>
+          </view>
+        </view>
+        <!-- form-fee-item end-->
+        <!-- form-fee-item -->
+        <view class='form-fee-item am-flex-item'>
+          <view class='form-fee-label form-fee-label'>科室位置</view>
+          <view class='am-flex-after' bindtap='map'  wx:if="{{data.hospitalId == 10361}}">
+            <text class='am-mr-5'>{{data.wind}}</text>
+            <i class="i-map-location"></i>
+          </view>
+          <view class='am-flex-after' wx:else>
+            <text class='am-mr-5'>{{data.wind}}</text>
+          </view>
+        </view>
+        <!-- form-fee-item end-->
+        <view class='form-fee-item am-flex-item' wx:if="{{data.expertName}}">
+          <view class='form-fee-label form-fee-label'>医生</view>
+          <view class='am-flex-after'>
+            <text>{{data.expertName}}</text>
+          </view>
+        </view>
+        <!-- form-fee-item -->
+        <view class='form-fee-item am-flex-item'>
+          <view class='form-fee-label form-fee-label'>就诊日期</view>
+          <view class='am-flex-after'>
+            <text>{{data.regDate}}</text>
+            <text wx:if="{{data.regTime=='MORNING'}}">上午</text>
+            <text wx:elif="{{data.regTime=='AFTERNOON'}}">下午</text>
+            <text wx:else>晚上</text>
+          </view>
+        </view>
+        <!-- form-fee-item end-->
+        <!-- form-fee-item -->
+        <view class='form-fee-item am-flex-item'>
+          <view class='form-fee-label form-fee-label'>门诊号</view>
+          <view class='am-flex-after'>
+            <text>{{data.visitNo}}</text>
+          </view>
+        </view>
+        <!-- form-fee-item end-->
+        <view class='form-fee-item am-flex-item'>
+          <view class='form-fee-label form-fee-label'>挂号状态</view>
+          <view class='am-flex-after'>
+            <text class='am-txt-muted txt-rsmall' wx:if="{{data.status=='PASS'}}">挂号成功</text>
+            <text class='am-txt-danger txt-rsmall' wx:elif="{{data.status=='UNPASS'}}">挂号失败</text>
+            <text class='am-txt-muted txt-rsmall' wx:elif="{{data.status=='CANCELLED'}}">已撤销</text>
+            <text class='am-txt-muted txt-rsmall' wx:elif="{{data.status=='RETURNED'}}">已退款</text>
+            <text class='am-txt-danger txt-rsmall' wx:elif="{{data.status=='APPOINTTING'}}">待支付</text>
+            <text class='am-txt-muted txt-rsmall' wx:elif="{{data.status=='EXPIRED'}}">已过期</text>
+            <text wx:else></text>
+          </view>
+        </view>
+      </view>
+      <view class='ft b-sh-t'>
+        <!-- form-fee-item -->
+        <view class='form-fee-item am-flex-item'>
+          <view class='am-flex-title form-fee-label'>交易单号</view>
+          <view class='am-flex-after'>{{data.zhpTradeId}}</view>
+        </view>
+        <!-- form-fee-item end-->
+      </view>
+    </view>
+    <view class="zan-btns">
+      <button class="zan-btn zan-btn--danger" wx:if="{{!(data.status === 'APPOINTTING' || data.canCancel === 1) && (data.status === 'CANCELLED' || data.canDelete === 1)}}" bindtap='deleteRecord'>
+        删除记录
+      </button>
+    </view>
+  </block>
+</block>
+<template is="zan-toast" data="{{ zanToast }}"></template>

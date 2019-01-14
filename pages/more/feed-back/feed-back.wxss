@@ -1,0 +1,12 @@
+/* pages/more/feed-back/feed-back.wxss */
+input,textarea{
+  background:#fff;
+margin:0 auto;
+margin-top:20px;
+padding:10px;
+border:1px solid #f4f4f4;
+border-radius:6px;
+}
+input {
+  width:300px
+}

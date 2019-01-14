@@ -1,0 +1,16 @@
+/* pages/index/clinic/clinic-info/clinic-info.wxss */
+.am-panel{
+  margin-top: -50rpx;
+  position: relative;
+}
+.select-person{
+  position: static;
+  height: 190rpx;
+  
+}
+.move-upward{
+  margin-top: -30rpx;
+}
+.am-flex-after{
+  position: relative;
+}

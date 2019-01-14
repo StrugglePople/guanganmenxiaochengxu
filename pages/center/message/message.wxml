@@ -1,0 +1,20 @@
+<!--pages/center/message/message.wxml-->
+<import src="../../template/empty.wxml" />
+<view>
+  <view class='item' wx:for="{{list}}">
+    <view class='title'>{{item.titleStr}}</view>
+    <view class='time'>{{item.effectTime}}</view>
+    <view class='content'>{{item.content}}</view>
+  </view>
+</view>
+
+  <view hidden="{{!hasMore}}">
+    <button class="zan-btn" hidden='{{isLoading}}' bindtap='loadMore' style='margin:15rpx 30rpx;border-radius:7px'>加载更多</button>
+    <view class="zan-loadmore" hidden='{{!isLoading}}'>
+      <view class="zan-loading"></view>
+      <view class="zan-loadmore__tips">加载中...</view>
+    </view>
+  </view>
+<block wx:if="{{!list || list.length == 0}}">
+    <template is="empty" data="{{text: '没有消息'}}"></template>
+</block>

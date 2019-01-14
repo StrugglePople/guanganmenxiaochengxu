@@ -1,0 +1,28 @@
+.item-top-font{
+text-align:center;
+color:#46c9b1;
+display:block;
+height:40px;
+line-height:40px;
+}
+
+.item-content{
+ display:-webkit-box;
+display:-webkit-flex;
+-webkit-box-orient:horizontal;
+-webkit-flex-flow:row nowrap;
+flex-flow:row nowrap;
+padding:32rpx 0;
+
+}
+
+.item-content li{
+  display: inline-block;
+  -webkit-box-flex:1;
+  -webkit-flex:1;
+  flex:1;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+}
+

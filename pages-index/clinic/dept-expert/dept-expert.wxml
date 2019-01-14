@@ -1,0 +1,59 @@
+<!--pages/index/clinic/dept-expert/dept-expert.wxml-->
+<!-- <view class='search-bar'>
+  <image src="../../common/image/i-search.svg" class='img-search'></image>
+  <input type='text' placeholder='搜索科室、医生、疾病'/>
+</view> -->
+<import src="/pages/template/empty.wxml" />
+<block wx:if="{{searchDepts}}">
+  <view class='search-lside'>
+    <view class='index-list'>
+      <block wx:for="{{searchDepts}}">
+        <!-- <view class='index'>{{item.key}}</view> -->
+        <ul>
+          <li class="{{item.id == selectDept.id ? 'active' : ''}}" bindtap="clickDept" data-dept="{{item.id}}">{{item.deptName}}</li>
+        </ul>
+      </block>
+    </view>
+  </view>
+  <view class='search-rcont'>
+    <view class='index-panel' wx:if="{{selectDept.speciality}}" style='color:#666;font-size:28rpx'>{{selectDept.speciality}}</view>
+    <view class='item-img-multitxt-list'>
+      <!-- item-img-multitxt -->
+      <view class='item-img-multitxt' wx:if="{{selectDept && type=='yuyue'}}" bindtap='deptSchedule'>
+        <text class='img-face-lg img-face-lg-primary'>普通</text>
+        <view class='am-flex-item'>
+          <view class='am-flex-title'>
+            <text class='h5'>普通号</text>
+          </view>
+        </view>
+        <view class='p'>{{selectDept.deptName}}</view>
+      </view>
+      <!-- item-img-multitxt end-->
+      <!-- item-img-multitxt-->
+      <view class='item-img-multitxt' wx:for="{{doctors}}" bindtap='doctorSchedule' data-id="{{item.id}}" wx:key="id">
+        <!-- <text class='img-face-lg img-face-lg-primary'>普通</text> -->
+        <image src="{{item.src}}" class='img-face-lg img-face-lg-primary' binderror='imageError' data-index='{{index}}' wx:if="{{!item.hiddenDefaultDoctor}}"></image>
+        <image src='../../../../style/svg/expert.svg' class='img-face-lg' wx:else></image>
+        <view class='am-flex-item'>
+          <view class='am-flex-title'>
+            <text class='h5'>{{item.name}}</text>
+            <text class='small'>{{item.titleDesc}}</text>
+          </view>
+          <view class='am-flex-after' wx:if="{{item.redisTotalLeftNum > 0}}">
+            <text class='span-auxiliary span-auxiliary-sm span-auxiliary-success'>有号</text>
+          </view>
+          <view class='am-flex-after' wx:if="{{item.redisTotalLeftNum == 0}}">
+            <text class='span-auxiliary span-auxiliary-sm span-auxiliary-gray'>已满</text>
+          </view>
+          <view class='am-flex-after' wx:if="{{item.redisTotalLeftNum == -2}}">
+            <text class='span-auxiliary span-auxiliary-sm span-auxiliary-gray'>无排班</text>
+          </view>
+        </view>
+        <view class='p' style="max-height: 72rpx;overflow:hidden">擅长：{{item.speciality || '暂无'}}</view>
+      </view>
+    </view>
+  </view>
+</block>
+<block wx:if="{{!searchDepts}}">
+  <template is="empty" data="{{text: '没有排班信息'}}"></template>
+</block>

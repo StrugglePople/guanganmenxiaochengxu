@@ -1,0 +1,14 @@
+<!--components/member-card/member-card.wxml-->
+<view class='bd member-body'>
+    <view class='name' wx:if="{{item.sex == 'MALE'}}">{{item.itemNameStr}}</view>
+    <view class='name name-danger' wx:if="{{item.sex != 'MALE'}}">{{item.itemNameStr}}                      </view>
+    <view class='h4'>{{item.name}}
+        <text class='samll'>{{item.sex == 'MALE' ? '男' : '女'}}  {{item.medicalCardNo}}                        </text>
+    </view>
+    <view class='p'>
+        <i class="i-user-sm"></i>{{item.mobileNo}}
+    </view>
+    <view class='p'>
+        <i class="i-phone-sm"></i>{{item.idNo}}
+    </view>
+</view>

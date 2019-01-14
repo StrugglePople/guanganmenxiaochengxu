@@ -1,0 +1,7 @@
+<!--pages/more/faq/faq.wxml-->
+<view class="zan-panel">
+  <view class="zan-cell zan-cell--access" wx:for="{{list}}" bindtap='showNext' data-item="{{index}}">
+    <view class="zan-cell__bd">{{item.subject}}</view>
+    <view class="zan-cell__ft"></view>
+  </view>
+</view>

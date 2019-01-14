@@ -1,0 +1,16 @@
+.verification{
+  position: absolute;
+  z-index: 999;
+  padding: 8rpx;
+  width: 200rpx;
+  top: 0;
+  height: 100%;
+  right: 20rpx;
+  box-sizing: border-box;
+}
+
+.verification.get-verifi{
+  padding:20rpx 24rpx;
+  text-align: center;
+  color: #F67EA7;
+}

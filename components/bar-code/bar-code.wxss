@@ -1,0 +1,5 @@
+/* components/bar-code.wxss */
+canvas{
+    height: 60rpx;
+    /*width: 500rpx;*/
+}

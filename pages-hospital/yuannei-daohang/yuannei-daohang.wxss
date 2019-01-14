@@ -1,0 +1,9 @@
+/* pages/into-hospital/yuannei-daohang/yuannei-daohang.wxss */
+.title{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.map-view{
+    width: 100%;
+}

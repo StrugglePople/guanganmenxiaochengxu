@@ -1,0 +1,123 @@
+<!--pages/index/in-hospital/in-hospital-info/in-hospital-info.wxml-->
+<import src="../../../../utils/toast/index.wxml" />
+<view class="b-t"></view>
+<view style='height: 40rpx'></view>
+<view class='am-panel' style='margin-top:0'>
+  <!-- am-panel-per -->
+  <view class='am-panel-per'>
+    <view class='bd'>
+      <view class='name name-success'>{{item.bedno}}床</view>
+      <view class='h4'>{{item.inpatientName}}
+        <text class='samll'>{{item.sex}}\t{{item.inpatientNO}}</text>
+      </view>
+      <view class='p am-txt-muted' style='min-height:44rpx'>{{item.idCardNo}}</view>
+    </view>
+  </view>
+  <!-- am-panel-per end-->
+  <!-- fee-panel -->
+  <view class='fee-panel'>
+    <view class='bd b-sh-t'>
+      <view class='form-fee-item'>
+        <view class='form-fee-label'>住院科室</view>
+        <view class='form-fee-control'>
+          <text class='am-mr-10'>{{item.deptName}}</text>
+        </view>
+      </view>
+      <!-- <view class='form-fee-item'>
+        <view class='form-fee-label'>住院病区</view>
+        <view class='form-fee-control'>
+          <text class='am-mr-10'>内科</text>
+        </view>
+      </view> -->
+    </view>
+    <view class='hd am-flex-item b-sh-t'>
+      <view class='am-flex-title h5-text'>收费总额</view>
+      <view class='am-flex-after'>
+        <text class='rmb-unit'>¥</text>
+        <text class='rmb-value'>{{item.totalAmount}}</text>
+      </view>
+    </view>
+    <view class='hd am-flex-item'>
+      <view class='am-flex-title h5-text'>剩余押金</view>
+      <view class='am-flex-after'>
+        <text class='rmb-unit'>¥</text>
+        <text class='rmb-value'>{{item.balance}}</text>
+      </view>
+    </view>
+    <!-- <view class='fee-panel-hd-small'>
+      <view class='am-flex-title h5-text'>剩余押金</view>
+      <text class='rmb-unit'>¥</text>
+      <text class='rmb-value'>{{item.balance}}</text>
+    </view> -->
+  </view>
+  <!-- fee-panel end -->
+</view>
+
+<view class='cell-item-list'>
+  <view class='am-flex-item cell-item link-active' bindtap='showRecord'>
+    <view class='am-flex-title'>
+      住院费用日清单
+    </view>
+    <view class='am-flex-after'>
+      <i class="i-item-angle"></i>
+    </view>
+  </view>
+  <navigator class='am-flex-item cell-item link-active' url='../in-hospital-recharge-record/in-hospital-recharge-record?inpatientNO={{item.inpatientNO}}'>
+    <view class='am-flex-title'>
+      押金预交记录
+    </view>
+    <view class='am-flex-after'>
+      <i class="i-item-angle"></i>
+    </view>
+  </navigator>
+</view>
+
+<view class='index-ft'>
+  <view class='am-btn-block-ljzf' bindtap='showCharge'>押金预交</view>
+</view>
+<view class='mask' hidden='{{!showCharge}}'>
+  <view class='am-pop-cover' bindtap='hiddenCharge'></view>
+  <view class='recharge-wrapper'>
+    <view style='position: relative;width:100%;height:100%'>
+      <view style='height:80rpx; line-height:80rpx;padding:0 30rpx' class='zan-row'>
+        <view class='zan-col zan-col-20'>选择预交金额</view>
+        <view class='zan-col zan-col-4 text-right' bindtap='hiddenCharge'>X</view>
+      </view>
+      <view style='height: 20rpx'></view>
+      <view style='height:80rpx; line-height:80rpx;' class='zan-row'>
+        <view class='zan-col zan-col-8'>
+          <view class="money {{selectMoney==500 ? 'active' : ''}}" bindtap='changeMoney' data-money="500">500元</view>
+        </view>
+        <view class='zan-col zan-col-8'>
+          <view class="money {{selectMoney==1000 ? 'active' : ''}}" bindtap='changeMoney' data-money="1000">1000元</view>
+        </view>
+        <view class='zan-col zan-col-8'>
+          <view class="money {{selectMoney==1500 ? 'active' : ''}}" bindtap='changeMoney' data-money="1500">1500元</view>
+        </view>
+      </view>
+      <view style='height: 20rpx'></view>
+      <view style='height:80rpx; line-height:80rpx;' class='zan-row'>
+        <view class='zan-col zan-col-8'>
+          <view class="money {{selectMoney==2000 ? 'active' : ''}}" bindtap='changeMoney' data-money="2000">2000元</view>
+        </view>
+        <view class='zan-col zan-col-8'>
+          <view class="money {{selectMoney==3000 ? 'active' : ''}}" bindtap='changeMoney' data-money="3000">3000元</view>
+        </view>
+        <view class='zan-col zan-col-8'>
+          <view class="money {{selectMoney==5000 ? 'active' : ''}}" bindtap='changeMoney' data-money="5000">5000元</view>
+        </view>
+      </view>
+      <view style='height: 30rpx'></view>
+      <view class='zan-row'>
+        <view class='zan-col zan-col-18'>
+          <input type="digit" class='input-wrapper' placeholder="请输入金额" bindinput="changeInput" value='{{selectMoney1}}'></input>
+        </view>
+        <view class='zan-col zan-col-6'>
+          <view class='am-btn' style='margin:0 30rpx' bindtap='charge'>确定</view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>
+<template is="zan-toast" data="{{ zanToast }}"></template>

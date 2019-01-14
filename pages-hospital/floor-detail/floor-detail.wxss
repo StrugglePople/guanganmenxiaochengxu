@@ -1,0 +1,18 @@
+/* pages/into-hospital/floor-detail/floor-detail.wxss */
+.floor-list{
+    border-bottom: 1px solid #dbdddc;
+    position: relative;
+    padding: 10px 0;
+    clear: both;
+    color: #3a3a3a;
+    font-size: 16px;
+}
+.floor{
+    width: 80px;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+}
+.description{
+    margin: 0 20px 0 80px;
+}

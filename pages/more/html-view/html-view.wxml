@@ -1,0 +1,8 @@
+<!--pages/more/html-view/html-view.wxml-->
+<import src="../../../utils/wxParse/wxParse.wxml"/>
+<view style='padding:20rpx;'>
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+
+
+

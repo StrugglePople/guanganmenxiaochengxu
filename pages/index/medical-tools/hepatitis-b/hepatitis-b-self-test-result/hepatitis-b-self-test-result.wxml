@@ -1,0 +1,8 @@
+
+
+<view class='containerView'>
+<view>您的乙肝自测结果为：</view>
+<view class='item-title-view'>{{title}}</view>
+
+<view class='item-zhu'>【注：以上乙肝自测结果仅供参考，如有疑问请及时咨询专家医生。】</view>
+</view>

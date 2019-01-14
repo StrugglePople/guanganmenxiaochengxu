@@ -1,0 +1,108 @@
+<import src="/pages/index/current-time/son-event.wxml" />
+<import src="/template/memberList.wxml" />
+<!--pages/center/index/index.wxml-->
+<view class='index-bd' style='padding-bottom:100rpx;'>
+  <view class="center-top">
+    <view class='face-top-item-detail'>
+      <image src="{{avatarUrl}}" class='img-face'></image>
+      <span wx:if="{{isLogin}}">{{mobile}}</span>
+      <button wx:else plain="true" class="btn-login" open-type="getUserInfo" bindgetuserinfo="getUserInfoCenter">登录</button>
+      <view class='triangle'>
+        <i class="i-item-angle-light"></i>
+      </view>
+    </view>
+  </view>
+
+  <view class='am-panel-block'>
+    <ul class="per-menu-list wx-row">
+      <li bindtap='methodNeedLogin' data-method="showPage" data-url='/pages/center/member-list/member-list'>
+        <image src="/style/svg/center/center-1.png"></image>
+        <text class='txt'>就诊人管理</text>
+        <i class="line-angle" wx:if="{{isLogin && accounts.length>0}}"></i>
+      </li>
+      <li bindtap='methodNeedLogin' data-method="showPage" data-url='/pages/record/appointment-record/appointment-record'>
+        <image src="/style/svg/center/center-2.png"></image>
+        <text class='txt'>预约挂号记录</text>
+      </li>
+      <li bindtap='methodNeedLogin' data-method="showPage" data-url='/pages/center/message/message'>
+        <image src="/style/svg/center/center-3.png">
+        </image>
+        <text class='txt'>消息中心</text>
+        <view class="badge" wx:if="{{unreadNum>0}}"></view>
+      </li>
+    </ul>
+    <view class='visit-per-cont'>
+      <view class="visit-per-list">
+        <view class='am-panel am-panel-per' wx:for="{{accounts}}" bindtap='chooseMember' data-id="{{item.id}}" data-medical-card-no="{{item.medicalCardNo}}">
+          <!--<template is="memberList" data="{{item}}"></template>-->
+          <member-card item="{{item}}"></member-card>
+          <!--<view class='bd'>
+            <view class='h4 main-text-color'>{{item.name}}
+              <text class='samll'>{{item.sex == 'MALE' ? '男' : '女'}}  {{item.medicalCardNo}}                        </text>
+            </view>
+            <view class='p'>
+              <i class="i-user-sm"></i>{{item.mobileNo}}
+            </view>
+            <view class='p'>
+              <i class="i-phone-sm"></i>{{item.paperNo}}
+            </view>
+            <view class="barcode">
+              <my-component card-no="{{item.paperNo}}"></my-component>
+            </view>
+          </view>-->
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 当前事件 start -->
+  <view class='am-panel-block'>
+    <!-- <view class='item-bot-line item-img-txt' bindtap='showHtml' data-type="ABOUT_US" hover-class='hover'>
+      <view class='am-flex-title'>
+        关于我们
+      </view>
+      <view class='am-flex-after'>
+        <i class="i-item-angle"></i>
+      </view>
+    </view>
+    <view class='item-bot-line item-img-txt' bindtap='showHtml' data-type="DISCLAIMER" hover-class='hover'>
+      <view class='am-flex-title'>
+        免责声明
+      </view>
+      <view class='am-flex-after'>
+        <i class="i-item-angle"></i>
+      </view>
+    </view>
+    <navigator class='item-bot-line item-img-txt' url='/pages/more/faq/faq' hover-class='hover'>
+      <view class='am-flex-title'>
+        常见问题
+      </view>
+      <view class='am-flex-after'>
+        <i class="i-item-angle"></i>
+      </view>
+    </navigator>
+    <navigator class='item-img-txt' url='/pages/more/feed-back/feed-back' hover-class='hover'>
+      <view class='am-flex-title'>
+        意见反馈
+      </view>
+      <view class='am-flex-after'>
+        <i class="i-item-angle"></i>
+      </view>
+    </navigator> -->
+    <navigator class='item-img-txt' url='/pages-center/novice-guide/novice-guide' hover-class='hover'>
+      <view class='am-flex-title'>
+        操作指南
+      </view>
+      <view class='am-flex-after'>
+        <i class="i-item-angle"></i>
+      </view>
+    </navigator>
+    <navigator class='item-img-txt' url='/pages/more/more' hover-class='hover'>
+      <view class='am-flex-title'>
+        更多
+      </view>
+      <view class='am-flex-after'>
+        <i class="i-item-angle"></i>
+      </view>
+    </navigator>
+  </view>
+</view>

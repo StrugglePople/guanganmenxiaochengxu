@@ -1,0 +1,15 @@
+/* pages/center/card-info/card-info.wxss */
+.list-item{
+  padding: 25rpx 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+.list-item .lable{
+  width: 150rpx;
+  color: #888888;
+}
+.list-item .lable-input{
+  width: 540rpx;
+  color: #333333;
+}

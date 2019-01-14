@@ -1,0 +1,78 @@
+<!--pages/record/clinic-record/clinic-record.wxml-->
+<import src="../../template/empty.wxml" />
+<navigator url="./../../center/member-list/member-list?isSelect=true" class="banner-reg-recond">
+  <block wx:if="{{!member}}">
+    <text class='h4'>选择就诊人</text>
+  </block>
+  <block wx:else>
+    <text class='h4'>{{member.name}}</text>{{member.sex == 'MALE' ? '男': '女'}}
+    <text class='muted-txt'></text>{{member.medicalCardNo}}
+  </block>
+  <image src='../../../style/svg/arrow.svg' class='image-arrow'></image>
+</navigator>
+<view class="zan-row" class='tab-wrapper' style='margin-top:2rpx'>
+  <view class="zan-col zan-col-12 text-center tab-item" style='border-right:1px dashed #d2d2d2' bindtap='select' data-tab="0">
+    <text>挂号记录</text>
+    <view class='tab-select-line' hidden='{{selectIndex != 0}}'></view>
+  </view>
+  <view class="zan-col zan-col-12 text-center tab-item" bindtap='select' data-tab="1">
+    <text>预约记录</text>
+    <view class='tab-select-line' hidden='{{selectIndex == 0}}'></view>
+  </view>
+</view>
+<block wx:if="{{list && list.length > 0}}">
+  <view class='am-panel-block rgrecond-item-list' wx:for="{{list}}" bindtap='showDetail' data-id='{{item.zhpTradeId}}'>
+    <view class='rgrecond-item am-flex-item'>
+
+      <view class='am-flex-title'>
+        <text class='h5-lg'>{{item.dept}} | <block wx:if="{{item.expertName}}">{{item.expertName}}</block> {{item.visitNo}}
+        </text>
+      </view>
+      <view class='am-flex-after'>
+        <text class='h5 am-txt-danger'>¥{{item.price}}元</text>
+      </view>
+    </view>
+    <view class='rgrecond-item am-flex-item'>
+      <view class='am-flex-title'>
+        <view class='h5'>{{item.name}}</view>
+        <view class='p'>{{item.regDate}}
+          <text wx:if="{{item.regTime=='MORNING'}}">上午</text>
+          <text wx:elif="{{item.regTime=='AFTERNOON'}}">下午</text>
+          <text wx:else>晚上</text>
+        </view>
+      </view>
+
+      <view class='am-flex-after' wx:if="{{selectIndex==0}}">
+        <!-- <text class='plain-auxiliary'>取消预约</text> -->
+        <text class='am-txt-muted txt-rsmall' wx:if="{{item.status=='PASS'}}">挂号成功</text>
+        <text class='am-txt-danger txt-rsmall' wx:elif="{{item.status=='UNPASS'}}">挂号失败</text>
+        <text class='am-txt-muted txt-rsmall' wx:elif="{{item.status=='CANCELLED'}}">已撤销</text>
+        <text class='am-txt-muted txt-rsmall' wx:elif="{{item.status=='RETURNED'}}">已退款</text>
+        <text class='am-txt-danger txt-rsmall' wx:elif="{{item.status=='APPOINTTING'}}">待支付</text>
+        <text class='am-txt-muted txt-rsmall' wx:elif="{{item.status=='EXPIRED'}}">已过期</text>
+        <text wx:else></text>
+      </view>
+      <view class='am-flex-after' wx:else>
+        <!-- <text class='plain-auxiliary'>取消预约</text> -->
+        <text class='am-txt-muted txt-rsmall' wx:if="{{item.status=='PASS'}}">预约成功</text>
+        <text class='am-txt-danger txt-rsmall' wx:elif="{{item.status=='UNPASS'}}">预约失败</text>
+        <text class='am-txt-muted txt-rsmall' wx:elif="{{item.status=='CANCELLED'}}">已撤销</text>
+        <text class='am-txt-muted txt-rsmall' wx:elif="{{item.status=='RETURNED'}}">已退号</text>
+        <text class='am-txt-danger txt-rsmall' wx:elif="{{item.status=='APPOINTTING'}}">待支付</text>
+        <text class='am-txt-muted txt-rsmall' wx:elif="{{item.status=='EXPIRED'}}">已过期</text>
+        <text wx:else></text>
+      </view>
+    </view>
+  </view>
+  <view hidden="{{!hasMore}}">
+    <button class="zan-btn" hidden='{{isLoading}}' bindtap='loadMore'>加载更多</button>
+    <view class="zan-loadmore" hidden='{{!isLoading}}'>
+      <view class="zan-loading"></view>
+      <view class="zan-loadmore__tips">加载中...</view>
+    </view>
+  </view>
+
+</block>
+<block wx:else>
+  <template is="empty" data="{{text: '没有记录'}}"></template>
+</block>

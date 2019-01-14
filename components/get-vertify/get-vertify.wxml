@@ -1,0 +1,5 @@
+<!--components/get-vertify/get-vertify.wxml-->
+
+<view class='verification get-verifi' bindtap='getVertify'>
+  {{getVertiValue}}
+</view>

@@ -1,0 +1,84 @@
+<!--pages/index/clinic/clinic-info/clinic-info.wxml-->
+<import src="../../../utils/toast/index.wxml" />
+<view class='b-t'></view>
+<view class="item-multi-txt am-flex-item bg-white link-active select-person" bindtap='showCardList'>
+  <image class="common-bg select-crard-bg" src='/style/image/record/common-bg.png'></image>
+  <view class='am-flex-title move-upward' wx:if="{{medicalCard.name}}">
+    <view class='h4-lg'>{{medicalCard.name}}</view>
+    <view class='color-3'>{{member.sex == "MALE"?"男":"女"}} {{medicalCard.medicalCardNo}}</view>
+  </view>
+  <view class='am-flex-title move-upward' wx:if="{{!medicalCard.name}}">
+    <view class='h4-lg color-3'>选择就诊人</view>
+  </view>
+  <view class='am-flex-after'>
+    <i class="i-item-angle" style="margin-top:0;"></i>
+  </view>
+</view>
+
+<view class='am-panel fee-panel'>
+  <view class='hd am-flex-item'>
+    <view class='am-flex-title h5-text'>预约费用</view>
+    <view class='am-flex-after'>
+      <text class='rmb-unit'>¥</text>
+      <text class='rmb-value'>{{schedule.price}}</text>
+    </view>
+  </view>
+  <view class='bd b-sh-t'>
+    <!-- form-fee-item -->
+    <view class='form-fee-item'>
+      <view class='form-fee-label'>就诊人</view>
+      <view class='form-fee-control'>
+        <text class='am-mr-10'>{{medicalCard.name}}</text>
+        <!-- <text class="am-txt-muted">{{medicalCard.medicalCardNo}}</text> -->
+      </view>
+    </view>
+    <view class='form-fee-item'>
+      <view class='form-fee-label'>科室</view>
+      <view class='form-fee-control'>
+        <text>{{dept.deptName}}</text>
+      </view>
+    </view>
+    <!-- form-fee-item end-->
+    <!-- form-fee-item -->
+    <view class='form-fee-item' wx:if="{{dept.location}}">
+      <view class='form-fee-label'>科室位置</view>
+      <view class='form-fee-control'>
+        <text class='am-mr-10'>{{dept.location}}</text>
+        <i class="i-map-location"></i>
+      </view>
+    </view>
+    <!-- form-fee-item end-->
+    <view class='form-fee-item' wx:if="{{doctor}}">
+      <view class='form-fee-label'>医生</view>
+      <view class='form-fee-control'>
+        <text>{{doctor.name}}</text>
+      </view>
+    </view>
+    <!-- form-fee-item -->
+    <view class='form-fee-item font-weight'>
+      <view class='form-fee-label'>就诊日期</view>
+      <view class='form-fee-control'>
+        <text>{{schedule.scheduleDate}} </text>
+        <text wx:if="{{schedule.time=='MORNING'}}">上午</text>
+        <text wx:elif="{{schedule.time=='AFTERNOON'}}">下午</text>
+        <!-- <text wx:else>晚上</text> -->
+      </view>
+    </view>
+    <!-- form-fee-item -->
+    <!-- <view class='form-fee-item' wx:if="{{time}}">
+      <view class='form-fee-label'>时间</view>
+      <view class='form-fee-control'>
+        <text>{{time.timeline}}</text>
+      </view>
+    </view> -->
+    <!-- form-fee-item end-->
+  </view>
+</view>
+<!-- <view class='am-panel-h5 am-mt-5'>
+  <view class='amm-ctr-chk'>
+    <text>挂号须知</text>
+  </view>
+  <!-- <view class='amm-ctr-chk active'><text>挂号须知</text></view> -->
+<!-- </view>  -->
+<view class='am-btn' bindtap='submit'>确认预约</view>
+<template is="zan-toast" data="{{ zanToast }}"></template>

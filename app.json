@@ -1,0 +1,147 @@
+{
+  "pages": [
+    "pages/index/index/index",
+    "pages/center/index/index",
+    "pages/into-hospital/index/index",
+    "pages/auth-setting/auth-setting",
+    "pages/more/web-view/web-view",
+    "pages/more/faq/faq",
+    "pages/more/more",
+    "pages/into-hospital/dept/deptList",
+    "pages/into-hospital/doctor/doctorList",
+    "pages/into-hospital/doctor-detial/doctor-detial",
+    "pages/into-hospital/deptDetial/deptDetial",
+    "pages/into-hospital/hospital-view/hospital-view",
+    "pages/index/heathList/heathList",
+    "pages/more/html-view/html-view",
+    "pages/more/faq-detail/faq-detail",
+    "pages/more/feed-back/feed-back",
+    "pages/record/clinic-record/clinic-record",
+    "pages/record/record-detial/record-detial",
+    "pages/customer/index/index",
+    "pages/record/appointment-record/appointment-record",
+    "pages/record/appointment-record-detail/appointment-record-detail",
+    "pages/record/reg-record/reg-record",
+    "pages/record/reg-record-detail/reg-record-detail",
+    "pages/record/check-index/check-index",
+    "pages/record/check-record/check-record",
+    "pages/record/check-record-detail/check-record-detail",
+    "pages/record/inspect-record-detail/inspect-record-detail",
+    "pages/index/in-hospital/in-hospital",
+    "pages/index/in-hospital/in-hospital-info/in-hospital-info",
+    "pages/index/in-hospital/in-hospital-recharge-record/in-hospital-recharge-record",
+    "pages/index/in-hospital/in-hospital-record/in-hospital-record",
+    "pages/index/medical-tools/bmi/bmi-calculator/bmi-calculator",
+    "pages/index/medical-tools/bmi/bmi-result/bmi-result",
+    "pages/index/medical-tools/check-test/check-test-analysis-detail/check-test-analysis-detail",
+    "pages/index/medical-tools/baby-blood/baby-blood",
+    "pages/index/medical-tools/hepatitis-b/hepatitis-b-self-test/hepatitis-b-self-test",
+    "pages/index/medical-tools/hepatitis-b/hepatitis-b-self-test-result/hepatitis-b-self-test-result",
+    "pages/index/medical-tools/medical-tools",
+    "pages/index/medical-tools/check-test/check-test-list/check-test-list",
+    "pages/center/message/message",
+    "pages/index/diagnose/diagnose-input/diagnose-input",
+    "pages/index/diagnose/diagnose-index/diagnose-index",
+    "pages/index/diagnose/diagnose-two/diagnose-two",
+    "pages/index/diagnose/symptom/symptom",
+    "pages/index/diagnose/symptom-select/symptom-select",
+    "pages/index/diagnose/disease/disease",
+    "pages/index/diagnose/disease-detail/disease-detail",
+    "pages/customer/customer-1/customer-1",
+    "pages/into-hospital/volunteer/index",
+    "pages/into-hospital/volunteer/protocol/protocol",
+    "pages/cms-about/news-list/news-list",
+    "pages/center/message-detail/message-detail",
+    "pages/center/member-list/member-list",
+    "pages/center/member-info/member-info",
+    "pages/center/card-info/card-info",
+    "pages/center/card-list/card-list",
+    "pages/more/cms-list/cms-list"
+  ],
+  "subpackages": [
+    {
+      "root": "pages-index",
+      "name": "index",
+      "pages": [
+        "clinic/clinic-note/clinic-note",
+        "clinic/dept-expert/dept-expert",
+        "clinic/expert-schedule/expert-schedule",
+        "clinic/dept-schedule/dept-schedule",
+        "clinic/clinic-info/clinic-info"
+      ]
+    },
+    {
+      "root": "pages-hospital",
+      "name": "hospital",
+      "pages": [
+        "yuanwai-daohang/yuanwai-daohang",
+        "yuannei-daohang/yuannei-daohang",
+        "floor-detail/floor-detail"
+      ]
+    },
+    {
+      "root": "pages-center",
+      "name": "center",
+      "pages": [
+        "novice-guide/novice-guide"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/index/index/index": {
+      "network": "all",
+      "packages": [
+        "index","hospital"
+      ]
+    },
+    "pages/center/index/index": {
+      "network": "all",
+      "packages": [
+        "center"
+      ]
+    },
+    "pages/into-hospital/index/index": {
+      "network": "all",
+      "packages": [
+        "hospital"
+      ]
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "广安门医院",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#FF6B89",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index/index",
+        "text": "自助服务",
+        "iconPath": "style/svg/tabbar/selfhelp_normal.png",
+        "selectedIconPath": "style/svg/tabbar/selfhelp_selected.png"
+      },
+      {
+        "pagePath": "pages/into-hospital/index/index",
+        "text": "走进医院",
+        "iconPath": "style/svg/tabbar/hospital_normal.png",
+        "selectedIconPath": "style/svg/tabbar/hospital_selected.png"
+      },
+      {
+        "pagePath": "pages/customer/index/index",
+        "text": "在线客服",
+        "iconPath": "style/svg/tabbar/service_normal.png",
+        "selectedIconPath": "style/svg/tabbar/service_selected.png"
+      },
+      {
+        "pagePath": "pages/center/index/index",
+        "text": "个人中心",
+        "iconPath": "style/svg/tabbar/my_normal.png",
+        "selectedIconPath": "style/svg/tabbar/my_selected.png"
+      }
+    ]
+  }
+}

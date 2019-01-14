@@ -1,0 +1,81 @@
+<!--pages/center/member-info/member-info.wxml-->
+
+<view class='index-bd' style='padding-bottom: 0;'>
+  <form bindsubmit="formSubmit">
+    <view class='bg-light'>
+      <!-- <view class='control-item' wx:if="{{isUpdate}}">
+        <input type="number" class='input-text' placeholder='输入门诊号' name="medicalCardNo"
+        value="{{member.medicalCardNo}}"></input>
+      </view> -->
+
+      <view class="list-item wx-row item-bot-line">
+        <view class="lable">姓　名</view>
+        <view class="lable-input">
+          <input name='name' value="{{member.name}}" placeholder="请输入真实姓名"></input>
+        </view>
+      </view>
+      <view class="list-item wx-row item-bot-line">
+        <view class="lable">身份证</view>
+        <view class="lable-input">
+          <input type='idcard' name='idNo' value="{{member.idNo}}" placeholder="请输入真实身份证号" bindinput='idNoChange'></input>
+
+        </view>
+      </view>
+      <view class="list-item wx-row item-bot-line">
+        <view class="lable">性　别</view>
+        <view class="lable-input">
+          <view class="select-sex wx-row">
+            <view class='man wx-col {{member.sex=="MALE" ? "active":""}}' bindtap='changeSex' data-sex='MALE'>男</view>
+            <view class='woman wx-col {{member.sex=="FEMALE" ? "active":""}}' bindtap='changeSex' data-sex='FEMALE'>女</view>
+          </view>
+        </view>
+      </view>
+      <view class="list-item wx-row item-bot-line">
+        <view class="lable">出生日期</view>
+        <view class="lable-input">
+          <picker mode="date" binclass="address-wrapper" bindchange="bindDateChange" style='height: 100%;width:100%;line-height:88rpx'>
+            <view class="picker">
+              {{member.birthday ? member.birthday: '出生日期'}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="list-item wx-row item-bot-line full">
+        <view class="lable">手机号</view>
+        <view class="lable-input">
+          <input name='mobileNo' value="{{member.mobileNo}}" placeholder="请输入手机号"></input>
+        </view>
+      </view>
+    </view>
+
+
+    <view class="bg-light" style="margin-top:30rpx;">
+      <view class="list-item wx-row item-bot-line">
+        <view class="left wx-col">就诊卡信息</view>
+        <view class="right wx-col text-right" bindtap='showPage' data-url='../card-info/card-info?personId={{member.id}}'>
+          添加就诊卡
+        </view>
+      </view>
+      <view class="card-list list-item wx-row item-bot-line" wx:for="{{member.cards}}" wx:for-item="card" bindtap='showPage' data-url='../card-info/card-info?personId={{member.id}}&cardId={{card.id}}'>
+        <view class="left wx-col" style="width:360rpx;">
+          <view class="wx-row icon-content">
+            <view class="left-icon tc-light">
+              <view class="content">院内卡</view>
+            </view>
+            <view class="right-content">
+              <view class="font-14">{{card.name}}</view>
+              <view class="color-1 font-12">{{card.medicalCardNo}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="right wx-col text-right color-1 font-12" style="line-height:100rpx;">
+          广安门医院
+        </view>
+      </view>
+    </view>
+
+    <button class='am-btn' formType="submit">{{buttonName}}</button>
+  </form>
+<button wx:if="{{member.id}}" class='am-btn' bindtap='deleteMember'>删除</button>
+
+</view>

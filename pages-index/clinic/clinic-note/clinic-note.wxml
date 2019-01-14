@@ -1,0 +1,26 @@
+<!--pages/index/clinic/clinic-note/clinic-note.wxml-->
+<import src="../../../utils/wxParse/wxParse.wxml" />
+<view class="index-bd" style='padding-bottom:0;'>
+  <view class='am-pdlr'>
+    <view class='h3-intro'>
+      <text class='h3'>须知</text>
+    </view>
+    <scroll-view scroll-y style="height: {{height}}px;">
+      <view class='p-intro'>
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      </view>
+    </scroll-view>
+
+    <!-- <view class='zan-row'>
+      <view class='zan-col zan-col-12'>
+        <image src="" style='max-height:160px;width:100%;' src='../../../../style/image/hubing-1.jpg' bindtap='showNext' data-id='10356'></image>
+      </view>
+      <view class='zan-col zan-col-12'>
+        <image src="" style='max-height:160px;width:100%;' src='../../../../style/image/binjiang-1.jpg' bindtap='showNext' data-id='10361'></image>
+      </view>
+    </view> -->
+    <navigator class='am-btn' url="/pages-index/clinic/dept-expert/dept-expert?type=yuyue">我已同意</navigator>
+
+  </view>
+
+</view>

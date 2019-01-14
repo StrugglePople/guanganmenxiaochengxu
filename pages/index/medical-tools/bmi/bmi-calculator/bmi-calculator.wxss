@@ -1,0 +1,7 @@
+/* pages/index/medical-tools/bmi/bmi-calculator/bmi-calculator.wxss */
+
+.bmi-detial{
+  color:#46c9b1;
+  display: block;
+  padding-left:30rpx 
+}

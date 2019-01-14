@@ -1,0 +1,2 @@
+/* pages/index/medical-tools/check-test/check-test-analysis-detail/check-test-analysis-detail.wxss */
+@import "../../../../../utils/wxParse/wxParse.wxss";

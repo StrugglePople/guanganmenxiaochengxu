@@ -1,0 +1,11 @@
+<!--pages/into-hospital/yuanwai-daohang/yuanwai-daohang.wxml-->
+<view class="page-body">
+    <map
+      id="myMap"
+      style="width: 100%; height: 100%;"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      markers="{{markers}}"
+      show-location
+    ></map>
+</view>

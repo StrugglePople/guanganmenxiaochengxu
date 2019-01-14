@@ -1,0 +1,4 @@
+<!--pages/more/novice-guide/novice-guide.wxml-->
+<image src='/pages-center/images/novice-guide.jpg' mode="widthFix" style='width:750rpx;height:auto'>
+</image>
+

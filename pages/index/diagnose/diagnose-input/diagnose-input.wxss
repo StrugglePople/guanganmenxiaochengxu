@@ -1,0 +1,22 @@
+/* pages/index/diagnose/diagnose-input/diagnose-input.wxss */
+.am-ctr-chk {
+  position: relative
+}
+.am-ctr-chk-2 {
+  vertical-align:top;
+  line-height:60rpx;
+  height:60rpx;
+  padding:16rpx 0 16rpx 80rpx;
+  font-size:34rpx;
+  position: relative
+}
+.am-ctr-chk .checked , .am-ctr-chk-2 .checked{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+

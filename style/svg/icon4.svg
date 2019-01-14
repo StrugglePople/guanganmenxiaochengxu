@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Overrides/hospital/icon4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-2.48949813e-15%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#FF6D8C" offset="0%"></stop>
+            <stop stop-color="#FF4965" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Overrides/hospital/icon4" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <path d="M4.81468006,3.67441998 C4.17259882,3.07453132 3.8214169,2.17066241 3.94654191,1.22529618 C4.3024526,1.51765694 4.73472612,1.72193321 5.21675803,1.80046088 C5.76077073,1.88908584 6.29262727,1.80523994 6.75969044,1.588259 C6.83722675,1.54453271 6.91610192,1.50300567 6.99623662,1.46375951 C6.99841156,1.46247376 7.00058472,1.46118496 7.00275609,1.45989313 L7.00275609,1.46057297 C7.60822539,1.16522912 8.28535302,1 9,1 C11.5773288,1 13.6666667,3.1490332 13.6666667,5.8 C13.6666667,8.4509668 11.5773288,10.6 9,10.6 C6.42267117,10.6 4.33333333,8.4509668 4.33333333,5.8 C4.33333333,5.03676476 4.50652098,4.31513538 4.81468006,3.67441998 Z M7.44444444,6.6 C7.44444444,7.4836556 8.14089039,8.2 9,8.2 C9.85910961,8.2 10.5555556,7.4836556 10.5555556,6.6 L7.44444444,6.6 Z M4,11.4 L14,11.4 C15.1045695,11.4 16,12.2954305 16,13.4 L16,17 L2,17 L2,13.4 C2,12.2954305 2.8954305,11.4 4,11.4 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

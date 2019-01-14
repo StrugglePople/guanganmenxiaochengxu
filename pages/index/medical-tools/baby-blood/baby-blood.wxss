@@ -1,0 +1,17 @@
+/* pages/index/medical-tools/baby-blood/baby-blood.wxss */
+.bmi-detial{
+  color:#46c9b1;
+  display: block;
+  padding-left:20px 
+}
+.item-zhu{
+  color: #e07046;
+  font-size: 11px;
+  display: block;
+  padding: 10px;
+}
+
+.zan-cell{
+  background: #fff;
+  
+}

@@ -1,0 +1,12 @@
+<!--pages/record/check-index/check-index.wxml-->
+  <view class="zan-panel">
+    <navigator class="zan-cell zan-cell--access" url="../check-record/check-record?type=0">
+      <view class="zan-cell__bd">检查报告</view>
+      <view class="zan-cell__ft"></view>
+    </navigator>
+    <navigator class="zan-cell zan-cell--access" url="../check-record/check-record?type=1">
+      <view class="zan-cell__bd">检验报告</view>
+      <view class="zan-cell__ft"></view>
+    </navigator>
+  </view>
+

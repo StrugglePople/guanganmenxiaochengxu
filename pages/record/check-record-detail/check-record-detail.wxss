@@ -1,0 +1,20 @@
+/* pages/record/check-record-detail/check-record-detail.wxss */
+.text-panel-form{
+  padding-bottom: 20rpx;
+}
+.text-panel-form .am-flex-box{
+  padding: 20rpx 24rpx 0 24rpx;
+}
+.text-panel-form .am-item-label{
+  min-width: 4em;
+  color: #888;
+  white-space: nowrap;
+  padding-right: 20rpx;
+}
+.justify-4em{
+  display: inline-block;
+  vertical-align: top;
+  width: 4em;
+  text-align:justify;
+  text-align-last:justify;
+}

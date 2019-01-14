@@ -1,0 +1,84 @@
+<!--pages/record/check-record/check-record.wxml-->
+<import src="../../template/empty.wxml" />
+<import src="../../../utils/toast/index.wxml" />
+<view class="zan-row" class='tab-wrapper' style='margin-top:2rpx'>
+  <view class="zan-col zan-col-12 text-center tab-item" style='border-right:1px dashed #d2d2d2' bindtap='select' data-tab="0">
+    <text>门诊病人</text>
+    <view class='tab-select-line' hidden='{{selectIndex != 0}}'></view>
+  </view>
+  <view class="zan-col zan-col-12 text-center tab-item" bindtap='select' data-tab="1">
+    <text>住院病人</text>
+    <view class='tab-select-line' hidden='{{selectIndex == 0}}'></view>
+  </view>
+</view>
+
+<view hidden="{{selectIndex!=0}}">
+  <navigator url="./../../center/member-list/member-list?isSelect=true" class="banner-reg-recond" style='margin-top:10px;'>
+    <block wx:if="{{!member}}">
+      <text class='h4'>选择就诊人</text>
+    </block>
+    <block wx:else>
+      <text class='h4'>{{member.name}}</text>{{member.sex == 'MALE' ? '男': '女'}}
+      <text class='muted-txt'></text>{{member.medicalCardNo}}
+    </block>
+      <image src='../../../style/svg/arrow.svg' class='image-arrow'></image>
+
+  </navigator>
+</view>
+<view  hidden="{{selectIndex!=1}}">
+  <view class='control-item-list' style='margin:16rpx 0'>
+    <view class='control-item' style='border-bottom:1px solid #f4f4f4'>
+      <input type="number" class='input-text' placeholder='输入住院号' bindinput="blur" value='{{inpatientNo}}'></input>
+    </view>
+  </view>
+</view>
+
+ <view class='zan-row bg-light zan-cell ' style='margin:10px 0px;height:60rpx'>
+<view class='zan-col zan-col-6'>
+<text>报告单</text>
+</view>
+<view class='zan-col zan-col-16'>
+<radio-group class="radio-group" bindchange="radioChange">
+<li>
+ <radio value="0"  checked="checked"/>
+  <text>检查单</text> 
+</li>
+<li style = "margin-left:50rpx;">
+ <radio value="1" />
+  <text>检验单</text>
+</li>
+</radio-group>
+</view>
+</view> 
+
+<view class='zan-row bg-light' style='height:88rpx'>
+  <view class='zan-col zan-col-10'>
+    <view class='time-wrapper'>
+      <picker mode="date" value="{{beginDate}}"  bindchange="bindDateChange" data-id='beginDate'>
+        <view class="picker">
+          {{beginDate}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='zan-col zan-col-3 text-center' style='line-height:88rpx'>至</view>
+  <view class='zan-col zan-col-10'>
+    <view class='time-wrapper'>
+      <picker mode="date" value="{{endDate}}" bindchange="bindDateChange"  end="{{endTime}}" data-id='endDate'>
+        <view class="picker">
+          {{endDate}}
+        </view>
+      </picker>
+    </view>
+  </view>
+</view>
+
+  <view class='title' hidden="{{selectIndex!=1}}"> 检查/检验报告不支持住院病人查看当天数据 </view>
+  <view class='zan-row' style='margin:20px'>
+    <button class="zan-btn zan-btn--primary" type="theme-1" style='height:70rpx;line-height:70rpx;margin:10rpx'
+    bindtap='loadData'>确定</button>
+  </view>
+
+
+
+  <template is="zan-toast" data="{{ zanToast }}"></template>

@@ -1,0 +1,16 @@
+  <block wx:if="{{accounts && accounts.length > 0}}">
+    <view style='height:40rpx'></view>
+    <view class='am-panel am-panel-per' wx:for="{{accounts}}" bindtap='chooseMember' data-id="{{item.id}}" data-medical-card-no="{{item.medicalCardNo}}">
+      <member-card item="{{item}}"></member-card>
+    </view>
+  </block>
+ <view class="am-btn"  bindtap='showPage' data-url="../member-info/member-info" style='font-size:36rpx'>＋就诊人
+    <!-- <text class='am-ft-sm'>（可添加3人）</text> -->
+  </view>
+
+  <!--<view class='model' bindtap='hideModel' wx:if="{{showModel}}">
+    <view class='model-content'>
+      <view class='select-member-type' bindtap='selectMemeberType' data-type="adult">成人</view>
+      <view class='select-member-type' bindtap='selectMemeberType' data-type="children">儿童</view>
+    </view>
+  </view>-->

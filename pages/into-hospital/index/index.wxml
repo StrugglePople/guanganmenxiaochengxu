@@ -1,0 +1,77 @@
+<!--pages/into-hospital/index/index.wxml-->
+  <view class='index-bd' style='background:#fff'>
+    <ul class="wx-row per-menu-list">
+      <li bindtap="toHospitalView" data-type="HOSPITAL_INFO">
+        <image src="/style/image/hosipital/jianjie.png"></image>
+        <text class='txt'>医院简介</text>
+      </li>
+      <li bindtap="toHospitalView" data-type="TRAFFIC">
+        <image src="/style/image/hosipital/jiaotong.png"></image>
+        <text class='txt'>医院交通</text>
+      </li>
+      <li bindtap="toHospitalView" data-type="WEBSITE">
+        <image src="/style/image/hosipital/guanwang.png"></image>
+        <text class='txt'>医院官网</text>
+      </li>
+      <li bindtap="toHospitalView" data-type="PHONE_NUMBER">
+        <image src="/style/image/hosipital/dianhua.png"></image>
+        <text class='txt'>医院电话</text>
+      </li>
+    </ul>
+    <view class='thumbnail-h-list-cont'>
+      <view class="thumbnail-h-list wx-row">
+        <navigator class="wx-col left" url='/pages-hospital/yuannei-daohang/yuannei-daohang'>
+          <image class='img-notice-bell' src="/style/svg/enter-hospital/yuannei.png"></image>
+          <view class='right-txt'>院内导航</view>
+          <view class="division"></view>
+        </navigator>
+        <navigator class="wx-col" url='/pages-hospital/yuanwai-daohang/yuanwai-daohang'>
+          <image class='img-notice-bell' src="/style/svg/enter-hospital/yuanwai.png"></image>
+          <view class='right-txt'>院外导航</view>
+        </navigator>
+      </view>
+    </view>
+
+    <!-- panel-->
+    <view class='h4-icon'>
+      <image src="/style/svg/enter-hospital/expert-little.png" class='i-information'></image>
+      专家介绍
+      <navigator url="/pages-index/clinic/dept-expert/dept-expert?type=introduce" class="right">更多</navigator>
+      <!--<image src="/style/image/i-angle-r.png" class='i-angle'></image>-->
+    </view>
+    <view class='am-shadow-panel'>
+      <view class="per-list-cont">
+        <ul class="per-list">
+          <li wx:for="{{expertList}}"  wx:for-item="item" data-id="{{item.id}}"  bindtap = "toDoctorDetialView">
+             <image src="{{item.picName}}" style="border-radius: 92rpx" class='img-face-lg' wx:if="{{item.picName}}"></image>
+      <image src='/style/svg/expert.svg' class='img-face-lg' wx:else></image>
+            <text class='txt-h4'>{{item.name}}</text>
+            <text class='txt-p'>{{item.underDepts[0].name}}</text>
+          </li>
+        </ul>
+      </view>
+    </view>
+
+    <!-- panel end-->
+    <view class='interval'></view>
+    <!-- panel-->
+    <view class='h4-icon'>
+      <image src="/style/svg/enter-hospital/news-little.png" class='i-information'></image>
+      医院新闻
+      <navigator url="/pages/cms-about/news-list/news-list?title=最新消息" class="right">更多</navigator>
+      <!--<image src="/style/image/i-angle-r.png" class='i-angle'></image>-->
+    </view>
+    <view class='am-shadow-panel'>
+      <view class="news-link-items"  wx:for="{{hosptialNew}}" wx:for-index="newsId" wx:for-item="item" data-news-id="{{item.id}}" data-name = "{{item.title}}" bindtap="toDetialView">
+        <view class='news-link-item'>
+          <view class='am-flex-item'>
+            <view class='am-flex-title'>{{item.title}}</view>
+            <view class='am-flex-after'>{{item.publishTime}}</view>
+          </view>
+          <image src="/style/image/i-angle-r.png" class='i-angle'></image>
+        </view>
+      </view>
+    </view>
+    <!-- panel end-->
+    <view style='height: 10px'></view>
+  </view>

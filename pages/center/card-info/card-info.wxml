@@ -1,0 +1,37 @@
+<!--pages/center/card-info/card-info.wxml-->
+<view class='index-bd' style='padding-bottom: 0;'>
+  <form bindsubmit="formSubmit">
+    <view class='bg-light'>
+      <!-- <view class='control-item' wx:if="{{isUpdate}}">
+        <input type="number" class='input-text' placeholder='输入门诊号' name="medicalCardNo"
+        value="{{member.medicalCardNo}}"></input>
+      </view> -->
+
+      <view class="list-item wx-row item-bot-line">
+        <view class="lable">姓　名</view>
+        <view class="lable-input">
+          {{member.name}}
+        </view>
+      </view>
+      <view class="list-item wx-row item-bot-line">
+        <view class="lable">证件号</view>
+        <view class="lable-input">
+          {{member.idNo}}
+        </view>
+      </view>
+      <view class="list-item wx-row item-bot-line">
+        <view class="lable">就诊卡号</view>
+        <view class="lable-input">
+          <input name='medicalCardNo' value="{{card.medicalCardNo}}" placeholder="请输入就诊卡号"></input>
+        </view>
+      </view>
+      
+      
+
+    </view>
+
+    <button class='am-btn' formType="submit">{{buttonName}}</button>
+  </form>
+
+
+</view>

@@ -1,0 +1,60 @@
+/* pages/center/member-info/member-info.wxss */
+page{
+  background: #EEEEEE;
+}
+.control-item-list{
+  background-color: #ffffff;
+}
+.list-item{
+  padding: 25rpx 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+.list-item .lable{
+  width: 150rpx;
+  color: #888888;
+}
+.list-item .lable-input{
+  width: 540rpx;
+  color: #333333;
+}
+.select-sex{
+  width: 260rpx;
+  border: 1px solid #B79153;
+  height: 100%;
+  border-radius: 30rpx;
+  text-align: center;
+  overflow: hidden;
+}
+.select-sex .wx-col.active{
+  background-color: #B79153;
+}
+.picker{
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.card-list{
+  height: 100rpx;
+}
+.icon-content .left-icon{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  background-color: #79BDAE;
+  text-align: center;
+  font-size: 24rpx;
+}
+.icon-content .left-icon .content{
+  line-height:32rpx;
+  height:auto;
+  transform:translate(0,-50%);
+  margin:47rpx auto;
+  font-size:24rpx;
+
+
+}
+.icon-content .right-content{
+  line-height:45rpx;
+  margin-left:30rpx;
+}

@@ -1,0 +1,7 @@
+/* pages/index/medical-tools/check-test/check-test-analysis/check-test-analysis.wxss */
+.search-bar {
+background:#fff;
+height:100rpx;
+border:0 solid #e5e5e5;
+border-bottom-width:1px;
+}

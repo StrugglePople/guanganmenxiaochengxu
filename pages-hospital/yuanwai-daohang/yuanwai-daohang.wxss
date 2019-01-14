@@ -1,0 +1,5 @@
+/* pages/into-hospital/yuanwai-daohang/yuanwai-daohang.wxss */
+.page-body{
+    width: 100%;
+    height: 100%;
+}

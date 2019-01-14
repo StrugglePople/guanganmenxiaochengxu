@@ -1,0 +1,17 @@
+<!--pages/index/diagnose/disease/disease.wxml-->
+<view class="zan-panel">
+  <view class="zan-panel-title" style='padding:15px'>可能病因</view>
+  <view class="zan-panel-title" style='padding:0 15px 15px'>以下数据只提供参考，紧急情况，需及时去医院就诊</view>
+</view>
+
+<view class="zan-panel">
+  <view class="zan-cell zan-cell--access" wx:for="{{list}}" bindtap='showDetailView' data-index="{{index}}">
+    <view class="zan-cell__bd">
+      <view class='zan-row'>
+        <view class='zan-col zan-col-3' style='color:red'>{{item.matchDegree}}%</view>
+        <view class='zan-col zan-col-21'>{{item.name}}</view>
+      </view>
+      <view class="zan-cell__ft"></view>
+    </view>
+  </view>
+</view>

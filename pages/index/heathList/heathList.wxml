@@ -1,0 +1,41 @@
+<!--pages/index/heathList/heathList.wxml-->
+<view class="containerView">
+   <navigator class='am-flex-item item-img-txt link-active' url='../medical-tools/bmi/bmi-calculator/bmi-calculator'>
+        <view class='am-flex-title'>
+          <image class='i-item' src="../../../style/image/knowledge-repository/bmi.png"></image>
+          BMI计算器
+        </view>
+        <view class='am-flex-after'>
+          <i class="i-item-angle"></i>
+        </view>
+      </navigator>
+      <navigator class='am-flex-item item-img-txt link-active' url='../medical-tools/hepatitis-b/hepatitis-b-self-test/hepatitis-b-self-test'>
+        <view class='am-flex-title'>
+          <image class='i-item' src="../../../style/image/knowledge-repository/ygzc.png"></image>
+          乙肝自测
+        </view>
+        <view class='am-flex-after'>
+          <i class="i-item-angle"></i>
+        </view>
+      </navigator>
+          <navigator class='am-flex-item item-img-txt link-active' url='../medical-tools/check-test/check-test-list/check-test-list'>
+        <view class='am-flex-title'>
+          <image class='i-item' src="../../../style/image/knowledge-repository/hydjd.png"></image>
+          检验单解读
+        </view>
+        <view class='am-flex-after'>
+          <i class="i-item-angle"></i>
+        </view>
+      </navigator>
+
+<navigator class='am-flex-item item-img-txt link-active' url='../medical-tools/baby-blood/baby-blood'>
+        <view class='am-flex-title'>
+          <image class='i-item' src="../../../style/image/knowledge-repository/xxzc.png"></image>
+          宝宝血型
+        </view>
+        <view class='am-flex-after'>
+          <i class="i-item-angle"></i>
+        </view>
+ </navigator>
+</view>
+ 

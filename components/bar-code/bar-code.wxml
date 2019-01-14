@@ -1,0 +1,4 @@
+<!--components/bar-code.wxml-->
+<view>
+    <canvas canvas-id="barcode" />
+</view>

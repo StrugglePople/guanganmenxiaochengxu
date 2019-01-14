@@ -1,0 +1,12 @@
+<!--components/medical-card/medical-card.wxml-->
+<!--components/member-card/member-card.wxml-->
+<view class='bd member-body'>
+  <view class='name'>{{item.cardTypeVO.name}}</view>
+  <view class='h4'>{{item.name}}
+    
+  </view>
+  <view class='p'>
+    <i class="i-phone-sm"></i>{{item.medicalCardNo}}
+  </view>
+
+</view>

@@ -1,0 +1,91 @@
+<!--pages/record/appointment-record-detail/appointment-record-detail.wxml-->
+<!-- 预约详情 -->
+<view class='am-panel fee-panel'>
+  <view class='bd'>
+
+    <view class='form-fee-item am-flex-item'>
+      <view class='form-fee-label form-fee-label'>科室</view>
+      <view class='am-flex-after'>
+        <text>{{data.dept.deptName}}</text>
+      </view>
+    </view>
+    <!-- form-fee-item end-->
+    <!-- form-fee-item -->
+    <view class='form-fee-item am-flex-item'>
+      <view class='form-fee-label form-fee-label'>科室位置</view>
+
+      <view class='am-flex-after'>
+        <text class='am-mr-5'>{{data.dept.location}}</text>
+      </view>
+    </view>
+    <!-- form-fee-item end-->
+    <view class='form-fee-item am-flex-item' wx:if="{{data.doctor}}">
+      <view class='form-fee-label form-fee-label'>医生</view>
+      <view class='am-flex-after'>
+        <text>{{data.doctor.name}}</text>
+      </view>
+    </view>
+    <!-- form-fee-item -->
+    <view class='form-fee-item am-flex-item'>
+      <view class='form-fee-label form-fee-label'>就诊日期</view>
+      <view class='am-flex-after'>
+        <text>{{data.regDate}}</text>
+        <text wx:if="{{data.regTime=='MORNING'}}">上午</text>
+        <text wx:elif="{{data.regTime=='AFTERNOON'}}">下午</text>
+        <text wx:else>晚上</text>
+        <text wx:if="{{data.visitTime}}">\t{{data.visitTime}}</text>
+
+      </view>
+    </view>
+    <!-- form-fee-item end-->
+    <!-- form-fee-item -->
+    <view class='form-fee-item am-flex-item'>
+      <view class='form-fee-label form-fee-label'>门诊号</view>
+      <view class='am-flex-after'>
+        <text>{{data.medicalCardNo}}</text>
+      </view>
+    </view>
+    <!-- form-fee-item end-->
+    <view class='form-fee-item am-flex-item'>
+      <view class='form-fee-label form-fee-label'>预约状态</view>
+      <view class='am-flex-after'>
+        <text class='am-txt-muted txt-rsmall' wx:if="{{data.status=='PASS'}}">预约成功</text>
+        <text class='am-txt-danger txt-rsmall' wx:elif="{{data.status=='UNPASS'}}">预约失败</text>
+        <text class='am-txt-muted txt-rsmall' wx:elif="{{data.status=='CANCELLED'}}">已撤销</text>
+        <text class='am-txt-muted txt-rsmall' wx:elif="{{data.status=='RETURNED'}}">已退号</text>
+        <text class='am-txt-danger txt-rsmall' wx:elif="{{data.status=='APPOINTTING' && data.timeoutSec > 0}}">待支付</text>
+        <text class='am-txt-muted txt-rsmall' wx:elif="{{data.status=='EXPIRED'}}">已过期</text>
+        <text wx:else></text>
+      </view>
+    </view>
+  </view>
+  <view class='ft b-sh-t'>
+    <!-- form-fee-item -->
+    <view class='form-fee-item am-flex-item'>
+      <view class='am-flex-title form-fee-label'>交易单号</view>
+      <view class='am-flex-after'>{{data.zhpTradeId}}</view>
+    </view>
+    <!-- form-fee-item end-->
+  </view>
+</view>
+<view class="zan-btns">
+  <button class="am-btn" wx:if="{{(data.status === 'PASS' || data.canCancel === 1)}}" bindtap='cancelRecord'>
+    取消预约
+  </button>
+  <!-- <button class="am-btn" wx:if="{{!(data.status === 'APPOINTTING' || data.canCancel === 1) && (data.status === 'CANCELLED' || data.canDelete === 1)}}" bindtap='deleteRecord'>
+    删除记录
+  </button> -->
+</view>
+
+<view class='model' wx:if="{{isCancelRecord}}">
+  <view class="confirm-modal">
+    <view class="modal-notice-txt">输入验证码取消预约</view>
+    <view class='input-wrapper'>
+      <input class="pw-input" type="number" value='{{verCode}}' placeholder='请输入验证码' bindinput='getVerCode' focus='{{isCancelRecord}}'></input>
+    </view>
+    <view class="btn-wrapper">
+      <view class="btn" bindtap='cancelCancelRecord'>取消</view>
+      <view class="btn confirm-btn" bindtap='confirmCancelRecord'>确认</view>
+    </view>
+  </view>
+</view>

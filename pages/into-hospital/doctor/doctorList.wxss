@@ -1,0 +1,13 @@
+.search-rcont{
+top:0rpx;
+right:0px; 
+}
+.search-lside{
+  top: 0px
+}
+.search-lside {
+  width: 280rpx;
+}
+.search-rcont {
+  left: 280rpx;
+}

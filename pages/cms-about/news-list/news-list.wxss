@@ -1,0 +1,102 @@
+/* pages/into-hospital/moreInfo.wxss */
+
+.loading{  
+  padding: 10rpx;  
+  text-align: center;  
+}  
+.loading:before{  
+  display: inline-block;  
+  margin-right: 5rpx;  
+  vertical-align: middle;  
+  content: '';  
+  width: 40rpx;  
+  height: 40rpx;  
+  background-size: contain;  
+  animation: rotate 1s linear infinite;  
+}  
+.loading.complete:before{  
+  display: none;  
+}  
+
+.img-face-lg{
+  width:120rpx;
+  height:120rpx;
+
+}
+
+.item-img-multitxt{
+  height: 80px
+}
+
+.news-imgtxt-list{
+  position: relative;
+}
+.news-imgtxt-list::before{
+  content: "";
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-top: 1rpx solid #E5E5E5;
+  pointer-events: none;
+}
+.news-imgtxt-list::after{
+  content: "";
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 1rpx solid #E5E5E5;
+  pointer-events: none;
+}
+.news-imgtxt-list .news-imgtxt:first-child::before{
+  display: none;
+}
+.news-imgtxt{
+  position: relative;
+  padding: 30rpx 240rpx 30rpx 24rpx;
+}
+.news-imgtxt::before{
+    content: "";
+    position: absolute;
+    z-index: 10;
+    left: 24rpx;
+    right: 0;
+    top: 0;
+    border-top: 1rpx solid #E5E5E5;
+    pointer-events: none;
+}
+.news-imgtxt-img{
+  position: absolute;
+  right: 24rpx;
+  top: 30rpx;
+}
+.news-imgtxt-img image{
+  width: 192rpx;
+  height: 136rpx
+}
+.news-imgtxt-txt .h5, .news-imgtxt-txt .h6{
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.news-imgtxt-txt .h5{
+  font-size: 17px;
+  line-height: 48rpx;
+}
+.news-imgtxt-txt .h6{
+  font-size: 14px;
+  color: #888;
+  line-height: 28rpx;
+  margin-top: 8rpx;
+}
+.news-imgtxt-txt .time{
+  display: block;
+  margin-top: 20rpx;
+  line-height: 34rpx;
+  font-size: 12px;
+  color: #a5a5a5;
+}

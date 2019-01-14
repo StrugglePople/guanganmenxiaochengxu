@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="165px" height="80px" viewBox="0 0 165 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>image/department</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-2.48949813e-15%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#53DB92" offset="0%"></stop>
+            <stop stop-color="#28CCC1" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="165" height="80" rx="14"></rect>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="50%" x2="50%" y2="50%" id="linearGradient-5">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#E6FFF9" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="-5.72118873e-16%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#53DB92" offset="0%"></stop>
+            <stop stop-color="#28CCC1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="image/department">
+            <g id="image/hospital">
+                <g id="Rectangle-2-+-Rectangle-2-Copy-Mask">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <rect id="Rectangle-2" fill="url(#linearGradient-4)" style="mix-blend-mode: soft-light;" opacity="0.200000003" mask="url(#mask-3)" transform="translate(145.635669, 27.635669) rotate(-315.000000) translate(-145.635669, -27.635669) " x="139.635669" y="-13.9323503" width="12" height="83.136039" rx="6"></rect>
+                    <rect id="Rectangle-2-Copy-3" fill="url(#linearGradient-4)" style="mix-blend-mode: soft-light;" opacity="0.200000003" mask="url(#mask-3)" transform="translate(20.635669, 47.635669) rotate(-315.000000) translate(-20.635669, -47.635669) " x="14.6356691" y="6.06764966" width="12" height="83.136039" rx="6"></rect>
+                    <rect id="Rectangle-2-Copy" fill="url(#linearGradient-4)" style="mix-blend-mode: soft-light;" opacity="0.200000003" mask="url(#mask-3)" transform="translate(69.892659, 80.892659) rotate(-315.000000) translate(-69.892659, -80.892659) " x="54.8926586" y="-8.60734137" width="30" height="179" rx="15"></rect>
+                    <rect id="Rectangle-2-Copy-2" fill="url(#linearGradient-4)" style="mix-blend-mode: soft-light;" opacity="0.200000003" mask="url(#mask-3)" transform="translate(54.749630, 13.749630) rotate(-315.000000) translate(-54.749630, -13.749630) " x="39.7496302" y="-37.3643309" width="30" height="102.227922" rx="15"></rect>
+                    <circle id="Oval" fill="url(#linearGradient-5)" mask="url(#mask-3)" cx="67.5" cy="23.5" r="3.5"></circle>
+                    <circle id="Oval-Copy" fill="url(#linearGradient-5)" mask="url(#mask-3)" cx="13" cy="43" r="2"></circle>
+                    <path d="M40,18 L38,18 C36.3431458,18 35,16.6568542 35,15 C35,13.3431458 36.3431458,12 38,12 L47,12 C48.6568542,12 50,13.3431458 50,15 C50,16.6568542 48.6568542,18 47,18 L45,18 L45,21.1373219 C56.2498761,22.3809327 65,31.9186159 65,43.5 C65,55.9264069 54.9264069,66 42.5,66 C30.0735931,66 20,55.9264069 20,43.5 C20,31.9186159 28.7501239,22.3809327 40,21.1373219 L40,18 Z" id="Combined-Shape" fill="url(#linearGradient-5)" fill-rule="nonzero" mask="url(#mask-3)"></path>
+                    <path d="M54.5355482,32.9623695 L47.0912128,46.688901 C46.998892,46.8591304 46.8591304,46.998892 46.688901,47.0912128 L32.9623695,54.5355482 C32.4768853,54.7988418 31.869881,54.6187207 31.6065874,54.1332364 C31.4453167,53.8358711 31.4453167,53.4771314 31.6065874,53.1797661 L39.0509228,39.4532346 C39.1432436,39.2830052 39.2830052,39.1432436 39.4532346,39.0509228 L53.1797661,31.6065874 C53.6652503,31.3432938 54.2722547,31.523415 54.5355482,32.0088992 C54.6968189,32.3062646 54.6968189,32.6650042 54.5355482,32.9623695 Z M42.8140751,45.2526233 C43.9186446,45.2526233 44.8140751,44.3571928 44.8140751,43.2526233 C44.8140751,42.1480538 43.9186446,41.2526233 42.8140751,41.2526233 C41.7095056,41.2526233 40.8140751,42.1480538 40.8140751,43.2526233 C40.8140751,44.3571928 41.7095056,45.2526233 42.8140751,45.2526233 Z" id="Combined-Shape" fill="url(#linearGradient-6)" mask="url(#mask-3)"></path>
+                </g>
+                <text id="就医指南" font-family="PingFangSC-Medium, PingFang SC" font-size="18" font-weight="400" letter-spacing="-0.787499905" fill="#FFFFFF">
+                    <tspan x="81" y="47">就医指南</tspan>
+                </text>
+            </g>
+            <path d="M42.5,20 C43.3284271,20 44,20.6715729 44,21.5 L44,24.5 C44,25.3284271 43.3284271,26 42.5,26 C41.6715729,26 41,25.3284271 41,24.5 L41,21.5 C41,20.6715729 41.6715729,20 42.5,20 Z M65,42.5 C65,43.3284271 64.3284271,44 63.5,44 L60.5,44 C59.6715729,44 59,43.3284271 59,42.5 C59,41.6715729 59.6715729,41 60.5,41 L63.5,41 C64.3284271,41 65,41.6715729 65,42.5 Z M42.5,65 C41.6715729,65 41,64.3284271 41,63.5 L41,60.5 C41,59.6715729 41.6715729,59 42.5,59 C43.3284271,59 44,59.6715729 44,60.5 L44,63.5 C44,64.3284271 43.3284271,65 42.5,65 Z M20,42.5 C20,41.6715729 20.6715729,41 21.5,41 L24.5,41 C25.3284271,41 26,41.6715729 26,42.5 C26,43.3284271 25.3284271,44 24.5,44 L21.5,44 C20.6715729,44 20,43.3284271 20,42.5 Z" id="Rectangle-15" fill="url(#linearGradient-6)"></path>
+        </g>
+    </g>
+</svg>

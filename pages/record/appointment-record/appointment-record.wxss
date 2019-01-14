@@ -1,0 +1,6 @@
+/* pages/record/appointment-record/appointment-record.wxss */
+.am-panel-block {
+  background: #fff;
+  margin-top: 20rpx;
+  width: 100%;
+}

@@ -1,0 +1,25 @@
+/* pages/index/clinic/clinic-note/clinic-note.wxss */
+page {
+  background: #fff
+}
+.h3-intro {
+  position: relative;
+  line-height: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  margin: 28rpx 0 10rpx 0;
+}
+.h3-intro .h3 {
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 44rpx;
+  background: #fff;
+  padding: 0 24rpx;
+}
+.am-btn{
+  margin-top: 0;
+  margin-bottom: 0;
+
+}

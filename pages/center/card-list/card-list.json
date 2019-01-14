@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "就诊卡列表",
+  "usingComponents": {
+    "medical-card": "/components/medical-card/medical-card"
+  }
+}

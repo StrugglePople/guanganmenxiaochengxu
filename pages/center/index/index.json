@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "usingComponents": {
+    "my-component": "/components/bar-code/bar-code",
+    "member-card": "/components/member-card/member-card"
+  }
+}

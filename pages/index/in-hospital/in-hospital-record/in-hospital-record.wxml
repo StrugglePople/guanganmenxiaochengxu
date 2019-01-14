@@ -1,0 +1,60 @@
+<!--pages/index/in-hospital/in-hospital-record/in-hospital-record.wxml-->
+<import src="../../../../utils/toast/index.wxml" />
+<import src="../../../template/empty.wxml" />
+<view class="b-t"></view>
+<view class='zan-row bg-light' style='height:88rpx'>
+  <view class='zan-col zan-col-24'>
+    <view class='time-wrapper'>
+      <picker mode="date" value="{{beginDate}}" bindchange="bindDateChange" data-id='beginDate' end="{{endDate}}">
+        <view class="picker">
+          {{beginDate}}
+        </view>
+      </picker>
+    </view>
+  </view>
+</view>
+<block wx:if="{{data}}">
+  <view class='item-top-fee am-flex-item'>
+    <view class='am-flex-title'>
+      <view class='h5'>自费 {{data.totalSelfFee}}</view>
+      <view class='p'>医保费用 {{data.totalMedicalFee}}</view>
+    </view>
+    <view class='am-flex-after'>
+      <text class='rmb-fee-unit'>¥</text>
+      <text class='rmb-fee-value'>{{data.totalFee}}</text>
+    </view>
+  </view>
+  <view style='background:#fff'  wx:for="{{data.feeItems}}">
+    <view style='height: 30rpx;background: #f4f4f4;'></view>
+    <view class='zan-row bottom-line' style='color:#888; line-height:72rpx;padding:0 20rpx'>
+      <view class='zan-col zan-col-12'>项目名称</view>
+      <view class='zan-col zan-col-6 text-center'>单价/数量</view>
+      <view class='zan-col zan-col-6 text-right'>金额</view>
+    </view>
+    <view class='bottom-line' wx:for="{{item.feeDetailItem}}" wx:for-item="item2" style='padding: 10rpx 0'>
+      <view class='zan-row' style='line-height:56rpx;padding:0 20rpx'>
+        <view class='zan-col zan-col-12'>{{item2.feeItemDetail}}</view>
+        <view class='zan-col zan-col-6 text-center'>{{item2.price}}/{{item2.num}}</view>
+        <view class='zan-col zan-col-6 text-right'>¥{{item2.fee}}</view>
+      </view>
+      <view class='zan-row' style='line-height:56rpx;padding:0 20rpx; color: #888;'>
+        <view class='zan-col zan-col-8 zan-col-offset-8 text-right'>医保费用 {{item2.medicalFee}}</view>
+        <view class='zan-col zan-col-8 text-right'>自费 {{item2.selfFee}}</view>
+      </view>
+    </view>
+    <view  style='padding: 10rpx 0; color: #888; font-size:34rpx'>
+      <view class='zan-row' style='line-height:56rpx;padding:0 20rpx'>
+        <view class='zan-col zan-col-18'>{{item.deptName}}</view>
+        <view class='zan-col zan-col-6 text-right'>¥{{item.totalFee}}</view>
+      </view>
+      <view class='zan-row' style='line-height:56rpx;padding:0 20rpx'>
+        <view class='zan-col zan-col-12'>医保费用 {{item.totalMedicalFee}}</view>
+        <view class='zan-col zan-col-12 text-right'>自费 {{item.totalFee - item.totalMedicalFee}}</view>
+      </view>
+    </view>
+  </view>
+</block>
+<block wx:if="{{!data}}">
+  <template is="empty" data="{{text: '没有记录'}}"></template>
+</block>
+<template is="zan-toast" data="{{ zanToast }}"></template>

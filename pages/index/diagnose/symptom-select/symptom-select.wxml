@@ -1,0 +1,14 @@
+<!--pages/index/diagnose/symptom-select/symptom-select.wxml-->
+<view class="zan-panel">
+  <view class="zan-cell zan-cell--access" wx:for="{{list}}" bindtap='checkboxChange' data-index="{{index}}">
+    <view class="zan-cell__bd">{{item.syspmtomName}}</view>
+    <checkbox value="{{item.syspmtomName}}" checked="{{item.checked}}"/>
+  </view>
+</view>
+<view class="zan-panel">
+  <view class="zan-panel-title" style='padding:15px'>可以返回前面流程继续添加症状</view>
+</view>
+<view style='padding-bottom: 50px'></view>
+<view class='index-ft'>
+  <view class='am-btn-block-success' bindtap='showDiseaseView'>下一步</view>
+</view>

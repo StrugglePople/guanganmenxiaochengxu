@@ -1,0 +1,61 @@
+<!--pages/record/appointment-record/appointment-record.wxml-->
+<import src="../../template/empty.wxml" />
+<navigator url="/pages/center/member-list/member-list?isSelect=true" class="banner-reg-recond">
+  <image class="navigator-background" src='/style/image/record/select-member-bg.png'></image>
+  <view class="navigator-info" wx:if="{{!member}}">
+    <text class='h4'>选择就诊人</text>
+  </view>
+  <view class="navigator-info" wx:else>
+    <text class='h4'>{{member.name}}</text>{{member.sex == 'MALE' ? '男': '女'}}
+    <text class='muted-txt'></text>{{member.mobileNo}}
+  </view>
+</navigator>
+
+
+
+<block wx:if="{{list && list.length > 0}}">
+  <view class='am-panel-block rgrecond-item-list' wx:for="{{list}}" bindtap='showDetail' data-id='{{item.zhpTradeId}}'>
+    <view class='rgrecond-item am-flex-item'>
+
+      <view class='am-flex-title'>
+        <text class='h5-lg'>{{item.dept.deptName}} | <block wx:if="{{item.doctor}}">{{item.doctor.name}}</block><block wx:else>普通</block>
+        </text>
+      </view>
+      <view class='am-flex-after'>
+        <text class='h5 am-txt-danger'>¥{{item.regFee}}元</text>
+      </view>
+    </view>
+    <view class='rgrecond-item am-flex-item'>
+      <view class='am-flex-title'>
+        <view class='h5'>{{item.patient.name}}</view>
+        <view class='p'>{{item.regDate}}
+          <text wx:if="{{item.regTime=='MORNING'}}">上午</text>
+          <text wx:elif="{{item.regTime=='AFTERNOON'}}">下午</text>
+          <text wx:else>晚上</text>
+          <text wx:if="{{item.visitTime}}">\t{{item.visitTime}}</text>
+        </view>
+      </view>
+      <view class='am-flex-after'>
+        <!-- <text class='plain-auxiliary'>取消预约</text> -->
+        <text class='am-txt-muted txt-rsmall' wx:if="{{item.status=='PASS'}}">预约成功</text>
+        <text class='am-txt-danger txt-rsmall' wx:elif="{{item.status=='UNPASS'}}">预约失败</text>
+        <text class='am-txt-muted txt-rsmall' wx:elif="{{item.status=='CANCELLED'}}">已撤销</text>
+        <text class='am-txt-muted txt-rsmall' wx:elif="{{item.status=='RETURNED'}}">已退号</text>
+        <text class='am-txt-danger txt-rsmall' wx:elif="{{item.status=='APPOINTTING'}}">待支付</text>
+        <text class='am-txt-muted txt-rsmall' wx:elif="{{item.status=='EXPIRED'}}">已过期</text>
+        <text wx:else></text>
+      </view>
+    </view>
+  </view>
+  <view hidden="{{!hasMore}}">
+    <button class="zan-btn" hidden='{{isLoading}}' bindtap='loadMore'>加载更多</button>
+    <view class="zan-loadmore" hidden='{{!isLoading}}'>
+      <view class="zan-loading"></view>
+      <view class="zan-loadmore__tips">加载中...</view>
+    </view>
+  </view>
+
+</block>
+<block wx:else>
+    <template is="empty" data="{{text: '没有记录'}}"></template>
+</block>

@@ -1,0 +1,17 @@
+/* pages/center/member-list/member-list.wxss */
+.am-panel{
+  margin: 40rpx 24rpx 0 24rpx;
+  background: #FFFFFF;
+  box-shadow: 0 12rpx 36rpx 0 rgba(0,0,0,0.10);
+  border-radius: 28rpx;
+}
+.am-panel.first{
+  margin-top: 0;
+}
+.am-panel-per{
+  padding: 0 20rpx;
+}
+.am-panel-per .bd{
+  position: relative;
+  padding: 32rpx 0 24rpx 130rpx;
+}

@@ -1,0 +1,4 @@
+/* pages/auth-setting/auth-setting.wxss */
+page{
+  background: #fff
+}

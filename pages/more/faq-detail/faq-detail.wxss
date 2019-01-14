@@ -1,0 +1,9 @@
+/* pages/more/faq-detail.wxss */
+  .faq-question, .faq-answer {
+    margin: 0 24px;
+    padding: 5px 0;
+    line-height: 20px;
+  }
+  .faq-question {
+    color: red;
+  }

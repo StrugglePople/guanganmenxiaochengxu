@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Overrides/choice_active</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Overrides/choice_active" stroke="#FF9F01">
+            <circle id="Oval-2" stroke-width="0.5" cx="15" cy="15" r="14.75"></circle>
+            <path d="M8.11138847,8.21220639 L8.11138847,14.8525156 C8.11138847,15.4048004 8.55910372,15.8525156 9.11138847,15.8525156 L22.381905,15.8525156" id="Path-3" stroke-width="2" stroke-linecap="round" transform="translate(15.246647, 12.032361) rotate(-45.000000) translate(-15.246647, -12.032361) "></path>
+        </g>
+    </g>
+</svg>

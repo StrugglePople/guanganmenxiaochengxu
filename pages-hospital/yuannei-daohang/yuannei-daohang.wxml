@@ -1,0 +1,12 @@
+<!--pages/into-hospital/yuannei-daohang/yuannei-daohang.wxml-->
+<view>
+    <view class="title">点击相应区域查看楼层信息{{options.scaledHeight}}</view>
+    <scroll-view class="map-view" style="height:{{options.scaledHeight}}px" scroll-x="true">
+        <image src="../images/hospital-building-nav.png" style="width:{{options.scaledWidth}}px;height:{{options.scaledHeight}}px"></image>
+        <view wx:for="{{options.areamap}}" style="position:absolute;top:{{item.coords[1]}}px;left:{{item.coords[0]}}px;width:{{item.coords[2]}}px;height:{{item.coords[3]}}px;"
+        bindtap="showDetail" data-id="{{item.id}}"
+        >
+        </view>
+    </scroll-view>
+</view>
+

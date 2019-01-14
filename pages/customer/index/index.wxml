@@ -1,0 +1,86 @@
+<!--pages/customer/index/index.wxml-->
+
+<scroll-view scroll-y="true" style="height: {{height}}px;" scroll-top="{{scrollTop}}">
+
+  <view>
+
+    <!-- 对话 -->
+    <view class="chat-kf-wrap">
+      <view class="chat-kf">
+
+        <view class="other-side clearfix">
+          <view class="tx">
+            <image src="/style/image/t-face.svg"></image>
+          </view>
+          <view class="txt">
+            <view class="ul clearfix">
+              <view class="arrow"></view>
+              <view class='li link-active'>
+                <text>有什么可以帮您?</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <block wx:for="{{list}}">
+          <block wx:if="{{item.type==0}}">
+            <view class="other-side clearfix">
+              <view class="tx">
+                <image src="/style/image/t-face.svg"></image>
+              </view>
+              <view class="txt">
+                <view class="ul clearfix">
+                  <view class="arrow"></view>
+                  <view class='li link-active' wx:for="{{item.data}}" wx:for-item="item1" wx:for-index="idx" bindtap='showDetail' data-id="{{item1.id}}" data-title="{{item1.question}}">
+                    <text><text wx:if="{{item.data.length > 1}}">{{idx + 1}}.</text> {{item1.question}}</text>
+                    <i class="i-item-angle" wx:if="{{item1.id > 0}}"></i>
+                  </view>
+                  <view class='li link-active' bindtap='call' data-title="4006898803" wx:if="{{item.isFirst}}">
+                    <text>人工客服\t\t4006898803</text>
+                    <i class="i-item-angle"></i>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </block>
+          <block wx:elif="{{item.type==1}}">
+            <view class="myself clearfix">
+              <view class="tx">
+                <image src="{{avatarUrl}}" style='border-radius:80rpx'></image>
+              </view>
+              <view class="txt">
+                {{item.question}}
+                <image class="arrow" src="/style/svg/myself-arrow.svg" width="12" height="2"></image>
+              </view>
+            </view>
+          </block>
+          <block wx:else>
+            <view class="other-side clearfix">
+              <view class="tx">
+                <image src="/style/image/t-face.svg"></image>
+              </view>
+              <view class="txt">
+                <view class="ul clearfix">
+                  <view class="arrow"></view>
+                  <view class='li' style='height:auto;line-height:40rpx;overflow:visible;white-space:normal;padding:16rpx'>
+                    <text>{{item.data}}</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </block>
+        </block>
+        
+      </view>
+    </view>
+    <!-- 对话 end -->
+  </view>
+  <view id="red" style='height:1px;width:100%'></view>
+
+</scroll-view>
+<view class="ft-kf clearfix" style='position:fixed'>
+  <view class="input-text" style='left:10px;right:10px;width:auto;position:absolute'>
+    <i></i>
+    <input type="text"  placeholder="写些什么吧…" confirm-type="send"  value="{{inputValue}}" bindconfirm="confirm" />
+  </view>
+</view>
+<!-- <view style='height:30rpx;background:#fff'></view> -->

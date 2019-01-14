@@ -1,0 +1,58 @@
+/* pages/index/in-hospital/in-hospital-info/in-hospital-info.wxss */
+
+.mask {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden
+}
+
+.recharge-wrapper {
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 540rpx;
+  z-index: 200
+}
+
+.money {
+  border: 1px solid #d2d2d2;
+  border-radius: 100px;
+  width: 200rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.money.active {
+  background: #ff9f01;
+  color: #fff;
+  border: 1px solid #ff9f01;
+}
+
+.input-wrapper {
+  margin: 0 30rpx;
+  border: 1px solid #d2d2d2;
+  border-radius: 100px;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding-left: 20rpx
+}
+.recharge-btn {
+  height: 98rpx;
+  line-height: 98rpx;
+  text-align: center;
+  color: #FF6987;
+  font-size: 36rpx;
+  border-top: 1px solid #d2d2d2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0
+}

@@ -1,0 +1,8 @@
+<!--pages/index/diagnose/diagnose-index/diagnose-index.wxml-->
+  <view class="zan-panel">
+
+    <view class="zan-cell zan-cell--access" wx:for="{{list}}" bindtap='showTwoPart' data-index='{{index}}'>
+      <view class="zan-cell__bd">{{item.partName}}</view>
+      <view class="zan-cell__ft"></view>
+    </view>
+  </view>

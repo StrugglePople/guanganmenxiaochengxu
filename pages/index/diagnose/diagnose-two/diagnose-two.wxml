@@ -1,0 +1,11 @@
+<!--pages/index/diagnose/diagnose-two/diagnose-two.wxml-->
+<view class="zan-panel">
+  <view class="zan-panel-title" style='padding:15px'>{{item.partName}}</view>
+  <view class="zan-panel-title" style='padding:0 15px 15px'>请选择与"{{item.partName}}"相关的症状</view>
+</view>
+<view class="zan-panel">
+  <view class="zan-cell zan-cell--access" wx:for="{{list}}" bindtap='showNext' data-index='{{index}}'>
+    <view class="zan-cell__bd">{{item.partName}}</view>
+    <view class="zan-cell__ft"></view>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<!--pages/index/diagnose/symptom/symptom.wxml-->
+
+
+
+<view class="zan-panel">
+  <view class="zan-panel-title" style='padding:15px'>{{item.partName}}</view>
+  <view class="zan-panel-title" style='padding:0 15px 15px'>请选择与"{{item.partName}}"相关的症状</view>
+</view>
+
+<view class="zan-panel">
+  <view class="zan-cell zan-cell--access" wx:for="{{list}}" bindtap='checkboxChange' data-index="{{index}}">
+    <view class="zan-cell__bd">{{item.syspmtomName}}</view>
+    <checkbox value="{{item.syspmtomName}}" checked="{{item.checked}}"/>
+  </view>
+</view>
+<view style='padding-bottom: 50px'></view>
+<view class='index-ft'>
+  <view class='am-btn-block-success' bindtap='showNext' bindtap='showNext'>下一步</view>
+</view>
