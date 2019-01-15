@@ -4,7 +4,7 @@
   <view class='tt clearfix'>
     <view class='pic'>
       <image src='{{doctor.src}}' style='border-radius: 140rpx' binderror='showHiddenDoctor' wx:if="{{hiddenDefaultDoctor}}"></image>
-      <image src='../../../../style/svg/expert.svg' wx:if="{{!hiddenDefaultDoctor}}"></image>
+      <image src='/style/svg/expert.svg' wx:if="{{!hiddenDefaultDoctor}}"></image>
     </view>
     <view class='txt'>
       <view class='name'>

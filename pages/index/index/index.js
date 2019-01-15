@@ -2,7 +2,8 @@ const commonJs = require('../../../utils/common.js');
 const loginExtentds = require('../../../utils/loginExtends.js');
 Page(Object.assign({}, loginExtentds, {
   data: {
-    isLoaded: false
+    isLoaded: false,
+    banners:[]
   },
   onLoad(options) {
     this.loadBanners();

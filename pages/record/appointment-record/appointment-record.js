@@ -85,6 +85,7 @@ Page({
       wx.stopPullDownRefresh();
     },()=>{
       this.setData({
+        list: this.data.list,
         hasMore: false,
         isLoading: false
       })

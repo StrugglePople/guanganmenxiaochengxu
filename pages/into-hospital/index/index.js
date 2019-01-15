@@ -58,6 +58,9 @@ Page({
   loadDoctors() {
     getApp().request.post('expertList', false, { unit:8 },
       (data) => {
+        for(var item of data){
+          item.src = getApp().request.url.mobile + '/mobile/image/hospital/' + getApp().globalData.hospitalId + '/expert/' + item.picName;
+        }
         this.setData({
           expertList: data
         })

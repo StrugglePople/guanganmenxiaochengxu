@@ -1,63 +1,62 @@
 <!--pages/index/index/index.wxml-->
-  <view class='index-bd' style='background:#fff'>
-    <view class="index-banner">
-
-      <swiper autoplay="true" style='height: 390rpx'>
-        <block wx:for="{{banners}}">
-          <swiper-item>
-            <image src="{{item.imageUrl}}" class="slide-image" mode='scaleToFill' />
-          </swiper-item>
-        </block>
-      </swiper>
+<view class='index-bd' style='background:#fff'>
+  <view class="index-banner">
+    <swiper autoplay="true" style='height: 390rpx'>
+      <block wx:for="{{banners}}">
+        <swiper-item>
+          <image src="{{item.imageUrl}}" class="slide-image" mode='scaleToFill' />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='top-1'>
+    <view class="common left" bindtap='noOpen'>
+      <image class='icon' src="/style/image/zizhu/guahao.png"></image>
+      <image class='text' src="/style/image/zizhu/guahao-text.png"></image>
     </view>
-    <view class='top-1'>
-      <view class="common left" bindtap='noOpen'>
-        <image class='icon' src="/style/image/zizhu/guahao.png"></image>
-        <image class='text' src="/style/image/zizhu/guahao-text.png"></image>
-      </view>
-      <navigator class="common right" hover-class="none" url='/pages-index/clinic/clinic-note/clinic-note?regType=RESERVATION'>
-        <image class='icon' src="/style/image/zizhu/guahao.png"></image>
-        <image class='text' src="/style/image/zizhu/yuyue-text.png"></image>
-      </navigator>
-    </view>
-    <view class='thumbnail-h-list-cont'>
-      <ul class="thumbnail-h-list wx-row">
-        <li class="wx-col left" bindtap="methodNeedLogin" data-method="showPage" data-url='/pages/record/record-detial/record-detial?type=0'>
-          <image class='img-notice-bell' src="/style/image/zizhu/jiancha.png"></image>
-          <view class='right-txt'>检查报告</view>
-          <view class="division"></view>
-        </li>
-        <li class="wx-col" bindtap="methodNeedLogin" data-method="showPage" data-url='/pages/record/record-detial/record-detial?type=1'>
-          <image class='img-notice-bell' src="/style/image/zizhu/jianyan.png"></image>
-          <view class='right-txt'>检验报告</view>
-        </li>
-      </ul>
-    </view>
-    <view class='grid-list-cont'>
-      <ul class="grid-list">
-        <li bindtap='methodNeedLogin' data-method="showPage" data-url='/pages/record/appointment-record/appointment-record'>
-          <image src="/style/image/zizhu/index-1.png"></image>
-          <text class='txt'>预约挂号记录</text>
-        </li>
-        <li bindtap="methodNeedLogin" data-method="showPage" data-url='/pages/cms-about/news-list/news-list?title=就医指南'>
-            <image src="/style/image/zizhu/index-2.png"></image>
-            <text class='txt'>就医指导</text>
-        </li>
-        <li bindtap="showPage" data-url="/pages-hospital/yuanwai-daohang/yuanwai-daohang">
-            <image src="/style/image/zizhu/index-3.png"></image>
-            <text class='txt'>来院导航</text>
-        </li>
-        <li  bindtap="methodNeedLogin" data-method="showPage" data-url='/pages/cms-about/news-list/news-list?title=医院公告'>
-            <image src="/style/image/zizhu/index-4.png"></image>
-            <text class='txt'>信息公告</text>
-        </li>
-        <li>
-          <navigator url='/pages/index/heathList/heathList'>
-            <image src="/style/image/zizhu/index-5.png"></image>
-            <text class='txt'>健康小工具</text>
-          </navigator>
-        </li>
-        <!-- <li>
+    <navigator class="common right" hover-class="none" url='/pages-index/clinic/clinic-note/clinic-note?regType=RESERVATION'>
+      <image class='icon' src="/style/image/zizhu/guahao.png"></image>
+      <image class='text' src="/style/image/zizhu/yuyue-text.png"></image>
+    </navigator>
+  </view>
+  <view class='thumbnail-h-list-cont'>
+    <ul class="thumbnail-h-list wx-row">
+      <li class="wx-col left" bindtap="methodNeedLogin" data-method="showPage" data-url='/pages/record/record-detial/record-detial?type=0'>
+        <image class='img-notice-bell' src="/style/image/zizhu/jiancha.png"></image>
+        <view class='right-txt'>检查报告</view>
+        <view class="division"></view>
+      </li>
+      <li class="wx-col" bindtap="methodNeedLogin" data-method="showPage" data-url='/pages/record/record-detial/record-detial?type=1'>
+        <image class='img-notice-bell' src="/style/image/zizhu/jianyan.png"></image>
+        <view class='right-txt'>检验报告</view>
+      </li>
+    </ul>
+  </view>
+  <view class='grid-list-cont'>
+    <ul class="grid-list">
+      <li bindtap='methodNeedLogin' data-method="showPage" data-url='/pages/record/appointment-record/appointment-record'>
+        <image src="/style/image/zizhu/index-1.png"></image>
+        <text class='txt'>预约挂号记录</text>
+      </li>
+      <li bindtap="methodNeedLogin" data-method="showPage" data-url='/pages/cms-about/news-list/news-list?title=就医指南'>
+        <image src="/style/image/zizhu/index-2.png"></image>
+        <text class='txt'>就医指导</text>
+      </li>
+      <li bindtap="showPage" data-url="/pages-hospital/yuanwai-daohang/yuanwai-daohang">
+        <image src="/style/image/zizhu/index-3.png"></image>
+        <text class='txt'>来院导航</text>
+      </li>
+      <li bindtap="methodNeedLogin" data-method="showPage" data-url='/pages/cms-about/news-list/news-list?title=医院公告'>
+        <image src="/style/image/zizhu/index-4.png"></image>
+        <text class='txt'>信息公告</text>
+      </li>
+      <li>
+        <navigator url='/pages/index/heathList/heathList'>
+          <image src="/style/image/zizhu/index-5.png"></image>
+          <text class='txt'>健康小工具</text>
+        </navigator>
+      </li>
+      <!-- <li>
           <navigator url='/pages/index/diagnose/diagnose-input/diagnose-input'>
             <image src="/style/image/zizhu/index-6.png"></image>
             <text class='txt'>随访通知</text>
@@ -67,17 +66,17 @@
           <image src="/style/image/zizhu/index-7.png"></image>
             <text class='txt'>国际医疗</text>
         </li> -->
-        <li>
-          <navigator url='/pages/record/bedappoint-record/bedappoint-record'>
-            <image src="/style/image/zizhu/index-8.png"></image>
-            <text class='txt'>床位预约查询</text>
-          </navigator>
-        </li>
-      </ul>
-    </view>
-    <!-- <view style='height: 10px'></view> -->
- <!-- panel -->
-    <!--<view class='h4-icon' style='margin-top:20rpx'>
+      <li>
+        <navigator url='/pages/record/bedappoint-record/bedappoint-record'>
+          <image src="/style/image/zizhu/index-8.png"></image>
+          <text class='txt'>床位预约查询</text>
+        </navigator>
+      </li>
+    </ul>
+  </view>
+  <!-- <view style='height: 10px'></view> -->
+  <!-- panel -->
+  <!--<view class='h4-icon' style='margin-top:20rpx'>
       <image src="/style/svg/icon1.svg" class='i-information'></image>
       健康资讯
       <text class="right"  data-name='HEALTH'   bindtap='moreView'>更多</text>
@@ -94,5 +93,5 @@
         </view>
       </view>
     </view>-->
-    <!-- panel end-->
-  </view>
+  <!-- panel end-->
+</view>

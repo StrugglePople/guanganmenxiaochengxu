@@ -79,6 +79,7 @@ Page({
       wx.stopPullDownRefresh();
     }, () => {
       this.setData({
+        list: this.data.list,
         isLoading: false
       })
       wx.stopPullDownRefresh();

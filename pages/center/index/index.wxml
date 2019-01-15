@@ -1,5 +1,3 @@
-<import src="/pages/index/current-time/son-event.wxml" />
-<import src="/template/memberList.wxml" />
 <!--pages/center/index/index.wxml-->
 <view class='index-bd' style='padding-bottom:100rpx;'>
   <view class="center-top">
