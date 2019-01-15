@@ -40,7 +40,7 @@ Page({
           mobileNo: newMember.mobileNo,
           medicalCardValid:true,
           cardTypeVO:{
-            name: "身份证"
+            name: "证件号"
           }
         }];
 

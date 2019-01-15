@@ -1,14 +1,17 @@
 <!--components/member-card/member-card.wxml-->
 <view class='bd member-body'>
-    <view class='name' wx:if="{{item.sex == 'MALE'}}">{{item.itemNameStr}}</view>
-    <view class='name name-danger' wx:if="{{item.sex != 'MALE'}}">{{item.itemNameStr}}                      </view>
-    <view class='h4'>{{item.name}}
-        <text class='samll'>{{item.sex == 'MALE' ? '男' : '女'}}  {{item.medicalCardNo}}                        </text>
-    </view>
-    <view class='p'>
-        <i class="i-user-sm"></i>{{item.mobileNo}}
-    </view>
-    <view class='p'>
-        <i class="i-phone-sm"></i>{{item.idNo}}
-    </view>
+  <view class='name' wx:if="{{item.sex == 'MALE'}}">{{item.itemNameStr}}</view>
+  <view class='name name-danger' wx:if="{{item.sex != 'MALE'}}">{{item.itemNameStr}} </view>
+  <view class='h4'>{{item.name}}
+    <text class='samll'>{{item.sex == 'MALE' ? '男' : '女'}}  {{item.medicalCardNo}}                        </text>
+  </view>
+  <view class='medical-card-item'>
+    <image class="medical-card-icon" src="/style/image/icons/phone.svg"></image>{{item.mobileNo}}
+  </view>
+  <view class='medical-card-item'>
+    <image class="medical-card-icon" src="/style/image/icons/card-number.svg"></image>{{item.idNo}}
+  </view>
+  <!-- <view class="medical-card-item">
+    <image class="medical-card-icon" src="/style/image/icons/number.svg "></image>身份证
+  </view> -->
 </view>

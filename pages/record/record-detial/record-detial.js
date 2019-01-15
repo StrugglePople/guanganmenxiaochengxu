@@ -120,29 +120,24 @@ Page(Object.assign({}, toast,{
   },
   
   showDetail(e) {
-    var doctorAdviceNo = e.currentTarget.dataset.id;
-    for (var i = 0; i < this.data.list.length; i++) {
-      if (doctorAdviceNo == this.data.list[i].doctorAdviceNo) {
-        if (this.data.type == 0) {
-          getApp().cache.setData('check-record-detail.data', this.data.list[i]);
-          wx.navigateTo({
-            url: '../check-record-detail/check-record-detail',
-          })
-        } else {
-          getApp().cache.setData('inspect-record-detail.data', this.data.list[i]);
-          wx.navigateTo({
-            url: '../inspect-record-detail/inspect-record-detail',
-          })
-        }
-        break;
-      }
+    var index = e.currentTarget.dataset.index;
+    this.data.list[index].medicalCardNo = this.data.medicalCard.medicalCardNo;
+    if (this.data.type == 0) {
+      getApp().cache.setData('check-record-detail.data', this.data.list[index]);
+      wx.navigateTo({
+        url: '../check-record-detail/check-record-detail',
+      })
+    } else {
+      getApp().cache.setData('inspect-record-detail.data', this.data.list[index]);
+      wx.navigateTo({
+        url: '../inspect-record-detail/inspect-record-detail',
+      })
     }
   },
-  showPage(e) {
+  showCardList(e) {
     this.data.refresh = true;
-    var url = e.currentTarget.dataset.url;
     wx.navigateTo({
-      url: url
+      url: "/pages/center/card-list/card-list"
     });
   }
 }))

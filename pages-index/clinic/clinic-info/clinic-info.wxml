@@ -1,7 +1,7 @@
 <!--pages/index/clinic/clinic-info/clinic-info.wxml-->
 <import src="../../../utils/toast/index.wxml" />
 <view class='b-t'></view>
-<view class="item-multi-txt am-flex-item bg-white link-active select-person" bindtap='showCardList'>
+<view class="item-multi-txt am-flex-item bg-white link-active select-card" bindtap='showCardList'>
   <image class="common-bg select-crard-bg" src='/style/image/record/common-bg.png'></image>
   <view class='am-flex-title move-upward' wx:if="{{medicalCard.name}}">
     <view class='h4-lg'>{{medicalCard.name}}</view>
@@ -17,7 +17,7 @@
 
 <view class='am-panel fee-panel'>
   <view class='hd am-flex-item'>
-    <view class='am-flex-title h5-text'>预约费用</view>
+    <view class='am-flex-title h5-text'>医师服务费</view>
     <view class='am-flex-after'>
       <text class='rmb-unit'>¥</text>
       <text class='rmb-value'>{{schedule.price}}</text>

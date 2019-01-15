@@ -30,7 +30,7 @@
 
     <view class="zan-row" class='tab-wrapper'>
       <view class="zan-col zan-col-12 text-center tab-item has-right-seg" bindtap='select' data-tab="0">
-        <text>挂号</text>
+        <text>预约</text>
         <view class='tab-schedule-active' hidden='{{selectIndex != 0}}'></view>
       </view>
       <view class="zan-col zan-col-12 text-center tab-item" bindtap='select' data-tab="1">
@@ -74,7 +74,7 @@
           <view class="schedule-left">
             <view class="font-16">
               <text space="true">{{item.scheduleDate}} </text>
-              <text space="true">星期{{dayOfWeek[item.dayOfWeek]}} </text>
+              <text space="true">星期{{dayOfWeek[item.dayOfWeek+1]}} </text>
               <text>{{schedules[item.time]}}</text>
             </view>
             <view>

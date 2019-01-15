@@ -5,8 +5,8 @@
   <view class='h4'>{{item.name}}
     
   </view>
-  <view class='p'>
-    <i class="i-phone-sm"></i>{{item.medicalCardNo}}
+  <view class='medical-card-item'>
+    <image class="medical-card-icon" src="/style/image/icons/card-number.svg"></image>{{item.medicalCardNo}}
   </view>
 
 </view>

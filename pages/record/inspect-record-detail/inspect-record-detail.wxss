@@ -1,1 +1,9 @@
 /* pages/record/inspect-record-detail/inspect-record-detail.wxss */
+.text-panel-hd{
+  box-shadow: 0 2rpx 10rpx 0 rgba(0,0,0,0.12);
+  margin-bottom: 10rpx;
+}
+.am-tb .thead{
+  background: #FCF6EA;
+  box-shadow: inset 0 1px 0 0 #C6C6C6;
+}

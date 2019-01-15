@@ -43,24 +43,24 @@
       <view class="list-item wx-row item-bot-line full">
         <view class="lable">手机号</view>
         <view class="lable-input">
-          <input name='mobileNo' value="{{member.mobileNo}}" placeholder="请输入手机号"></input>
+          <input type='number' name='mobileNo' value="{{member.mobileNo}}" placeholder="请输入手机号"></input>
         </view>
       </view>
     </view>
 
 
     <view class="bg-light" style="margin-top:30rpx;">
-      <view class="list-item wx-row item-bot-line">
+      <view class="list-item wx-row item-bot-line card-list-title">
         <view class="left wx-col">就诊卡信息</view>
         <view class="right wx-col text-right" bindtap='showPage' data-url='../card-info/card-info?personId={{member.id}}'>
-          添加就诊卡
+          + 添加就诊卡
         </view>
       </view>
       <view class="card-list list-item wx-row item-bot-line" wx:for="{{member.cards}}" wx:for-item="card" bindtap='showPage' data-url='../card-info/card-info?personId={{member.id}}&cardId={{card.id}}'>
         <view class="left wx-col" style="width:360rpx;">
           <view class="wx-row icon-content">
             <view class="left-icon tc-light">
-              <view class="content">院内卡</view>
+              <view class="content">{{card.cardTypeVO.name}}</view>
             </view>
             <view class="right-content">
               <view class="font-14">{{card.name}}</view>

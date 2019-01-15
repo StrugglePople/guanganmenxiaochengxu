@@ -5,6 +5,12 @@ page{
 .control-item-list{
   background-color: #ffffff;
 }
+.list-item.card-list-title{
+  font-size: 34rpx;
+}
+.card-list-title .right{
+  color: #B79153;
+}
 .list-item{
   padding: 25rpx 30rpx;
   height: 60rpx;

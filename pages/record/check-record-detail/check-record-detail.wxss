@@ -1,9 +1,14 @@
 /* pages/record/check-record-detail/check-record-detail.wxss */
-.text-panel-form{
-  padding-bottom: 20rpx;
+page{
+  background: #ffffff;
 }
+.text-panel-form{
+  padding: 20rpx 20rpx 0;
+}
+
+
 .text-panel-form .am-flex-box{
-  padding: 20rpx 24rpx 0 24rpx;
+  padding-top: 40rpx;
 }
 .text-panel-form .am-item-label{
   min-width: 4em;
@@ -17,4 +22,8 @@
   width: 4em;
   text-align:justify;
   text-align-last:justify;
+}
+.text-panel-hd{
+  box-shadow: 0 2rpx 18rpx 0 rgba(0,0,0,0.12);
+  margin-bottom: 10rpx;
 }

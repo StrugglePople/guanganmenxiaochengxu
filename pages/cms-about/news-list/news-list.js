@@ -23,17 +23,6 @@ Page({
 
     var title = options.title || '';
     this.data.options = options;
-    if (this.data.options.name == 'HEALTH') {
-      title = '健康资讯';
-    } else if (this.data.options.name == 'NEWS') {
-      title = '医院新闻';
-    } else if (this.data.options.name == 'HOSPITAL') {
-      title = '医院介绍';
-    } else if (this.data.options.name == 'INSTRUCTIONS') {
-      title = '就医指南';
-    } else if (this.data.options.name == 'ANNOUNCEMENT') {
-      title = '医院公告';
-    }
     wx.setNavigationBarTitle({
       title: title,
     })

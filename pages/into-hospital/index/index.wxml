@@ -57,7 +57,7 @@
     <!-- panel-->
     <view class='h4-icon'>
       <image src="/style/svg/enter-hospital/news-little.png" class='i-information'></image>
-      医院新闻
+      最新消息
       <navigator url="/pages/cms-about/news-list/news-list?title=最新消息" class="right">更多</navigator>
       <!--<image src="/style/image/i-angle-r.png" class='i-angle'></image>-->
     </view>

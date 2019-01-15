@@ -26,7 +26,7 @@
     <view style='height:20rpx'></view>
     <view class="zan-row" class='tab-wrapper'>
       <view class="zan-col zan-col-12 text-center tab-item has-right-seg" bindtap='select' data-tab="0">
-        <text>挂号</text>
+        <text>预约</text>
         <view class='tab-schedule-active' hidden='{{selectIndex != 0}}'></view>
       </view>
       <view class="zan-col zan-col-12 text-center tab-item" bindtap='select' data-tab="1">

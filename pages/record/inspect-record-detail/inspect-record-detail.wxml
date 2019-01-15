@@ -1,67 +1,54 @@
 <!--pages/record/inspect-record-detail/inspect-record-detail.wxml-->
 <view class='b-t'></view>
 
-<view class='text-panel'>
-  <view class='text-panel-hd'>
+<view class=''>
+  <view class='text-panel text-panel-hd'>
     <view class="am-flex-item">
       <view class='am-flex-title'>
         <text class='h4'>{{data.partItemName}}</text>
       </view>
-      <view class='am-flex-after'>
-        <text class='small'>{{data.entryDate}}</text>
-      </view>
+      
     </view>
     <view class="am-flex-item am-nmt-5">
       <view class='am-flex-title'>
         <text class='am-txt-light'>报告单号：{{data.barCode}}</text>
       </view>
-      <!-- <view class='am-flex-after'>
-        <text class='small'>2018-01-12  09:20</text>
-      </view> -->
+      <view class='am-flex-after'>
+        <text class='small'>{{data.entryDate}}</text>
+      </view>
     </view>
   </view>
   <!-- ----------- -->
-  <view class='text-panel-bd b-t'>
-    <view class="am-flex-item" wx:if="{{data.userName}}">
+  <view class='text-panel'>
+    <view class="am-flex-item has-bot">
       <view class='am-flex-title'>
-        <text class='am-txt-light'>就诊人</text>
+        <text class='am-txt-light am-ft-17'>就诊人</text>
       </view>
-      <view class='am-flex-after'>
-        <text>{{data.userName}}</text>
+      <view class='am-flex-after text-right am-ft-17'>
+        <text style='line-height:36rpx;'>{{data.patientName}}\n <text class='am-txt-light font-12'>{{data.medicalCardNo}}</text></text>
+
       </view>
     </view>
-    <view class="am-flex-item" wx:if="{{data.cardNO}}">
+    <view class="am-flex-item has-bot">
       <view class='am-flex-title'>
-        <text class='am-txt-light'>门诊号</text>
+        <text class='am-txt-light am-ft-17'>开方医生</text>
       </view>
-      <view class='am-flex-after'>
-        <text>{{data.cardNO}}</text>
+      <view class='am-flex-after am-ft-17'>
+        <text>{{data.checkDoctorName}}</text>
       </view>
     </view>
-    <!-- ----------- -->
-    <!-- 循环中第一个没有这个 -->
-    <view class='b-sh-t am-mt-10'></view>
-    <!-- ----------- -->
     <view class="am-flex-item">
       <view class='am-flex-title'>
-        <text class='am-txt-light'>医生</text>
+        <text class='am-txt-light am-ft-17'>开方科室</text>
       </view>
-      <view class='am-flex-after'>
-        <text>{{data.assReportVO.checkDoctorName}}</text>
+      <view class='am-flex-after am-ft-17'>
+        <text>{{data.checkDeptName}}</text>
       </view>
     </view>
-    <!-- <view class="am-flex-item">
-      <view class='am-flex-title'>
-        <text class='am-txt-light'>开方科室</text>
-      </view>
-      <view class='am-flex-after'>
-        <text>呼吸内科</text>
-      </view>
-    </view> -->
   </view>
 </view>
 
-<view class="am-tb am-mt-10">
+<view class="am-tb">
   <!-- thead -->
   <view class='thead'>
     <view class='tr'>

@@ -1,38 +1,40 @@
 <import src="../../template/empty.wxml" />
-<import src="../../../utils/toast/index.wxml" />
-<view bindtap='showPage' data-url="/pages/center/card-list/card-list" class="banner-reg-recond">
-  <image class="navigator-background" src='/style/image/record/select-member-bg.png'></image>
-  <view class="navigator-info" wx:if="{{!member.id}}">
-    <text class='h4'>选择就诊人</text>
+<view class="item-multi-txt am-flex-item bg-white link-active select-card" bindtap='showCardList'>
+  <image class="common-bg select-crard-bg" src='/style/image/record/common-bg.png'></image>
+  <view class='am-flex-title move-upward' wx:if="{{medicalCard.name}}">
+    <view class='h4-lg'>{{medicalCard.name}}</view>
+    <view class='color-3'>{{member.sex == "MALE"?"男":"女"}} {{medicalCard.medicalCardNo}}</view>
   </view>
-  <view class="navigator-info" wx:else>
-    <text class='h4'>{{member.name}}</text>{{member.sex == 'MALE' ? '男': '女'}}
-    <text class='muted-txt'></text>{{member.mobileNo}}
+  <view class='am-flex-title move-upward' wx:if="{{!medicalCard.name}}">
+    <view class='h4-lg color-3'>选择就诊人</view>
+  </view>
+  <view class='am-flex-after'>
+    <i class="i-item-angle" style="margin-top:0;"></i>
   </view>
 </view>
 
-<view class='am-panel-block rgrecond-item-list' wx:for="{{list}}" bindtap='showDetail' data-id="{{item.doctorAdviceNo}}">
-  <view class='rgrecond-item am-flex-item'>
-    <view class='am-flex-title'>
-      <!-- <text class='am-txt-light am-mr-10'>已发布</text> -->
-      <text class='am-txt-muted'>{{type==0?item.reportDate : item.entryDate}}</text>
+<view class='report-record-list' wx:if="{{list && list.length >0}}">
+  <view class='am-panel fee-panel' wx:for="{{list}}" bindtap='showDetail' data-index="{{index}}">
+    <view class='bd'>
+
+      <view class='form-fee-item am-flex-item'>
+        <view class='form-fee-label form-fee-label am-txt-normal'>【{{type==0?'检查': '检验'}}】{{type==0?item.itemName:item.partItemName}}</view>
+      </view>
+      <view class='form-fee-item am-flex-item'>
+        <view class='form-fee-label form-fee-label font-14'>{{item.reportNo}}</view>
+      </view>
     </view>
-    <view class='am-flex-after'>
-      <text class='h5'>{{item.userName}}</text>
-    </view>
-  </view>
-  <view class='rgrecond-item am-flex-item link-active'>
-    <view class='am-flex-title'>
-      <view class='h5-lg'>
-        <text class="span-auxiliary {{type==0?'span-auxiliary-success': 'span-auxiliary-warn'}}" style='vertical-align:top;'>{{type==0?'检查': '检验'}}</text> {{type==0?item.itemName:item.partItemName}}</view>
-      <view class='am-txt-light'>{{item.doctorAdviceNo}}</view>
-    </view>
-    <view class='am-flex-after'>
-      <i class="i-item-angle" style="margin-top:0;"></i>
+    <view class='ft b-sh-t'>
+      <view class='form-fee-item am-flex-item'>
+        <view class='am-flex-title form-fee-label font-14'>报告时间：{{type==0?item.reportDate : item.entryDate}}</view>
+
+      </view>
     </view>
   </view>
 </view>
-<view hidden='{{list && list.length >0}}'>
-<template is="empty" data="{{text: '没有记录'}}"></template>
+
+
+
+<view wx:else>
+  <template is="empty" data="{{text: '没有记录'}}"></template>
 </view>
-<template is="zan-toast" data="{{ zanToast }}"></template>

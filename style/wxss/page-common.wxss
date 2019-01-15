@@ -503,7 +503,7 @@
 }
 
 /* 持卡人名片显示end */
-/* 公用背景 */
+/* 公用背景 start */
 .common-bg{
   width: 750rpx;
   height: 190rpx;
@@ -514,7 +514,19 @@
   left: 0;
   
 }
-
+/* 记录类公用背景 end */
+/* 选择就诊卡条栏 start */
+.select-card{
+  position: static;
+  height: 190rpx;
+}
+.move-upward{
+  margin-top: -30rpx;
+}
+.select-card .am-flex-after{
+  position: relative;
+}
+/* 选择就诊卡条栏 end */
 
 /* 记录类列表start */
 .rgrecond-item {
@@ -561,9 +573,11 @@
 }
 
 .text-panel .am-flex-item {
-  padding-top: 20rpx;
+  padding: 20rpx 0;
 }
-
+.text-panel .am-flex-item.has-bot {
+  border-bottom: 1rpx solid #EEEEEE;
+}
 .text-panel .h4 {
   font-size: 40rpx;
 }

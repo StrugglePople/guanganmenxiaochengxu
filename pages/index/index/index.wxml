@@ -40,7 +40,7 @@
       </li>
       <li bindtap="methodNeedLogin" data-method="showPage" data-url='/pages/cms-about/news-list/news-list?title=就医指南'>
         <image src="/style/image/zizhu/index-2.png"></image>
-        <text class='txt'>就医指导</text>
+        <text class='txt'>就医指南</text>
       </li>
       <li bindtap="showPage" data-url="/pages-hospital/yuanwai-daohang/yuanwai-daohang">
         <image src="/style/image/zizhu/index-3.png"></image>
@@ -48,7 +48,7 @@
       </li>
       <li bindtap="methodNeedLogin" data-method="showPage" data-url='/pages/cms-about/news-list/news-list?title=医院公告'>
         <image src="/style/image/zizhu/index-4.png"></image>
-        <text class='txt'>信息公告</text>
+        <text class='txt'>医院公告</text>
       </li>
       <li>
         <navigator url='/pages/index/heathList/heathList'>

@@ -57,7 +57,11 @@ ul, li{
   color: #FF9F01;
 }
 .am-txt-normal{
-  color: #111;
+  color: #111 !important;
+}
+.am-txt-333{
+  font-weight: 600;
+  color: #333333 !important;
 }
 .main-text-color{
     color: #AE700D;
@@ -85,6 +89,9 @@ ul, li{
 }
 .font-15 {
     font-size: 30rpx
+}
+.text-right{
+  text-align: right
 }
 .am-btn{
     display: block;
