@@ -56,7 +56,9 @@
     "pages/center/member-info/member-info",
     "pages/center/card-info/card-info",
     "pages/center/card-list/card-list",
-    "pages/more/cms-list/cms-list"
+    "pages/more/cms-list/cms-list",
+    "pages/record/bedappoint-record/bedappoint-record",
+    "pages/record/bedappoit-record-detail/bedappoit-record-detail"
   ],
   "subpackages": [
     {
@@ -91,7 +93,8 @@
     "pages/index/index/index": {
       "network": "all",
       "packages": [
-        "index","hospital"
+        "index",
+        "hospital"
       ]
     },
     "pages/center/index/index": {

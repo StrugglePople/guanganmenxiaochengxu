@@ -1,5 +1,4 @@
 const loginExtentds = require('../../../utils/loginExtends.js');
-const eventExtentds = require('../../../utils/eventExtends.js');
 const commonJs = require('../../../utils/common.js');
 const toast = require('../../../utils/toast/index.js');
 var wxbarcode = require('../../../utils/barCode/index.js');
@@ -9,14 +8,11 @@ const options = {
   accounts:[],
   unreadNum:0
 }
-Page(Object.assign({}, loginExtentds, eventExtentds, toast,{
+Page(Object.assign({}, loginExtentds, toast,{
   data: {
-    isEventList: false,
     unreadNum:0
     },
   onLoad() {
-    this.data.list = [];
-    commonJs.shareMenu();
   },
   onShow() {
     var userInfo = {
@@ -32,8 +28,6 @@ Page(Object.assign({}, loginExtentds, eventExtentds, toast,{
       ...userInfo
     });
     if (getApp().isLogin()) {
-      // commonJs.getOfferBill();
-      // this.loadEvent();
       this.setUnReadMessageAmount();
       var data = getApp().globalData;
       var accounts = data.session.patientVoList || [];
@@ -47,8 +41,7 @@ Page(Object.assign({}, loginExtentds, eventExtentds, toast,{
         barcode: url,
         accounts: accounts,
         mobile: data.session.mobile,
-        isShow: false,
-        event: this.data.event
+        isShow: false
       })
     }
 

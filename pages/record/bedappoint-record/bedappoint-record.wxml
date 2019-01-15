@@ -14,16 +14,14 @@
 
 
 <block wx:if="{{list && list.length > 0}}">
-  <view class='am-panel-block rgrecond-item-list' wx:for="{{list}}" bindtap='showDetail' data-id='{{item.zhpTradeId}}'>
+  <view class='am-panel-block rgrecond-item-list' wx:for="{{list}}" bindtap='showDetail' data-index='{{index}}'>
     <view class='rgrecond-item am-flex-item'>
 
       <view class='am-flex-title'>
-        <text class='h5-lg'>{{item.dept.deptName}} | <block wx:if="{{item.doctor}}">{{item.doctor.name}}</block><block wx:else>普通</block>
+        <text class='h5-lg'>{{item.deptName}}
         </text>
       </view>
-      <view class='am-flex-after'>
-        <text class='h5 am-txt-danger'>¥{{item.regFee}}元</text>
-      </view>
+      
     </view>
     <view class='rgrecond-item am-flex-item'>
       <view class='am-flex-title'>
@@ -39,13 +37,6 @@
         <!-- <text class='plain-auxiliary'>取消预约</text> -->
         <text class='am-txt-muted txt-rsmall'>{{statusList[item.status]}}</text>
       </view>
-    </view>
-  </view>
-  <view hidden="{{!hasMore}}">
-    <button class="zan-btn" hidden='{{isLoading}}' bindtap='loadMore'>加载更多</button>
-    <view class="zan-loadmore" hidden='{{!isLoading}}'>
-      <view class="zan-loading"></view>
-      <view class="zan-loadmore__tips">加载中...</view>
     </view>
   </view>
 

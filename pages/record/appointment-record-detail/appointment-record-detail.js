@@ -7,7 +7,8 @@ Page(Object.assign({}, toast,{
    * 页面的初始数据
    */
   data: {
-    isCancelRecord:false
+    isCancelRecord: false,
+    statusList: getApp().globalData.recordStatus
   
   },
 

@@ -49,13 +49,7 @@
     <view class='form-fee-item am-flex-item'>
       <view class='form-fee-label form-fee-label'>预约状态</view>
       <view class='am-flex-after'>
-        <text class='am-txt-muted txt-rsmall' wx:if="{{data.status=='PASS'}}">预约成功</text>
-        <text class='am-txt-danger txt-rsmall' wx:elif="{{data.status=='UNPASS'}}">预约失败</text>
-        <text class='am-txt-muted txt-rsmall' wx:elif="{{data.status=='CANCELLED'}}">已撤销</text>
-        <text class='am-txt-muted txt-rsmall' wx:elif="{{data.status=='RETURNED'}}">已退号</text>
-        <text class='am-txt-danger txt-rsmall' wx:elif="{{data.status=='APPOINTTING' && data.timeoutSec > 0}}">待支付</text>
-        <text class='am-txt-muted txt-rsmall' wx:elif="{{data.status=='EXPIRED'}}">已过期</text>
-        <text wx:else></text>
+        <text class='am-txt-muted txt-rsmall'>{{statusList[item.status]}}</text>
       </view>
     </view>
   </view>

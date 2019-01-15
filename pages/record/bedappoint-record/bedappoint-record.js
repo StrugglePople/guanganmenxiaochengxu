@@ -5,7 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    hasMore:false,
     list: [],
     statusList: getApp().globalData.recordStatus
   },
@@ -22,7 +21,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
@@ -36,13 +35,12 @@ Page({
         if (zhpTradeId == this.data.list[i].zhpTradeId) {
           this.data.list.splice(i, 1);
           this.setData({
-            list: this.data.list,
-            hasMore: this.data.list.length > 0 ? this.data.hasMore: false
+            list: this.data.list
           })
           break;
         }
       }
-      
+
     }
     var isRefresh = getApp().cache.getData('appoint.record.refresh');
     getApp().cache.removeKey('appoint.record.refresh');
@@ -67,25 +65,20 @@ Page({
   getData(hasLoading) {
     var param = {
       accountId: getApp().globalData.session.id,
-      patientId: this.member.id,
-      from:2,
-      regType:"RESERVATION",
-      yearMonth: this.yearMonth
+      name: this.member.name,
+      idCard: this.member.idNo
     }
-    getApp().request.post('getAppointmentOrRegOnline', hasLoading, {param}, (data) => {
+    getApp().request.post('getBedAppointment', hasLoading, param, (data) => {
       this.yearMonth = data.monthName;
       if (!this.data.list) this.data.list = [];
-      this.data.list = this.data.list.concat(data.regRecords);
-      this.data.hasMore = data.regRecords && data.regRecords.length > 0;
+      this.data.list = this.data.list.concat(data);
       this.setData({
-        hasMore: this.data.hasMore,
         list: this.data.list,
         isLoading: false
       })
       wx.stopPullDownRefresh();
-    },()=>{
+    }, () => {
       this.setData({
-        hasMore: false,
         isLoading: false
       })
       wx.stopPullDownRefresh();
@@ -101,14 +94,14 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
@@ -121,9 +114,10 @@ Page({
   },
 
   showDetail(e) {
-    var zhpTradeId = e.currentTarget.dataset.id;
+    var index = e.currentTarget.dataset.index;
+    getApp().cache.setData("bedAppointDetail", this.data.list[index]);
     wx.navigateTo({
-      url: '../appointment-record-detail/appointment-record-detail?zhpTradeId=' + zhpTradeId,
+      url: '../bedappoit-record-detail/bedappoit-record-detail',
     })
   }
 })

@@ -48,10 +48,12 @@ const urlIds = {
   
   //预约挂号
   commitReg:"/guahao.apply.lockIn.hsr",
-  getAppointmentOrRegOnline:"/guahao.record.list.online.hsr",
-  regDetail:"/guahao.record.detail.online.hsr",
   cancelYuyue:"/guahao.apply.cancel.hsr",
   cancelAppointVerCode:"/guahao.apply.cancel.verifycode.hsr",
+  //记录类
+  getAppointmentOrRegOnline: "/guahao.record.list.online.hsr",
+  regDetail: "/guahao.record.detail.online.hsr",
+  getBedAppointment:"/gamInpatientBed.records.hsr",
   //走进医院
   guideDepts:"/guiding.depts.info.hsr",
   expertList: '/guiding.famous.doctors.info.hsr',

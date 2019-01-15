@@ -13,3 +13,6 @@ item-zhu/* pages/index/medical-tools/hepatitis-b/hepatitis-b-self-test-result/he
   display: block;
 
 }
+.containerView{
+  padding: 20rpx;
+}

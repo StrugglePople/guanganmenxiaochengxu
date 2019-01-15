@@ -2,7 +2,6 @@
 /* @import "bower_components/zanui-weapp/dist/index.wxss"; */
 @import 'style/wxss/zanui.wxss';
 @import 'style/wxss/common.wxss';
-@import 'style/wxss/common1.wxss';
 @import 'style/wxss/page-common.wxss';
 .container {
   height: 100%;

@@ -6,7 +6,7 @@ Page({
    */
   data: {
     pageIndex: 1,
-    pageSize: 1,
+    pageSize: 10,
     list: [],
     hasMore: false
   },

@@ -57,22 +57,18 @@
             <text class='txt'>健康小工具</text>
           </navigator>
         </li>
-        <li >
+        <!-- <li>
           <navigator url='/pages/index/diagnose/diagnose-input/diagnose-input'>
             <image src="/style/image/zizhu/index-6.png"></image>
             <text class='txt'>随访通知</text>
           </navigator>
         </li>
         <li bindtap="noOpen">
-          <!-- <navigator url="../record/reg-record/reg-record?source=manyidu&title=满意度调查">
-            <image src="/style/svg/icon_7.svg"></image>
-            <text class='txt'>满意度问卷</text>
-          </navigator> -->
           <image src="/style/image/zizhu/index-7.png"></image>
             <text class='txt'>国际医疗</text>
-        </li>
+        </li> -->
         <li>
-          <navigator url='/pages/index/heathList/heathList'>
+          <navigator url='/pages/record/bedappoint-record/bedappoint-record'>
             <image src="/style/image/zizhu/index-8.png"></image>
             <text class='txt'>床位预约查询</text>
           </navigator>

@@ -1,0 +1,34 @@
+<!--pages/record/appointment-record-detail/appointment-record-detail.wxml-->
+<!-- 预约详情 -->
+<view class='am-panel fee-panel'>
+  <view class='bd'>
+    <view class='form-fee-item am-flex-item'>
+      <view class='form-fee-label form-fee-label'>姓名</view>
+      <view class='am-flex-after'>
+        <text>{{data.name}}</text>
+      </view>
+    </view>
+    <view class='form-fee-item am-flex-item'>
+      <view class='form-fee-label form-fee-label'>科室</view>
+      <view class='am-flex-after'>
+        <text>{{data.deptName}}</text>
+      </view>
+    </view>
+    <view class='form-fee-item am-flex-item'>
+      <view class='form-fee-label form-fee-label'>预约时间</view>
+      <view class='am-flex-after'>
+        <text space="ensp">{{data.regDate}}\t </text>
+        <text wx:if="{{data.regTime=='MORNING'}}">上午</text>
+        <text wx:elif="{{data.regTime=='AFTERNOON'}}">下午</text>
+        <text wx:else>晚上</text>
+
+      </view>
+    </view>
+    <view class='form-fee-item am-flex-item'>
+      <view class='form-fee-label form-fee-label'>预约状态</view>
+      <view class='am-flex-after'>
+        <text class='am-txt-muted txt-rsmall'>{{statusList[data.status]}}</text>
+      </view>
+    </view>
+  </view>
+</view>
