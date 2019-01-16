@@ -76,11 +76,10 @@ Page({
           for (var i = 0; i < cards.length;i++){
             if (cards[i].id == this.data.card.id){
               cards.splice(i, 1);
+              break;
             }
-            getApp().cache.setData('app.session', getApp().globalData.session);
-            var ddd = getApp().cache.getData('app.session');
-            break;
           }
+          getApp().cache.setData('app.session', getApp().globalData.session);
           setTimeout(() => {
             wx.navigateBack()
           }, 1000);

@@ -1,21 +1,21 @@
-<view class='containerView'> 
-<text class = 'item-top-font'>请对照医院检查结果进行选择</text>
-<view>
-<view wx:for = "{{hepatitisB}}" data-type='item.property'>
-<text>{{item.title}}</text>
-<view class='item-content'>
-<radio-group class="radio-group" data-type='{{item.property}}' bindchange="radioChange">
-<li>
- <text>阴性（-）</text> 
- <radio value="1"  checked="checked"/>
-</li>
-<li>
- <text>阳性（+）</text>
- <radio value="2" />
-</li>
-</radio-group>
-</view>
-</view>
-</view>
-<button class='am-btn' bindtap='submit'>查看结果</button>
+<view class='containerView'>
+  <text class='item-top-font'>请对照医院检查结果进行选择</text>
+  <view style='padding:20rpx'>
+    <view wx:for="{{hepatitisB}}" data-type='item.property'>
+      <text>{{item.title}}</text>
+      <view class='item-content'>
+        <radio-group class="radio-group" data-type='{{item.property}}' bindchange="radioChange">
+          <li>
+            <text>阴性（-）</text>
+            <radio value="1" checked="checked" />
+          </li>
+          <li>
+            <text>阳性（+）</text>
+            <radio value="2" />
+          </li>
+        </radio-group>
+      </view>
+    </view>
+  </view>
+  <button class='am-btn' bindtap='submit'>查看结果</button>
 </view>

@@ -81,7 +81,7 @@ const urlIds = {
   itemcontent: '/outerInterface/checklistitems/itemcontent',
   babyBlood: '/outerInterface/babyBlood',
   //guide
-  getBuildingDetail: '/mobile/more/floorNavigation/{zhicall.config.hospitalId}/{?}',
+  getBuildingDetail: '/guiding.floorNavigation.hsr',
   //消息中心
   messageAmount: "/message.amount.unread.hsr",
   message: "/message.list.hsr",

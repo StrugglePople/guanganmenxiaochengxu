@@ -48,7 +48,7 @@
     <view class='form-fee-item am-flex-item'>
       <view class='form-fee-label form-fee-label'>预约状态</view>
       <view class='am-flex-after'>
-        <text class='am-txt-muted txt-rsmall'>{{statusList[data.status]}}</text>
+        <text class='am-txt-danger txt-rsmall'>{{statusList[data.status]}}</text>
       </view>
     </view>
   </view>
@@ -73,6 +73,7 @@
     <view class="modal-notice-txt">输入验证码取消预约</view>
     <view class='input-wrapper'>
       <input class="pw-input" type="number" value='{{verCode}}' placeholder='请输入验证码' bindinput='getVerCode' focus='{{isCancelRecord}}'></input>
+      <get-vertify mobile="{{phoneNumber}}" url-id="cancelAppointVerCode" business-no="{{data.zhpTradeId}}"></get-vertify>
     </view>
     <view class="btn-wrapper">
       <view class="btn" bindtap='cancelCancelRecord'>取消</view>

@@ -3,7 +3,7 @@
 <view class="reg">
   <view class='tt clearfix'>
     <view class='pic'>
-      <image src='../../../../style/image/logo.png'></image>
+      <image src='/style/image/logo.png'></image>
     </view>
     <view class='txt'>
       <view class='name'>
@@ -78,7 +78,7 @@
               <text>{{schedules[item.time]}}</text>
             </view>
             <view>
-              <text space="true" class="font-12 color-1">普通</text>
+              <text space="true" class="font-12 color-1">{{item.clinicLabel}}</text>
               <text class="font-12 color-2">￥{{item.price}}</text>
               </view>
           </view>

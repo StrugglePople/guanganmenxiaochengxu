@@ -17,7 +17,7 @@
   <view hidden='{{selectIndex == 0}}' class='bg-light' style='font-size:32rpx;'>
     <block>
       <view class='content-title'>
-        <image src='../../../style/image/position.png'></image>
+        <image src='/style/image/position.png'></image>
         <text>执业点</text>
       </view>
       <view class='content-content color-1'>
@@ -26,7 +26,7 @@
     </block>
     <block>
       <view class='content-title'>
-        <image src='../../../style/image/specialize.png'></image>
+        <image src='/style/image/specialize.png'></image>
         <text>擅长</text>
       </view>
       <view class='content-content color-1'>
@@ -35,7 +35,7 @@
     </block>
     <block>
       <view class='content-title'>
-        <image src='../../../style/image/abstract.png'></image>
+        <image src='/style/image/abstract.png'></image>
         <text>简介</text>
       </view>
       <view class='content-content color-1'>

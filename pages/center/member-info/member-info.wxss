@@ -33,6 +33,9 @@ page{
   text-align: center;
   overflow: hidden;
 }
+.select-sex .man{
+  border-right: 1px solid #B79153;
+}
 .select-sex .wx-col.active{
   background-color: #B79153;
 }

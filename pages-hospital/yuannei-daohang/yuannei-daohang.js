@@ -90,7 +90,7 @@ Page({
     }
   },
   showDetail: function (e) {
-    getApp().request.post("getBuildingDetail",true,null,[e.target.dataset.id],
+    getApp().request.post("getBuildingDetail", true, {building: e.target.dataset.id},
       (data)=>{
         getApp().cache.setData("floorDetail",data);
         wx.navigateTo({

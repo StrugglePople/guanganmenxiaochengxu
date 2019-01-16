@@ -16,6 +16,10 @@ Component({
     urlId: {
       type: String,
       value: '',
+    },
+    businessNo: {
+      type: String,
+      value: '',
     }
 
   },
@@ -41,13 +45,15 @@ Component({
    */
   methods: {
     getVertify: function (e) {
-      // if(1){
-      //   this.triggerEvent('tost', "cajdafasfaf");
-      //   return;
-      // }
       if (this.data.getVertiValue != "获取验证码") {
         return;
       }
+      // if(1){
+      //   toastTxt("获取验证码成功");
+      //   getApp().cache.setData('lastGetVerTime', new Date().getTime());
+      //   this.changeVertify(60);
+      //   return;
+      // }
       if (!this.properties.mobile) {
         toastTxt("请输入手机号");
         // this.triggerEvent('tost', { title: '请输入手机号' });
@@ -58,19 +64,19 @@ Component({
         return;
       }
       var param = {};
+      param.mobile = this.properties.mobile;
       if (this.properties.urlId == 'getRegisterSecCode'){
         param.picVCode = this.properties.imgValue;
         param.deviceId = getApp().globalData.deviceId;
-
+      } else if (this.properties.urlId == 'cancelAppointVerCode'){
+        param.accountId = getApp().globalData.session.id;
+        param.businessNo = this.properties.businessNo;
       }
-      getApp().request.post(this.properties.urlId, true, param, [this.properties.mobile], (json) => {
-        if (json.success){
-          toastTxt(json.errMsg);
-          // this.triggerEvent('tost', { title: json.errMsg })
-          getApp().cache.setData('lastGetVerTime', new Date().getTime());
-          this.changeVertify(60);
-        }
-        
+      getApp().request.post(this.properties.urlId, true, param, (json) => {
+        toastTxt("获取验证码成功");
+        // this.triggerEvent('tost', { title: json.errMsg })
+        getApp().cache.setData('lastGetVerTime', new Date().getTime());
+        this.changeVertify(60);
       });
     },
     changeVertify: function (time) {

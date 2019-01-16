@@ -239,7 +239,7 @@
 .ft-kf .input-text input {
   position: relative;
   /* float: left; */
-  width: 370rpx;
+  /* width: 370rpx; */
   margin-left: 12rpx;
   margin-top: 10rpx;
   font-size: 32rpx;

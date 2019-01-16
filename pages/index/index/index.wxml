@@ -38,7 +38,7 @@
         <image src="/style/image/zizhu/index-1.png"></image>
         <text class='txt'>预约挂号记录</text>
       </li>
-      <li bindtap="methodNeedLogin" data-method="showPage" data-url='/pages/cms-about/news-list/news-list?title=就医指南'>
+      <li bindtap="showPage" data-url='/pages/cms-about/news-list/news-list?title=就医指南'>
         <image src="/style/image/zizhu/index-2.png"></image>
         <text class='txt'>就医指南</text>
       </li>
@@ -46,7 +46,7 @@
         <image src="/style/image/zizhu/index-3.png"></image>
         <text class='txt'>来院导航</text>
       </li>
-      <li bindtap="methodNeedLogin" data-method="showPage" data-url='/pages/cms-about/news-list/news-list?title=医院公告'>
+      <li bindtap="showPage" data-url='/pages/cms-about/news-list/news-list?title=医院公告'>
         <image src="/style/image/zizhu/index-4.png"></image>
         <text class='txt'>医院公告</text>
       </li>
@@ -56,21 +56,17 @@
           <text class='txt'>健康小工具</text>
         </navigator>
       </li>
-      <!-- <li>
-          <navigator url='/pages/index/diagnose/diagnose-input/diagnose-input'>
-            <image src="/style/image/zizhu/index-6.png"></image>
-            <text class='txt'>随访通知</text>
-          </navigator>
-        </li>
-        <li bindtap="noOpen">
-          <image src="/style/image/zizhu/index-7.png"></image>
-            <text class='txt'>国际医疗</text>
-        </li> -->
-      <li>
-        <navigator url='/pages/record/bedappoint-record/bedappoint-record'>
-          <image src="/style/image/zizhu/index-8.png"></image>
-          <text class='txt'>床位预约查询</text>
-        </navigator>
+      <li bindtap='noOpen'>
+        <image src="/style/image/zizhu/index-6.png"></image>
+        <text class='txt'>随访通知</text>
+      </li>
+      <li bindtap="noOpen">
+        <image src="/style/image/zizhu/index-7.png"></image>
+        <text class='txt'>国际医疗</text>
+      </li>
+      <li bindtap="methodNeedLogin" data-method="showPage" data-url='/pages/record/bedappoint-record/bedappoint-record'>
+        <image src="/style/image/zizhu/index-8.png"></image>
+        <text class='txt'>床位预约查询</text>
       </li>
     </ul>
   </view>

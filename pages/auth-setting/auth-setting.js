@@ -68,7 +68,7 @@ Page({
     getApp().globalData.userInfo = userInfo;
     getApp().cache.setData('userInfo', userInfo);*/
 
-    var userInfo = getApp().globalData.userInfo;
+    var userInfo = getApp().globalData.userInfo || {};
     userInfo.mobile = "15067127499"; //18858285384
     getApp().globalData.userInfo = userInfo;
     getApp().cache.setData('userInfo', userInfo)

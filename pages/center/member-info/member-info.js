@@ -15,22 +15,14 @@ Page(Object.assign({}, loginExtentds, {
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    var id = options.id,
-      accounts = getApp().globalData.session.patientVoList;
-    if (id) {
-      for (var i = 0; i < accounts.length; i++) {
-        if (accounts[i].id == id) {
-          var thismember = accounts[i];
-          this.setData({
-            member: thismember,
-            buttonName: "更新"
-          });
-
-        }
-      }
-    } else {
-
+    var id = options.id;
+    if(id){
+      this.data.memberId = id;
+      this.setData({
+        buttonName: "更新"
+      });
     }
+    
 
 
 
@@ -47,16 +39,19 @@ Page(Object.assign({}, loginExtentds, {
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-    this.setData({
-      member: this.data.member
-    });
+    if (this.data.memberId) {
+      var thismember = getApp().accountServer.getMemberById(this.data.memberId);
+      this.data.member = { ...thismember };
+      this.setData({
+        member: this.data.member
+      });
+    }
   },
-  changeSex: function(e) {
-    this.setData({
-      'member.sex': e.target.dataset.sex
-    });
+  nameChange: function (e) {
+    this.data.member.name = e.detail.value;
   },
-  idNoChange: function(e) {
+  idNoChange: function (e) {
+    this.data.member.idNo = idNo;
     var idNo = e.detail.value;
     if (!idNo || idNo.length != 18) return;
     let array = getApp().validate.isChinaId(idNo);
@@ -67,9 +62,25 @@ Page(Object.assign({}, loginExtentds, {
         'member.sex': array[2]
       });
     }
-
+  },
+  bindDateChange(e) {
+    this.setData({
+      'member.birthday': e.detail.value
+    })
+  },
+  changeSex: function(e) {
+    this.setData({
+      'member.sex': e.target.dataset.sex
+    });
+  },
+  mobileNoChange: function(e) {
+    this.data.member.mobileNo = e.detail.value;
   },
   formSubmit: function(e) {
+    if (!this.memberInfoIsChange()){
+      getApp().widget.toast('没有信息更改');
+      return;
+    }
     var member = {};
     member.birthday = this.data.member.birthday;
     member.sex = this.data.member.sex;
@@ -96,7 +107,7 @@ Page(Object.assign({}, loginExtentds, {
     }
     let array = getApp().validate.isChinaId(member.idNo);
     if (!array[0]) {
-      getApp().widget.toast('输入的身份证号有误');
+      getApp().widget.toast(array[1]);
       return;
     }
     if (!member.birthday) {
@@ -142,12 +153,20 @@ Page(Object.assign({}, loginExtentds, {
 
   },
 
-
-  bindDateChange(e) {
-    this.setData({
-      'member.birthday': e.detail.value
+  showAddCardPage(){
+    if (!this.data.memberId){
+      getApp().widget.toastTxt('请先填写并保存持卡人信息！');
+      return;
+    }
+    if (this.memberInfoIsChange()) {
+      getApp().widget.toastTxt('请先保存持卡人信息！');
+      return;
+    }
+    wx.navigateTo({
+      url: '../card-info/card-info?personId='+this.data.member.id
     })
   },
+  
   deleteMember(){
     getApp().request.post("deleteMember", true, {
       patientId: this.data.member.id
@@ -159,5 +178,27 @@ Page(Object.assign({}, loginExtentds, {
         }, 1000);
       });
     });
+  },
+  alertWarning(){
+    getApp().widget.toastTxt("请确保证件号和姓名姓名填写正确，否则无法取号");
+  },
+  memberInfoIsChange(){
+    var oldMember = getApp().accountServer.getMemberById(this.data.memberId),
+    newMember = this.data.member;
+    if (oldMember.name != newMember.name){
+      return true;
+    }
+    if (oldMember.idNo != newMember.idNo) {
+      return true;
+    }
+    if (oldMember.sex != newMember.sex) {
+      return true;
+    }
+    if (oldMember.birthday != newMember.birthday) {
+      return true;
+    }
+    if (oldMember.mobileNo != newMember.mobileNo) {
+      return true;
+    }
   }
 }))

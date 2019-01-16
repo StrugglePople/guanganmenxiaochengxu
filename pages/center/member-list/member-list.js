@@ -30,7 +30,7 @@ Page({
   onShow: function () {
     var accounts = getApp().globalData.session.patientVoList;
     for (var i = 0; i < accounts.length; i++) {
-      accounts[i].itemNameStr = accounts[i].name.slice(1);
+      accounts[i].itemNameStr = accounts[i].name.substr(-2);
     }
     this.setData({
       accounts: accounts

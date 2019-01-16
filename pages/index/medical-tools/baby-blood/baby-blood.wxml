@@ -1,32 +1,32 @@
 <import src="../../../../utils/toast/index.wxml" />
 <form bindsubmit="formSubmit">
-<view>
-<view style='margin-bottom:20px'>
-<text style='padding:10px'>血型一般分为A、B、AB和O四种，其中，AB型可接受任何血型的血液输入，因此被称为万能受血者，O型可以输出给任何血型的人体内，因此被称作万能输血者、异能血者。</text>
-<text class='bmi-detial'>填写基本信息</text>
-</view>
-     <view class="zan-cell zan-cell--access" bindtap='fatherBlood'>
-      <view class="zan-cell__bd">父亲血型:{{faBlood}}</view>
-     <view class="zan-cell__ft"></view>
+  <view style='padding:20rpx'>
+    <view style='margin-bottom:20px'>
+      <text>血型一般分为A、B、AB和O四种，其中，AB型可接受任何血型的血液输入，因此被称为万能受血者，O型可以输出给任何血型的人体内，因此被称作万能输血者、异能血者。</text>
+      <text class='bmi-detial'>填写基本信息</text>
     </view>
-        <view class="zan-cell zan-cell--access" bindtap='motherBlood' >
-         <view class="zan-cell__bd">母亲血型:{{moBlood}}</view>
-         <view class="zan-cell__ft"></view>
-      </view> 
-</view>
-<view class='item-zhu'>【注：本测试仅供参考，有关疾病相关诊断请咨询医生。】
-</view>
+    <view class="zan-cell zan-cell--access" bindtap='fatherBlood'>
+      <view class="zan-cell__bd">父亲血型:{{faBlood}}</view>
+      <view class="zan-cell__ft"></view>
+    </view>
+    <view class="zan-cell zan-cell--access" bindtap='motherBlood'>
+      <view class="zan-cell__bd">母亲血型:{{moBlood}}</view>
+      <view class="zan-cell__ft"></view>
+    </view>
+  </view>
+  <view class='item-zhu'>【注：本测试仅供参考，有关疾病相关诊断请咨询医生。】
+  </view>
 
-<view wx:if="{{babyBlood}}">
-<view>
-宝宝的血型可能是：
-<text style='color:#02BF78'>{{resultData.possibleBlood}}</text>
-</view>
-<view>
-不可能出现血型是：
-<text style='color:#f66f71'>{{resultData.impossibleBlood}}</text>
-</view>
-</view>
-<button class='am-btn' bindtap="submit">查看结果</button>
+  <view wx:if="{{babyBlood}}">
+    <view>
+      宝宝的血型可能是：
+      <text style='color:#02BF78'>{{resultData.possibleBlood}}</text>
+    </view>
+    <view>
+      不可能出现血型是：
+      <text style='color:#f66f71'>{{resultData.impossibleBlood}}</text>
+    </view>
+  </view>
+  <button class='am-btn' bindtap="submit">查看结果</button>
 </form>
 <template is="zan-toast" data="{{ zanToast }}"></template>

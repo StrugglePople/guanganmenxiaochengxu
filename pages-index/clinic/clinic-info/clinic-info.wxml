@@ -48,10 +48,17 @@
       </view>
     </view>
     <!-- form-fee-item end-->
-    <view class='form-fee-item' wx:if="{{doctor}}">
+    <view class='form-fee-item' wx:if="{{doctor && doctor.name}}">
       <view class='form-fee-label'>医生</view>
       <view class='form-fee-control'>
         <text>{{doctor.name}}</text>
+      </view>
+    </view>
+    <view class='form-fee-item'>
+      <view class='form-fee-label'>号别</view>
+      <view class='form-fee-control'>
+        <text>{{schedule.clinicLabel}}</text>
+        <!-- <text class="am-txt-muted">{{medicalCard.medicalCardNo}}</text> -->
       </view>
     </view>
     <!-- form-fee-item -->
