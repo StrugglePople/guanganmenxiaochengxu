@@ -46,6 +46,16 @@ Page(Object.assign({}, loginExtentds, toast,{
     }
 
   },
+  methodNeedLogin(e) {
+    if (getApp().isLogin()) {
+      var method = e.currentTarget.dataset.method;
+      if (this[method]) {
+        this[method](e);
+      }
+    } else {
+      getApp().widget.toastTxt("请先登录再使用此功能");
+    }
+  },
   showHtml(e) {
     wx.navigateTo({
       url: '/pages/more/html-view/html-view?type=' + e.currentTarget.dataset.type,

@@ -11,7 +11,11 @@ module.exports = {
               this[method](e);
           }
       } else {
-        app.widget.toastTxt("请先登录再使用此功能");
+        app.widget.confirm("此功能需要登录,是否去登陆？",()=>{
+          wx.switchTab({
+            url: '/pages/center/index/index',
+          })
+        });
         
           // wx.navigateTo({
           //   url: '/pages/auth-setting/auth-setting'

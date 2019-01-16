@@ -17,7 +17,7 @@
   <view class='item-zhu'>【注：本测试仅供参考，有关疾病相关诊断请咨询医生。】
   </view>
 
-  <view wx:if="{{babyBlood}}">
+  <view style='padding:20rpx' wx:if="{{babyBlood}}">
     <view>
       宝宝的血型可能是：
       <text style='color:#02BF78'>{{resultData.possibleBlood}}</text>
