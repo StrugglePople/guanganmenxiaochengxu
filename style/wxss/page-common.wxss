@@ -680,6 +680,18 @@
 }
 
 /* 检验详情列表 end*/
-
-
+/* 注意事项 start*/
+.attention-info{
+  font-size: 26rpx;
+  line-height: 46rpx;
+  padding: 0 20rpx 40rpx;
+}
+.attention-info .title{
+  text-align: center;
+  color: #666666;
+}
+.attention-info .content{
+  color: #999999;
+}
+/* 注意事项 end*/
 /******************功能列表end**********************/

@@ -1,6 +1,6 @@
 <!--pages/more/feed-back/feed-back.wxml-->
 <form bindsubmit='formSubmit'>
   <textarea placeholder="有什么要对我们说..." maxlength="250" name="content"></textarea>
-  <input placeholder='请输入手机号' type="number" value='{{mobile}}' name="mobile"></input>
+  <input placeholder='请输入手机号' type="number" value='{{mobile}}' name="mobile" />
   <button class="am-btn" url="../member-add-1/member-add-1" formType='submit'>提交</button>
 </form>

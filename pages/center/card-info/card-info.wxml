@@ -2,11 +2,6 @@
 <view class='index-bd' style='padding-bottom: 0;'>
   <form bindsubmit="formSubmit">
     <view class='bg-light'>
-      <!-- <view class='control-item' wx:if="{{isUpdate}}">
-        <input type="number" class='input-text' placeholder='输入门诊号' name="medicalCardNo"
-        value="{{member.medicalCardNo}}"></input>
-      </view> -->
-
       <view class="list-item wx-row item-bot-line">
         <view class="lable">姓　名</view>
         <view class="lable-input">
@@ -22,16 +17,25 @@
       <view class="list-item wx-row item-bot-line">
         <view class="lable">就诊卡号</view>
         <view class="lable-input">
-          <input name='medicalCardNo' value="{{card.medicalCardNo}}" placeholder="请输入就诊卡号"></input>
+          <input name='medicalCardNo' value="{{card.medicalCardNo}}" placeholder="请输入就诊卡号" />
         </view>
       </view>
-      
-      
+
+
 
     </view>
 
     <button class='am-btn' formType="submit">{{buttonName}}</button>
   </form>
+  <view class="attention-info">
+    <view class='title'>注意事项</view>
+    <view class="content">
+      <text decode="true">1、支持在本院就诊过的就诊卡、医保卡、京医通的绑定；
+      2、绑定医保卡需填写右下角的条形码号。
+      3、绑卡失败提示输入信息于医院预留信息不符时，医保卡患者请联系智康客服，京医通、自费卡请去医院核实信息。初诊患者无法绑卡时也可以用证件号无卡预约。
+      </text>
 
+    </view>
+  </view>
 
 </view>

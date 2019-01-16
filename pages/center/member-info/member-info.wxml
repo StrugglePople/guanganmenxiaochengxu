@@ -3,21 +3,16 @@
 <view class='index-bd' style='padding-bottom: 0;'>
   <form bindsubmit="formSubmit">
     <view class='bg-light'>
-      <!-- <view class='control-item' wx:if="{{isUpdate}}">
-        <input type="number" class='input-text' placeholder='输入门诊号' name="medicalCardNo"
-        value="{{member.medicalCardNo}}"></input>
-      </view> -->
-
       <view class="list-item wx-row item-bot-line">
         <view class="lable">姓　名</view>
         <view class="lable-input">
-          <input name='name' bindfocus="alertWarning" bindinput='nameChange' value="{{member.name}}" placeholder="请输入真实姓名"></input>
+          <input name='name' bindfocus="alertWarning" bindinput='nameChange' value="{{member.name}}" placeholder="请输入真实姓名" />
         </view>
       </view>
       <view class="list-item wx-row item-bot-line">
         <view class="lable">证件号</view>
         <view class="lable-input">
-          <input type='idcard' bindfocus="alertWarning" name='idNo' value="{{member.idNo}}" placeholder="请输入真实身份证号" bindinput='idNoChange'></input>
+          <input type='idcard' bindfocus="alertWarning" name='idNo' value="{{member.idNo}}" placeholder="请输入真实身份证号" bindinput='idNoChange' />
 
         </view>
       </view>
@@ -43,7 +38,7 @@
       <view class="list-item wx-row item-bot-line full">
         <view class="lable">手机号</view>
         <view class="lable-input">
-          <input type='number' name='mobileNo' bindinput='mobileNoChange' value="{{member.mobileNo}}" placeholder="请输入手机号"></input>
+          <input type='number' name='mobileNo' bindinput='mobileNoChange' value="{{member.mobileNo}}" placeholder="请输入手机号" />
         </view>
       </view>
     </view>
@@ -78,15 +73,15 @@
   </form>
   <button wx:if="{{member.id}}" class='am-btn' bindtap='deleteMember'>删除</button>
 
-  
+
   <view class="attention-info">
     <view class='title'>注意事项</view>
     <view class="content">
-    <text decode="true">1. 手机号将用于短信（电话）通知，故请认真填写；无手机号可填写其他家人手机号（多个持卡人可以共用一个手机号 。
+      <text decode="true">1. 手机号将用于短信（电话）通知，故请认真填写；无手机号可填写其他家人手机号（多个持卡人可以共用一个手机号 。
     2. 证件号可输入身份证号、军官证号、护照号；<text style="color: red">请确保证件号和姓名填写正确，否则无法取号。
     3. 绑卡后一个月内不能解绑。</text>
-    </text>
-    
+      </text>
+
     </view>
   </view>
 

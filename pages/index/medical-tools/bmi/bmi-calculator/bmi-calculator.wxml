@@ -5,10 +5,10 @@
 <text class='bmi-detial'>填写基本信息</text>
 </view>
     <view class='control-item' style='background:#fff;'>
-        <input type="digit" class='input-text'  name="height" placeholder='身高(cm)'></input>
+        <input type="digit" class='input-text'  name="height" placeholder='身高(cm)' />
       </view>
     <view class='control-item' style='background:#fff'>
-      <input type='digit' class='input-text' name = "weight" placeholder = "体重(kg)"></input>
+      <input type='digit' class='input-text' name = "weight" placeholder = "体重(kg)" />
     </view>
 </view>
 <button class='am-btn' formType="submit">查看结果</button>

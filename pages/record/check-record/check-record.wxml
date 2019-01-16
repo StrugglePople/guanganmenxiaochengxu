@@ -28,7 +28,7 @@
 <view  hidden="{{selectIndex!=1}}">
   <view class='control-item-list' style='margin:16rpx 0'>
     <view class='control-item' style='border-bottom:1px solid #f4f4f4'>
-      <input type="number" class='input-text' placeholder='输入住院号' bindinput="blur" value='{{inpatientNo}}'></input>
+      <input type="number" class='input-text' placeholder='输入住院号' bindinput="blur" value='{{inpatientNo}}' />
     </view>
   </view>
 </view>
