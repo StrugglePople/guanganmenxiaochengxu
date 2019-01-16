@@ -10,7 +10,7 @@
     </swiper>
   </view>
   <view class='top-1'>
-    <view class="common left" bindtap='noOpen'>
+    <view class="common left" bindtap='noOpen' data-msg='正在建设中..'>
       <image class='icon' src="/style/image/zizhu/guahao.png"></image>
       <image class='text' src="/style/image/zizhu/guahao-text.png"></image>
     </view>
@@ -56,11 +56,11 @@
           <text class='txt'>健康小工具</text>
         </navigator>
       </li>
-      <li bindtap='noOpen'>
+      <li bindtap='methodNeedLogin' data-method="showPage" data-url='/pages/center/message/message?type=SYSTEM_NOTIFICATION'>
         <image src="/style/image/zizhu/index-6.png"></image>
         <text class='txt'>随访通知</text>
       </li>
-      <li bindtap="noOpen">
+      <li bindtap="noOpen" data-msg='请用app使用此功能'>
         <image src="/style/image/zizhu/index-7.png"></image>
         <text class='txt'>国际医疗</text>
       </li>

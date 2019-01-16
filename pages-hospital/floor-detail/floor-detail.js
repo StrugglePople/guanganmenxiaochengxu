@@ -28,7 +28,7 @@ Page({
    */
   onShow: function () {
     this.setData({
-        detail:getApp.cache.getData("floorDetail")
+        detail:getApp().cache.getData("floorDetail")
     });
 
   },

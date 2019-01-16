@@ -49,8 +49,8 @@ Page(Object.assign({}, loginExtentds, {
   },
   
   
-  noOpen() {
-    getApp().widget.alert('正在建设中..')
+  noOpen(e) {
+    getApp().widget.alert(e.currentTarget.dataset.msg);
   },
   toDetialView(even) {
     var url = 'https://mng.zhicall.cn/news/index.html?newsId=' + even.currentTarget.dataset.newsId;

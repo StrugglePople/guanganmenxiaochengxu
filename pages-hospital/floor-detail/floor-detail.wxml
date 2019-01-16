@@ -1,5 +1,5 @@
 <!--pages/into-hospital/floor-detail/floor-detail.wxml-->
 <view wx:for="{{detail}}" class="floor-list">
-    <view class="floor">{{detail.floor}}</view>
-    <view class="description">{{detail.description}}</view>
+    <view class="floor">{{item.floor}}</view>
+    <view class="description">{{item.floorDesc}}</view>
 </view>

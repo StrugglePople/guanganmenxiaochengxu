@@ -55,7 +55,7 @@ Page(Object.assign({}, loginExtentds, {
     var idNo = e.detail.value;
     if (!idNo || idNo.length != 18) return;
     let array = getApp().validate.isChinaId(idNo);
-    if (array[0]) {
+    if (array[0] && array[1]) {
       // this.data.member.idNo = idNo;
       this.setData({
         'member.birthday': array[1],
@@ -105,11 +105,11 @@ Page(Object.assign({}, loginExtentds, {
       getApp().widget.toast('请输入证件号');
       return;
     }
-    // let array = getApp().validate.isChinaId(member.idNo);
-    // if (!array[0]) {
-    //   getApp().widget.toast(array[1]);
-    //   return;
-    // }
+    let array = getApp().validate.isChinaId(member.idNo);
+    if (!array[0]) {
+      getApp().widget.toast(array[1]);
+      return;
+    }
     if (!member.birthday) {
       getApp().widget.toast('请输入出生日期');
       return;
@@ -180,7 +180,7 @@ Page(Object.assign({}, loginExtentds, {
     });
   },
   alertWarning(){
-    getApp().widget.toastTxt("请确保证件号和姓名姓名填写正确，否则无法取号");
+    getApp().widget.toastTxt("请确保证件号和姓名填写正确，否则无法取号");
   },
   memberInfoIsChange(){
     var oldMember = getApp().accountServer.getMemberById(this.data.memberId),

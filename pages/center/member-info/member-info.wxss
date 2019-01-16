@@ -67,3 +67,13 @@ page{
   line-height:45rpx;
   margin-left:30rpx;
 }
+.attention-info{
+  font-size: 26rpx;
+  line-height: 46rpx;
+  padding: 0 20rpx 40rpx;
+  color: #999999;
+}
+.attention-info .title{
+  text-align: center;
+  color: #666666;
+}

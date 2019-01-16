@@ -8,20 +8,22 @@ Page({
     pageIndex: 1,
     pageSize: 10,
     list: [],
-    hasMore: false
+    hasMore: false,
+    massageType:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.data.massageType = options.type;
     this.getData(true);
   },
  
   getData(hasLoading) {
     var param = {
       accountId: getApp().globalData.session.id,
-      notificationMessageType: 'SYSTEM_NOTIFICATION',
+      notificationMessageType: this.data.massageType,
       pageIndex: this.data.pageIndex,
       pageSize: this.data.pageSize
     }
@@ -49,8 +51,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setMessageRead();
-  
+    if (this.data.massageType == "USER_NOTIFICATION"){
+      this.setMessageRead();
+    }
   },
 
   /**

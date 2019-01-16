@@ -76,7 +76,7 @@ Page(Object.assign({}, loginExtentds, toast,{
   setUnReadMessageAmount:function(){
     getApp().request.post("messageAmount",false,{
       accountId:getApp().globalData.session.id,
-      notificationMessageType: "SYSTEM_NOTIFICATION"
+      notificationMessageType: "USER_NOTIFICATION"
     },(data)=>{
       this.setData({
         unreadNum: data.unreadAmountAll

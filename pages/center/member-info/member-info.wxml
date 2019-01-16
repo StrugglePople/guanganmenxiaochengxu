@@ -76,6 +76,18 @@
 
     <button class='am-btn' formType="submit">{{buttonName}}</button>
   </form>
-<button wx:if="{{member.id}}" class='am-btn' bindtap='deleteMember'>删除</button>
+  <button wx:if="{{member.id}}" class='am-btn' bindtap='deleteMember'>删除</button>
+
+  
+  <view class="attention-info">
+    <view class='title'>注意事项</view>
+    <view class="content">
+    <text decode="true">1. 手机号将用于短信（电话）通知，故请认真填写；无手机号可填写其他家人手机号（多个持卡人可以共用一个手机号 。
+    2. 证件号可输入身份证号、军官证号、护照号；<text style="color: red">请确保证件号和姓名填写正确，否则无法取号。
+    3. 绑卡后一个月内不能解绑。</text>
+    </text>
+    
+    </view>
+  </view>
 
 </view>

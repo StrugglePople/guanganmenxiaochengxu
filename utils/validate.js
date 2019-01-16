@@ -68,6 +68,9 @@ var isChinaId = (s) => {
       81: "香港", 82: "澳门",
       91: "国外 "
     };
+  if (sId.length == 8 || sId.length == 9){
+    return [true];
+  }
 
   if (!/^\d{17}(\d|x)$/i.test(sId)) {
     return [false, '身份证格式错误'];
