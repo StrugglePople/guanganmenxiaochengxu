@@ -41,7 +41,7 @@ Page({
     }
     var result = (weight / height / height * 10000);
     if (result < 15 || result > 45) {
-      getApp().widget.toast('BMI计算异常，请输入正确的身高和体重值');
+      getApp().widget.toastTxt('BMI计算异常，请输入正确的身高和体重值');
       return;
    }
 

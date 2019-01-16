@@ -6,11 +6,11 @@
       <text class='bmi-detial'>填写基本信息</text>
     </view>
     <view class="zan-cell zan-cell--access" bindtap='fatherBlood'>
-      <view class="zan-cell__bd">父亲血型:{{faBlood}}</view>
+      <view class="zan-cell__bd"><text space="nbsp">父亲血型 :   {{faBlood}}</text></view>
       <view class="zan-cell__ft"></view>
     </view>
     <view class="zan-cell zan-cell--access" bindtap='motherBlood'>
-      <view class="zan-cell__bd">母亲血型:{{moBlood}}</view>
+      <view class="zan-cell__bd"><text space="nbsp">母亲血型 :   {{moBlood}}</text></view>
       <view class="zan-cell__ft"></view>
     </view>
   </view>

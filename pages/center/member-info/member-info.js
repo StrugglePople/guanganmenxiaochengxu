@@ -77,7 +77,7 @@ Page(Object.assign({}, loginExtentds, {
     this.data.member.mobileNo = e.detail.value;
   },
   formSubmit: function(e) {
-    if (!this.memberInfoIsChange()){
+    if (this.data.memberId && !this.memberInfoIsChange()){
       getApp().widget.toast('没有信息更改');
       return;
     }
@@ -102,14 +102,14 @@ Page(Object.assign({}, loginExtentds, {
       return;
     }
     if (!member.idNo) {
-      getApp().widget.toast('请输入身份证号');
+      getApp().widget.toast('请输入证件号');
       return;
     }
-    let array = getApp().validate.isChinaId(member.idNo);
-    if (!array[0]) {
-      getApp().widget.toast(array[1]);
-      return;
-    }
+    // let array = getApp().validate.isChinaId(member.idNo);
+    // if (!array[0]) {
+    //   getApp().widget.toast(array[1]);
+    //   return;
+    // }
     if (!member.birthday) {
       getApp().widget.toast('请输入出生日期');
       return;
