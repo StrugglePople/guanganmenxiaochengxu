@@ -4,10 +4,10 @@
     <view class='face-top-item-detail'>
       <image src="{{avatarUrl}}" class='img-face'></image>
       <span wx:if="{{isLogin}}">{{mobile}}</span>
-      <button wx:else plain="true" class="btn-login" open-type="getUserInfo" bindgetuserinfo="getUserInfoCenter">登录</button>
-      <view class='triangle'>
+      <button wx:else class="btn-login" open-type="getUserInfo" bindgetuserinfo="getUserInfoCenter">登录</button>
+      <!-- <view class='triangle'>
         <i class="i-item-angle-light"></i>
-      </view>
+      </view> -->
     </view>
   </view>
 
