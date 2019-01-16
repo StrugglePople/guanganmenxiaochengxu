@@ -28,7 +28,7 @@
       <view class="list-item wx-row item-bot-line">
         <view class="lable">出生日期</view>
         <view class="lable-input">
-          <picker mode="date" binclass="address-wrapper" bindchange="bindDateChange" style='height: 100%;width:100%;line-height:88rpx'>
+          <picker mode="date" binclass="address-wrapper" bindchange="bindDateChange" style='height: 100%;width:100%;line-height:88rpx' value="{{member.birthday}}">
             <view class="picker">
               {{member.birthday ? member.birthday: '出生日期'}}
             </view>

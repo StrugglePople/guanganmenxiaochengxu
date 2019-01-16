@@ -11,9 +11,15 @@ module.exports = {
               this[method](e);
           }
       } else {
-          wx.navigateTo({
-            url: '/pages/auth-setting/auth-setting'
-          });
+        app.widget.confirm("此功能需要登录是否现在登录",()=>{
+          wx.switchTab({
+            url: '/pages/center/index/index',
+          })
+        });
+        
+          // wx.navigateTo({
+          //   url: '/pages/auth-setting/auth-setting'
+          // });
       }
     },
     showPage(e) {
