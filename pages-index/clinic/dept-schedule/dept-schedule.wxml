@@ -71,7 +71,7 @@
               <text class="font-12 color-2">￥{{item.price}}</text>
               </view>
           </view>
-          <view wx:if="{{item.num>0}}" class="schedule-right" bindtap="methodNeedLogin" data-method="chooseSchedule" data-schedule="{{item.id}}">余{{item.num}}</view>
+          <view wx:if="{{item.leftNum>0}}" class="schedule-right" bindtap="methodNeedLogin" data-method="chooseSchedule" data-schedule="{{item.id}}">余 {{item.leftNum}}</view>
           <view wx:else class="schedule-right no-num" >已满</view>
         </view>
       </scroll-view>

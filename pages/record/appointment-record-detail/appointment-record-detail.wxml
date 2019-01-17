@@ -60,7 +60,7 @@
   </view>
 </view>
 <view class="zan-btns">
-  <button class="am-btn" wx:if="{{(data.status === 'PASS' || data.canCancel === 1)}}" bindtap='cancelRecord'>
+  <button class="am-btn" wx:if="{{data.canCancel === 1}}" bindtap='cancelRecord'>
     取消预约
   </button>
   <!-- <button class="am-btn" wx:if="{{!(data.status === 'APPOINTTING' || data.canCancel === 1) && (data.status === 'CANCELLED' || data.canDelete === 1)}}" bindtap='deleteRecord'>

@@ -39,15 +39,6 @@
             <text class='h5'>{{item.name}}</text>
             <text class='small'>{{item.titleDesc}}</text>
           </view>
-          <view class='am-flex-after' wx:if="{{item.redisTotalLeftNum > 0}}">
-            <text class='span-auxiliary span-auxiliary-sm span-auxiliary-success'>有号</text>
-          </view>
-          <view class='am-flex-after' wx:if="{{item.redisTotalLeftNum == 0}}">
-            <text class='span-auxiliary span-auxiliary-sm span-auxiliary-gray'>已满</text>
-          </view>
-          <view class='am-flex-after' wx:if="{{item.redisTotalLeftNum == -2}}">
-            <text class='span-auxiliary span-auxiliary-sm span-auxiliary-gray'>无排班</text>
-          </view>
         </view>
         <view class='p' style="max-height: 72rpx;overflow:hidden">擅长：{{item.speciality || '暂无'}}</view>
       </view>
