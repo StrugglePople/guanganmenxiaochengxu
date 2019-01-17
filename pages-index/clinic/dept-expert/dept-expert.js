@@ -29,7 +29,8 @@ Page({
   },
   getData() {
     var param = {
-      hospitalId: getApp().globalData.selectHospitalId
+      hospitalId: getApp().globalData.selectHospitalId,
+      regType:"RESERVATION"
     }
     var url = this.data.type == "yuyue" ? "getAppointDeptList" :"guideDepts";
     getApp().request.postNoToast(url, param, (data) => {
@@ -84,7 +85,8 @@ Page({
 
   getDoctors(hasLoading) {
     var param = {
-      deptId: this.data.selectDept.id
+      deptId: this.data.selectDept.id,
+      regType: "RESERVATION"
     }
     getApp().request.post('expertListBySchedule', hasLoading, param, (data) => {
       for (var item of data) {
@@ -116,12 +118,13 @@ Page({
 
   deptSchedule(e) {
     var param1 = {
-      deptId: this.data.selectDept.id
+      deptId: this.data.selectDept.id,
+      regType: "RESERVATION"
     }
     getApp().request.postWithToast('getDeptDetailInfo', param1, (data) => {
       getApp().cache.setData('clinicInfo', data);
       wx.navigateTo({
-        url: '/pages-index/clinic/dept-schedule/dept-schedule',
+        url: '/pages-index/clinic/dept-schedule/dept-schedule'
       })
     })
   },
@@ -136,7 +139,8 @@ Page({
   
     var param1 = {
       deptId: this.data.selectDept.id,
-      doctorId: id
+      doctorId: id,
+      regType: "RESERVATION"
     }
     if (this.data.type == "yuyue"){
       getApp().request.postWithToast('getScheduleForExpert', param1, (data) => {
