@@ -1,4 +1,4 @@
-<import src="../../template/empty.wxml" />
+<import src="../../../template/empty.wxml" />
 
 <view class="reg">
   <view class='tt clearfix'>
@@ -9,22 +9,11 @@
       <view class='name'>
         <text>普通号</text>
       </view>
-      <view class='ks'> {{dept.name}}</view>
+      <view class='ks'> {{dept.deptName}}</view>
     </view>
   </view>
 
-  <navigator class='baner-panel-link' wx:if="{{showFare}}" url='../../fever/fever-1/fever-1' open-type='redirect'>
-    如患儿有发热现象,
-    <br/>请走发热检验快速通道
-    <i class="i-angle-r-danger"></i>
-  </navigator>
 
-  <!-- <view class='all-time'>
-    <view class='title'>
-      <text>全部时间</text>
-      <image src='../../common/image/right-arrow-gray.png'></image>
-    </view>
-  </view> -->
   <view>
       <view style='height:20rpx'></view>
 
@@ -67,7 +56,7 @@
 
   </view>
   <view hidden='{{selectIndex != 0}}'>
-    <template is="empty" wx:if="{{!scheduleList || scheduleList == 0}}" data="{{text: '沒有排班'}}"></template>
+    <template is="empty" wx:if="{{!scheduleList || scheduleList.length == 0}}" data="{{text: '沒有排班'}}"></template>
     <block wx:else>
       <scroll-view scroll-y style="height: {{height1}}px;">
         <view class="schedule-list item-bot-line" wx:for="{{scheduleList}}">
@@ -82,7 +71,8 @@
               <text class="font-12 color-2">￥{{item.price}}</text>
               </view>
           </view>
-          <view class="schedule-right" bindtap='chooseSchedule' data-schedule="{{item.id}}">余{{item.num}}</view>
+          <view wx:if="{{item.num>0}}" class="schedule-right" bindtap="methodNeedLogin" data-method="chooseSchedule" data-schedule="{{item.id}}">余{{item.num}}</view>
+          <view wx:else class="schedule-right no-num" >已满</view>
         </view>
       </scroll-view>
     </block>

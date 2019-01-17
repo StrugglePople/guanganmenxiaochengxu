@@ -36,7 +36,7 @@
     <ul class="grid-list">
       <li bindtap='methodNeedLogin' data-method="showPage" data-url='/pages/record/appointment-record/appointment-record'>
         <image src="/style/image/zizhu/index-1.png"></image>
-        <text class='txt'>预约挂号记录</text>
+        <text class='txt'>预约记录</text>
       </li>
       <li bindtap="showPage" data-url='/pages/cms-about/news-list/news-list?title=就医指南'>
         <image src="/style/image/zizhu/index-2.png"></image>
