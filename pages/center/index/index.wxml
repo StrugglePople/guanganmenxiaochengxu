@@ -22,7 +22,7 @@
         <image src="/style/svg/center/center-2.png"></image>
         <text class='txt'>预约记录</text>
       </li>
-      <li bindtap='methodNeedLogin' data-method="showPage" data-url='/pages/center/message/message?type=USER_NOTIFICATION'>
+      <li bindtap='methodNeedLogin' data-method="showPage" data-url='/pages/center/message/message?type=USER_NOTIFICATION?hasUnread={{unreadNum>0}}'>
         <image src="/style/svg/center/center-3.png">
         </image>
         <text class='txt'>消息中心</text>

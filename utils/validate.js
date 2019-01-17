@@ -73,7 +73,7 @@ var isChinaId = (s) => {
   }
 
   if (!/^\d{17}(\d|x)$/i.test(sId)) {
-    return [false, '身份证格式错误'];
+    return [false, '证件号格式错误'];
   }
 
   // sId = sId.replace(/x$/i, "a");
