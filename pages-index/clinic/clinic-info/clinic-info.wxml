@@ -65,9 +65,8 @@
     <view class='form-fee-item font-weight'>
       <view class='form-fee-label'>就诊日期</view>
       <view class='form-fee-control'>
-        <text>{{schedule.scheduleDate}} </text>
-        <text wx:if="{{schedule.time=='MORNING'}}">上午</text>
-        <text wx:elif="{{schedule.time=='AFTERNOON'}}">下午</text>
+        <text>{{schedule.scheduleDateStr}} </text>
+        <text>{{schedules[schedule.time]}}</text>
         <!-- <text wx:else>晚上</text> -->
       </view>
     </view>

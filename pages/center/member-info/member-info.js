@@ -128,6 +128,7 @@ Page(Object.assign({}, loginExtentds, {
       },(data) => {
         getApp().widget.toastTxt("更新持卡人成功", () => {
           getApp().globalData.session.patientVoList = data;
+          getApp().accountServer.setCardsToAccount();
           getApp().cache.setData("app.session", getApp().globalData.session);
           // setTimeout(() => {
           //   wx.navigateBack()
@@ -141,6 +142,7 @@ Page(Object.assign({}, loginExtentds, {
       }, (data) => {
         getApp().widget.toastTxt("添加持卡人成功", () => {
           getApp().globalData.session.patientVoList = data;
+          getApp().accountServer.setCardsToAccount();
           getApp().cache.setData("app.session", getApp().globalData.session);
 
           setTimeout(() => {

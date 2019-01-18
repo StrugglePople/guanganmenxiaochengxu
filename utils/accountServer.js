@@ -26,8 +26,14 @@ var service = {
       }
     }
   },
-  deleteCard:function(){
-    
+  deleteCard:function(id){
+    var cards = getApp().globalData.session.medicalCards;
+    for (var i = 0; i < cards.length; i++) {
+      if (cards[i].id == id) {
+        cards.splice(i, 1);
+        break;
+      }
+    }
   },
   getSelectMember(){
     var id = cache.getData("selectMemberId");

@@ -29,10 +29,7 @@
       <view class='am-flex-title'>
         <view class='h5'>{{item.patient.name}}</view>
         <view class='p'>{{item.regDate}}
-          <text wx:if="{{item.regTime=='MORNING'}}">上午</text>
-          <text wx:elif="{{item.regTime=='AFTERNOON'}}">下午</text>
-          <text wx:else>晚上</text>
-          <text wx:if="{{item.visitTime}}">\t{{item.visitTime}}</text>
+          <text>{{schedules[item.regTime]}}</text>
         </view>
       </view>
       <view class='am-flex-after'>

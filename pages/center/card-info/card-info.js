@@ -79,6 +79,7 @@ Page({
               break;
             }
           }
+          getApp().accountServer.deleteCard(this.data.card.id);
           getApp().cache.setData('app.session', getApp().globalData.session);
           setTimeout(() => {
             wx.navigateBack()
@@ -114,6 +115,7 @@ Page({
     }, (data) => {
       getApp().widget.toastTxt("添加就诊卡成功", () => {
         this.data.member.cards.push(data.medCard);
+        getApp().globalData.session.medicalCards.push(data.medCard);
         getApp().cache.setData("app.session", getApp().globalData.session);
         setTimeout(() => {
           wx.navigateBack()

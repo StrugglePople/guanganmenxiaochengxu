@@ -7,7 +7,8 @@ Page({
   data: {
     hasMore:false,
     list: [],
-    statusList: getApp().globalData.recordStatus
+    statusList: getApp().globalData.recordStatus,
+    schedules: getApp().globalData.schedules
   },
 
   /**

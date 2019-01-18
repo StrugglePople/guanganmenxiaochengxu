@@ -8,7 +8,8 @@ Page(Object.assign({}, toast,{
   data: {
     medicalCard:{},
     member:{},
-    clinicInfo:{}
+    clinicInfo: {},
+    schedules: getApp().globalData.schedules
   },
 
   /**

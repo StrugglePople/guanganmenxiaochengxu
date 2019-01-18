@@ -8,7 +8,8 @@ Page(Object.assign({}, toast, {
    */
   data: {
     isCancelRecord: false,
-    statusList: getApp().globalData.recordStatus
+    statusList: getApp().globalData.recordStatus,
+    schedules: getApp().globalData.schedules
   },
 
   /**

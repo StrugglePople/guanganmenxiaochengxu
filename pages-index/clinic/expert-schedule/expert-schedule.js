@@ -10,15 +10,7 @@ Page(Object.assign({}, loginExtends, {
     selectIndex: 0,
     hiddenDefaultDoctor: true,
     showSchedule:false,
-    schedules: {
-      E_MORNING: '凌晨',
-      MORNING: '上午',
-      NOON: '中午',
-      AFTERNOON: '下午',
-      EVENING: '夜间',
-      ALLDAY: '全天',
-      DAY: "白天"
-    },
+    schedules: getApp().globalData.schedules,
     dayOfWeek: ['日', '一', '二', '三', '四', '五', '六']
   },
 
@@ -30,7 +22,8 @@ Page(Object.assign({}, loginExtends, {
     var data = getApp().cache.getData('clinicInfo');
     // data.doctor.src = getApp().request.url.mobile + '/mobile/image/hospital/' + getApp().globalData.hospitalId + '/expert/' + data.doctor.picName
     this.setData(data);
-    var scheduleList = this.handleScheduleList();
+    // var scheduleList = this.handleScheduleList();
+    var scheduleList = this.data.scheduleList;
     this.setData({
       scheduleList: scheduleList,
       height: getApp().globalData.device.windowHeight - 160,

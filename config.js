@@ -17,6 +17,15 @@ var config = {
     "RETURNED": "已退号",
     "APPOINTTING": "待支付"
 
+  },
+  schedules: {
+    E_MORNING: '凌晨',
+    MORNING: '上午',
+    NOON: '中午',
+    AFTERNOON: '下午',
+    EVENING: '夜间',
+    ALLDAY: '全天',
+    DAY: "白天"
   }
 
 };

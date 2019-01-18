@@ -69,7 +69,7 @@
         <view class="schedule-list item-bot-line" wx:for="{{scheduleList}}">
           <view class="schedule-left">
             <view class="font-16">
-              <text space="true">{{item.scheduleDate}} </text>
+              <text space="true">{{item.scheduleDateStr}} </text>
               <text space="true">星期{{dayOfWeek[item.dayOfWeek]}} </text>
               <text>{{schedules[item.time]}}</text>
             </view>

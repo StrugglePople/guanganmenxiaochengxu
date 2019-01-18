@@ -9,15 +9,7 @@ Page(Object.assign({}, loginExtends, {
     selectIndex: 0,
     showFare:false,
     scheduleList:[],
-    schedules :{
-      E_MORNING: '凌晨',
-      MORNING: '上午',
-      NOON: '中午',
-      AFTERNOON: '下午',
-      EVENING: '夜间',
-      ALLDAY: '全天',
-      DAY: "白天"
-    },
+    schedules: getApp().globalData.schedules,
     dayOfWeek: ['日','一', '二', '三', '四', '五', '六']
   },
 
@@ -29,7 +21,8 @@ Page(Object.assign({}, loginExtends, {
     this.setData({
       ...scheduleInfo
     });
-    var scheduleList = this.handleScheduleList();
+    // var scheduleList = this.handleScheduleList();
+    var scheduleList = this.data.scheduleList;
     this.setData({
       scheduleList: scheduleList,
       height: getApp().globalData.device.windowHeight - 160,
