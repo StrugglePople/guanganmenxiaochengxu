@@ -1,2 +1,5 @@
 /* pages/more/html-view/html-view.wxss */
 @import "../../../utils/wxParse/wxParse.wxss";
+page{
+  background: #fff
+}
