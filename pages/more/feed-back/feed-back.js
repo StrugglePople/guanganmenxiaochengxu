@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    mobile: getApp().cache.getData("mobile").mobile
+    mobile: getApp().cache.getData("app.session") ? getApp().cache.getData("app.session").mobile:""
   },
 
   /**

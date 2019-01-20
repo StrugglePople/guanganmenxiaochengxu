@@ -11,29 +11,7 @@ App({
     })
 
   },
-  onShow(options) {
-    if (options.scene == 1089 
-      && options.path != 'pages/charge/charge' && options.path != 'pages/charge/charge-result/charge-result'
-      && options.path != 'pages/charge/charge-confrim/charge-confrim'
-      && options.path != 'pages/record/appointment-record-detail/appointment-record-detail'
-      && options.path != 'pages/record/reg-record-detail/reg-record-detail'
-      && options.path != 'pages/index/in-hospital/in-hospital-info/in-hospital-info'
-      && options.path != 'pages/index/self-fee/self-fee-detail/self-fee-detail'
-      && options.path != 'pages/index/current-time/current-time'
-      && options.path != 'pages/index/body-checkup/body-checkup-confirm/body-checkup-confirm'
-      && options.path != 'pages/index/body-checkup/body-checkup-order-detail/body-checkup-order-detail'
-      && options.path != 'pages/index/body-checkup/body-check-order/body-check-order'
-      && options.path != 'pages/center/member-certified/member-certified'
-      && options.path != 'pages/center/member-add-2/member-add-2'
-      && options.path != 'pages/into-hospital/volunteer/personage/personage'
-      && options.path != 'pages/charge-study/step-2/step-2'
-      && options.path != 'pages/more/web-view/web-view'
-      && options.path != 'pages/into-hospital/volunteer/index') {
-      wx.reLaunch({
-        url: '/pages/index/index/index'
-      })
-    }
-  },
+  
 
   initObject() {
     var cache = require('/utils/cache.js');

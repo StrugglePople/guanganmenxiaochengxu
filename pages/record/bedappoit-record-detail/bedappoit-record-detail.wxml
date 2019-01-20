@@ -17,11 +17,7 @@
     <view class='form-fee-item am-flex-item'>
       <view class='form-fee-label form-fee-label'>预约时间</view>
       <view class='am-flex-after'>
-        <text space="ensp">{{data.regDate}}\t </text>
-        <text wx:if="{{data.regTime=='MORNING'}}">上午</text>
-        <text wx:elif="{{data.regTime=='AFTERNOON'}}">下午</text>
-        <text wx:else>晚上</text>
-
+        <text space="ensp">{{data.regDate}}</text>
       </view>
     </view>
     <view class='form-fee-item am-flex-item'>

@@ -87,8 +87,9 @@ Page({
     var param = {
       deptId: this.data.selectDept.id,
       regType: "RESERVATION"
-    }
-    getApp().request.post('expertListBySchedule', hasLoading, param, (data) => {
+    },
+      url = this.data.type == "yuyue" ? "expertListBySchedule" : "expertListByDept";
+    getApp().request.post(url, hasLoading, param, (data) => {
       for (var item of data) {
         if (!item.picName) {
           item.picName = item.id + '';

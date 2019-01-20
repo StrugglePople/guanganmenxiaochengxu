@@ -43,6 +43,7 @@ const urlIds = {
   loadContentInfo: '/more.hospital.note.info.hsr',
   getAppointDeptList: '/schedule.dept.list.hsr',
   expertListBySchedule: '/schedule.dept.doctors.hsr',
+  expertListByDept: '/guiding.dept.doctors.info.hsr',
   getScheduleForExpert: '/schedule.dept.doctor.sch.no.hsr',
   getDeptDetailInfo: '/schedule.dept.doctor.sch.no.hsr',
   

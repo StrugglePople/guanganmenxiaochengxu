@@ -44,7 +44,7 @@
         <text class='am-txt-light am-ft-17'>开方科室</text>
       </view>
       <view class='am-flex-after am-ft-17'>
-        <text>{{data.checkDeptName}}</text>
+        <text>{{data.patDeptName}}</text>
       </view>
     </view>
   </view>

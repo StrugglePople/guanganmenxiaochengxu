@@ -16,15 +16,15 @@
 }
 
 .item .time{
-  height: 12px;
-  line-height: 12px;
+  height: 24rpx;
+  line-height: 24rpx;
   color: #b1b1b1;
   font-size: 24rpx;
   text-align: center
 }
 
 .item .content {
-   padding: 10px 15px 15px; 
+   padding: 20rpx 30rpx 30rpx; 
   font-size: 30rpx;
   color: #4d4d4d;
 }

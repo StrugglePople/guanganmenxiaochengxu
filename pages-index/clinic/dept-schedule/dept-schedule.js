@@ -7,10 +7,9 @@ Page(Object.assign({}, loginExtends, {
    */
   data: {
     selectIndex: 0,
-    showFare:false,
     scheduleList:[],
     schedules: getApp().globalData.schedules,
-    dayOfWeek: ['日','一', '二', '三', '四', '五', '六']
+    dayOfWeek: ['日', '一', '二', '三', '四', '五', '六', '日']
   },
 
   /**
@@ -28,15 +27,6 @@ Page(Object.assign({}, loginExtends, {
       height: getApp().globalData.device.windowHeight - 160,
       height1: getApp().globalData.device.windowHeight - 150,
     })
-    if ((this.data.dept.name.indexOf('呼吸内科') > -1 || this.data.dept.name.indexOf('内科门诊') > -1) && this.data.regType == 'REAL_TIME' && getApp().globalData.selectHospitalId == 10361) {
-      this.setData({
-        showFare: true
-      })
-    } else {
-      this.setData({
-        showFare: false
-      })
-    }
   },
 
   /**

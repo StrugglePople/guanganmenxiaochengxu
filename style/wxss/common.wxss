@@ -17,7 +17,7 @@ textarea {
   /*-webkit-tap-highlight-color:rgba(0,0,0,0);*/
 }
 input{
-  padding-top: 4rpx;
+  padding-top: 6rpx;
 }
 page {
   color: #111;

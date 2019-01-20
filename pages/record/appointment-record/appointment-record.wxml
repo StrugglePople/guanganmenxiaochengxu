@@ -28,7 +28,7 @@
     <view class='rgrecond-item am-flex-item'>
       <view class='am-flex-title'>
         <view class='h5'>{{item.patient.name}}</view>
-        <view class='p'>{{item.regDate}}
+        <view class='p'>{{item.regDateStr}}
           <text>{{schedules[item.regTime]}}</text>
         </view>
       </view>

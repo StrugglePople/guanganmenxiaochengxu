@@ -32,6 +32,34 @@ Page({
     this.setData({
       type: type,
     })
+    if (!this.data.type) {
+      var content = getApp().cache.getData('html.data');
+      getApp().cache.removeKey('html.data');
+      var WxParse = require('../../../utils/wxParse/wxParse.js');
+      WxParse.wxParse('article', 'html', content, this, 5);
+      return;
+    }
+    if (this.data.type == "gonggao") {
+      getApp().request.postHeadWithToast('getNewDetail', {
+        hospitalId: getApp().globalData.hospitalId,
+        familyId: 0
+      }, [this.data.newsId],
+        (data) => {
+          wx.setNavigationBarTitle({
+            title: data.title
+          })
+          var WxParse = require('../../../utils/wxParse/wxParse.js');
+          WxParse.wxParse('article', 'html', data.newsDetail, this, 5);
+        }, null, "zixun")
+    } else {
+      getApp().request.postWithToast('loadContentInfo', {
+        type: this.data.type
+      },
+        (data) => {
+          var WxParse = require('../../../utils/wxParse/wxParse.js');
+          WxParse.wxParse('article', 'html', data.content, this, 5);
+        })
+    }
   },
 
   /**
@@ -45,34 +73,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-    if (!this.data.type) {
-      var content = getApp().cache.getData('html.data');
-      getApp().cache.removeKey('html.data');
-      var WxParse = require('../../../utils/wxParse/wxParse.js');
-      WxParse.wxParse('article', 'html', content, this, 5);
-      return;
-    }
-    if (this.data.type == "gonggao") {
-      getApp().request.postHeadWithToast('getNewDetail', {
-        hospitalId: getApp().globalData.hospitalId,
-        familyId:0
-      }, [this.data.newsId],
-        (data) => {
-          wx.setNavigationBarTitle({
-            title: data.title
-          })
-          var WxParse = require('../../../utils/wxParse/wxParse.js');
-          WxParse.wxParse('article', 'html', data.newsDetail, this, 5);
-        },null,"zixun")
-    } else {
-      getApp().request.postWithToast('loadContentInfo', {
-          type: this.data.type
-        },
-        (data) => {
-          var WxParse = require('../../../utils/wxParse/wxParse.js');
-          WxParse.wxParse('article', 'html', data.content, this, 5);
-        })
-    }
+    
 
 
   },

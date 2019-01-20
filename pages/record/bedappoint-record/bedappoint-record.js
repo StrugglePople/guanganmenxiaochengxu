@@ -64,7 +64,6 @@ Page({
 
   getData(hasLoading) {
     var param = {
-      accountId: getApp().globalData.session.id,
       name: this.member.name,
       idCard: this.member.idNo
     }

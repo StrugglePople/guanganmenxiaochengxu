@@ -11,7 +11,7 @@ Page(Object.assign({}, loginExtends, {
     hiddenDefaultDoctor: true,
     showSchedule:false,
     schedules: getApp().globalData.schedules,
-    dayOfWeek: ['日', '一', '二', '三', '四', '五', '六']
+    dayOfWeek: ['日', '一', '二', '三', '四', '五', '六', '日']
   },
 
   /**

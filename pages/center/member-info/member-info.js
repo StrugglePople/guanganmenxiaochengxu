@@ -51,8 +51,8 @@ Page(Object.assign({}, loginExtentds, {
     this.data.member.name = e.detail.value;
   },
   idNoChange: function (e) {
-    this.data.member.idNo = idNo;
     var idNo = e.detail.value;
+    this.data.member.idNo = idNo;
     if (!idNo || idNo.length != 18) return;
     let array = getApp().validate.isChinaId(idNo);
     if (array[0] && array[1]) {
