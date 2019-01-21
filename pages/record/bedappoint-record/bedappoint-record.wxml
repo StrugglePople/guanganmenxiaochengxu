@@ -2,7 +2,7 @@
 <import src="../../template/empty.wxml" />
 <navigator url="/pages/center/member-list/member-list?isSelect=true" class="banner-reg-recond">
   <image class="navigator-background" src='/style/image/record/select-member-bg.png'></image>
-  <view class="navigator-info" wx:if="{{!member}}">
+  <view class="navigator-info" wx:if="{{!member || !member.id}}">
     <text class='h4'>选择就诊人</text>
   </view>
   <view class="navigator-info" wx:else>

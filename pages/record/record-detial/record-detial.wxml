@@ -1,11 +1,11 @@
 <import src="../../template/empty.wxml" />
 <view class="item-multi-txt am-flex-item bg-white link-active select-card" bindtap='showCardList'>
   <image class="common-bg select-crard-bg" src='/style/image/record/common-bg.png'></image>
-  <view class='am-flex-title move-upward' wx:if="{{medicalCard.name}}">
+  <view class='am-flex-title move-upward' wx:if="{{medicalCard && medicalCard.name}}">
     <view class='h4-lg'>{{medicalCard.name}}</view>
     <view class='color-3'>{{member.sex == "MALE"?"男":"女"}} {{medicalCard.medicalCardNo}}</view>
   </view>
-  <view class='am-flex-title move-upward' wx:if="{{!medicalCard.name}}">
+  <view class='am-flex-title move-upward' wx:else>
     <view class='h4-lg color-3'>选择就诊人</view>
   </view>
   <view class='am-flex-after'>

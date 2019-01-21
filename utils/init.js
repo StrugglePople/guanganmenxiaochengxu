@@ -31,7 +31,7 @@ var Init = {
       getApp().globalData.session = cache.getData('app.session');
       this.getMembers((data) => {
         this.getCards((data) => {
-          if (typeof callback == "function") callback(session);
+          if (typeof callback == "function") callback();
         }, this.initSessionFail)
       }, this.initSessionFail);
     }

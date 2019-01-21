@@ -33,13 +33,15 @@ Page(Object.assign({}, toast,{
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var medicalCard = getApp().cache.getData("selectCard"),
-      member = getApp().accountServer.getMemberById(medicalCard.patientId);
-
-    this.setData({
-      medicalCard,
-      member
-    })
+    var medicalCard = getApp().cache.getData("selectCard");
+    if (medicalCard && medicalCard.id){
+      var member = getApp().accountServer.getMemberById(medicalCard.patientId);
+      this.setData({
+        medicalCard,
+        member
+      })
+    }
+    
   },
 
   showCardList() {

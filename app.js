@@ -39,7 +39,10 @@ App({
     });
     //初始化账户信息
     setTimeout(()=>{
-      this.init.initSession();
+      this.init.initSession(()=>{
+        getApp().cache.removeKey('selectMemberId');
+        getApp().cache.removeKey('selectCard');
+      });
     });
     
 
