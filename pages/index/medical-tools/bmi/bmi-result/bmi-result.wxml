@@ -1,6 +1,6 @@
 <view class="containerView" style='padding:20rpx'>
   <view>
-    <text> BMI = 体重kg ÷ 身高㎡。是世界卫生组织认定的胖瘦判断以及是否健康的标准，适用于成年男女。</text>
+    <text> BMI = 体重(kg) ÷ 身高²(m)。是世界卫生组织认定的胖瘦判断以及是否健康的标准，适用于成年男女。</text>
     <view style='display:block'>
       <text class='result-type'>您的BMI是:{{result}}</text>
       <text class='sort-type' style='padding-left: 40px'>体型:{{sort}}</text>
