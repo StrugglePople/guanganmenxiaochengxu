@@ -143,16 +143,20 @@
   padding: 20rpx 24rpx;
   color: #fff;
   font-size: 32rpx;
-  background-image: linear-gradient(-90deg, #53DB92 0%, #28CCC1 100%);
+  /* background-image: linear-gradient(-90deg, #53DB92 0%, #28CCC1 100%); */
   border-radius: 16rpx;
+  background-color: #B79153;
 }
 .chat-kf .myself .txt .arrow {
   position: absolute;
   display: block;
-  width: 12rpx;
-  height: 20rpx;
+  /* width: 12rpx; */
+  /* height: 20rpx; */
   right: -12rpx;
   top: 30rpx;
+  border-left: 12rpx solid #B79153;
+  border-top: 10rpx solid #fff;
+  border-bottom: 10rpx solid #fff;
 }
 .chat-kf .myself .tx {
   float: right;
@@ -246,6 +250,7 @@
   border: none;
   z-index: 879;
   height: 54rpx;
+  padding-top: 0;
 }
 .ft-kf .input-text i {
   display: block;
@@ -276,4 +281,13 @@
   display: block;
   width: 100%;
   height: 160rpx;
+}
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5rpx
 }

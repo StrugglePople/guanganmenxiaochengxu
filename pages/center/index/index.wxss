@@ -566,7 +566,7 @@ face-top-item-detail span {
   height: 26rpx;
   line-height: 38rpx;
   top: 24rpx;
-  right: 56rpx;
+  right: 62rpx;
   background-color: #ff513c;
   border-radius: 50%;
   color: #fff;

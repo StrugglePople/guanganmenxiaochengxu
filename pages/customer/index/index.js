@@ -18,7 +18,7 @@ Page({
     })
     console.log(getApp().globalData.userInfo)
     this.data.list = [];
-    var avatarUrl = getApp().globalData.userInfo ? getApp().globalData.userInfo.avatarUrl : '/style/image/t-face.png';
+    var avatarUrl = getApp().globalData.userInfo ? getApp().globalData.userInfo.avatarUrl : '/style/image/zizhu/guahao.png';
     this.setData({
       avatarUrl: avatarUrl
     })

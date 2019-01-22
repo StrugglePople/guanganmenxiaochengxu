@@ -4,7 +4,6 @@
   position: relative;
   padding: 32rpx 0 24rpx 130rpx;
 }
-
 .member-body .name {
   position: absolute;
   left: 0;
@@ -18,7 +17,9 @@
   border-radius: 100rpx;
   font-size: 34rpx;
 }
-
+.member-body .name-danger {
+  background-color: #FF9571;
+}
 .member-body .h4 {
   font-size: 36rpx;
   line-height: 50rpx;
