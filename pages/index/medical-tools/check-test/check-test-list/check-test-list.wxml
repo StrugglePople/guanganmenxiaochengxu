@@ -1,7 +1,7 @@
 <view class="containerView">
 <view class='search-bar'>
   <image src="../../../../../style/svg/i-search.svg" class='img-search'></image>
-  <input  bindinput = "search" type='text' placeholder='请输入检查单名称'/>
+  <input  bindinput = "search" type='text' placeholder='请输入检验单名称'/>
 </view>
 <scroll-view scroll-y="true"> 
       <ul>

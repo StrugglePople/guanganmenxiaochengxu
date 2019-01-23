@@ -96,6 +96,9 @@ Page({
     this.setData({
       list: this.data.list
     })
+    setTimeout(() => {
+      this.pageScrollToBottom();
+    }, 100);
     getApp().request.postHeadNoToast('kefuData', { question: question }, [], (data) => {
       if (data) {
         this.data.list.push({ type: 0, data: data });
@@ -124,13 +127,14 @@ Page({
     })
   },
   pageScrollToBottom(id) {
-    this.setData({toView: 'customer-' + id})
+    this.setData({ toView: 'red' });
+    /*this.setData({toView: 'customer-' + id})
     wx.createSelectorQuery().select('#red').boundingClientRect((rect) => {
       // 使页面滚动到底部
       this.setData({
         scrollTop: rect.bottom
       })
-    }).exec()
+    }).exec()*/
   },
   call(e) {
     var tel = e.currentTarget.dataset.title;

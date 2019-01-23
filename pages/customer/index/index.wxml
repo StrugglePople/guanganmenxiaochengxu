@@ -1,6 +1,6 @@
 <!--pages/customer/index/index.wxml-->
 
-<scroll-view scroll-y="true" style="height: {{height}}px;" scroll-top="{{scrollTop}}">
+<scroll-view scroll-y="true" style="height: {{height}}px;" scroll-into-view="{{toView}}">
 
   <view>
 

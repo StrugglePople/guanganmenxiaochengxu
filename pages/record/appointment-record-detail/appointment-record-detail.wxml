@@ -38,7 +38,7 @@
     <view class='form-fee-item am-flex-item'>
       <view class='form-fee-label form-fee-label'>医师服务费</view>
       <view class='am-flex-after'>
-        <text>￥{{data.regFee}}</text>
+        <text class='am-txt-danger'>￥{{data.regFee}}</text>
       </view>
     </view>
     <!-- form-fee-item end-->
