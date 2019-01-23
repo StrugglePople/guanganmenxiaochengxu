@@ -122,6 +122,9 @@ Page(Object.assign({}, toast,{
   showDetail(e) {
     var index = e.currentTarget.dataset.index;
     this.data.list[index].medicalCardNo = this.data.medicalCard.medicalCardNo;
+    if (!this.data.list[index].patientName){
+      this.data.list[index].patientName = this.data.medicalCard.name;
+    }
     if (this.data.type == 0) {
       getApp().cache.setData('check-record-detail.data', this.data.list[index]);
       wx.navigateTo({

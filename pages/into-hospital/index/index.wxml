@@ -1,5 +1,9 @@
 <!--pages/into-hospital/index/index.wxml-->
-  <view class='index-bd' style='background:#fff'>
+<view class='index-bd' style='background:#fff'>
+  <view class='title-top'>
+    <image src='http://image.zhicall.cn/gamhospital.png'></image>
+  </view>
+  <view class='content'>
     <ul class="wx-row per-menu-list">
       <li bindtap="toHospitalView" data-type="HOSPITAL_INFO">
         <image src="/style/image/hosipital/jianjie.png"></image>
@@ -33,18 +37,19 @@
     </view>
 
     <!-- panel-->
-    <view class='h4-icon'>
-      <image src="/style/svg/enter-hospital/expert-little.png" class='i-information'></image>
-      专家介绍
-      <navigator url="/pages-index/clinic/dept-expert/dept-expert?type=introduce" class="right">更多</navigator>
-      <!--<image src="/style/image/i-angle-r.png" class='i-angle'></image>-->
-    </view>
+
     <view class='am-shadow-panel'>
+      <view class='h4-icon'>
+        <image src="/style/svg/enter-hospital/expert-little.png" class='i-information'></image>
+        专家介绍
+        <navigator url="/pages-index/clinic/dept-expert/dept-expert?type=introduce" class="right">更多</navigator>
+        <!--<image src="/style/image/i-angle-r.png" class='i-angle'></image>-->
+      </view>
       <view class="per-list-cont">
         <ul class="per-list">
-          <li wx:for="{{expertList}}"  wx:for-item="item" data-id="{{item.id}}"  bindtap = "toDoctorDetialView">
-             <image src="{{item.picName}}" style="border-radius: 92rpx" class='img-face-lg' wx:if="{{item.picName}}"></image>
-      <image src='/style/svg/expert.svg' class='img-face-lg' wx:else></image>
+          <li wx:for="{{expertList}}" wx:for-item="item" data-id="{{item.id}}" bindtap="toDoctorDetialView">
+            <image src="{{item.picName}}" style="border-radius: 92rpx" class='img-face-lg' wx:if="{{item.picName}}"></image>
+            <image src='/style/svg/expert.svg' class='img-face-lg' wx:else></image>
             <text class='txt-h4'>{{item.name}}</text>
             <!-- <text class='txt-p'>{{item.underDepts[0].name}}</text> -->
           </li>
@@ -52,17 +57,14 @@
       </view>
     </view>
 
-    <!-- panel end-->
-    <view class='interval'></view>
-    <!-- panel-->
-    <view class='h4-icon'>
-      <image src="/style/svg/enter-hospital/news-little.png" class='i-information'></image>
-      最新消息
-      <navigator url="/pages/cms-about/news-list/news-list?title=最新消息" class="right">更多</navigator>
-      <!--<image src="/style/image/i-angle-r.png" class='i-angle'></image>-->
-    </view>
     <view class='am-shadow-panel'>
-      <view class="news-link-items"  wx:for="{{hosptialNew}}" wx:for-index="newsId" wx:for-item="item" data-news-id="{{item.id}}" data-name = "{{item.title}}" bindtap="toDetialView">
+      <view class='h4-icon'>
+        <image src="/style/svg/enter-hospital/news-little.png" class='i-information'></image>
+        最新消息
+        <navigator url="/pages/cms-about/news-list/news-list?title=最新消息" class="right">更多</navigator>
+        <!--<image src="/style/image/i-angle-r.png" class='i-angle'></image>-->
+      </view>
+      <view class="news-link-items" wx:for="{{hosptialNew}}" wx:for-index="newsId" wx:for-item="item" data-news-id="{{item.id}}" data-name="{{item.title}}" bindtap="toDetialView">
         <view class='news-link-item'>
           <view class='am-flex-item'>
             <view class='am-flex-title'>{{item.title}}</view>
@@ -75,3 +77,6 @@
     <!-- panel end-->
     <view style='height: 10px'></view>
   </view>
+
+
+</view>

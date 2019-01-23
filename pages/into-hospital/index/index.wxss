@@ -1,41 +1,58 @@
 /* pages/into-hospital/index/index.wxss */
-.thumbnail-h-list-cont{
-    background-color: #FFFFFF;
-    box-shadow: 0 4rpx 20rpx 0 rgba(0,0,0,0.13);
-    border-radius: 20rpx;
-    margin-bottom: 40rpx;
+
+.title-top image {
+  width: 100%;
+  height: 220rpx;
 }
 
-.h4-icon{
+.content {
+  border-radius: 50rpx;
+  margin-top: -94rpx;
   position: relative;
-  margin: 50rpx 24rpx 10rpx 24rpx;
+  z-index: 999999;
+  background: #fff;
+}
+
+.thumbnail-h-list-cont {
+  background-color: #fff;
+  box-shadow: 0 4rpx 20rpx 0 rgba(0, 0, 0, 0.13);
+  border-radius: 20rpx;
+}
+
+.h4-icon {
+  position: relative;
+  padding: 34rpx 24rpx 10rpx 24rpx;
   line-height: 50rpx;
   font-size: 36rpx;
   color: #634616;
   font-weight: 500;
 }
-.h4-icon .right{
+
+.h4-icon .right {
   position: absolute;
-  right: 20px;
-  top: 0;
-  color: #B79153;
+  right: 34rpx;
+  top: 35rpx;
+  color: #b79153;
   font-size: 32rpx;
   font-weight: 400;
 }
-.h4-icon .i-angle{
+
+.h4-icon .i-angle {
   position: absolute;
   right: 0;
   top: 50%;
   margin-top: -13rpx;
 }
-.i-angle{
+
+.i-angle {
   width: 16rpx;
   height: 26rpx;
 }
-.am-shadow-panel{
-  background: #FFFFFF;
-}
 
+.am-shadow-panel {
+  background: #fff;
+  margin-top: 30rpx;
+}
 
 .am-flex-title {
   -ms-flex: 0 1 auto;
@@ -47,6 +64,7 @@
   text-overflow: ellipsis;
   max-width: 100%;
 }
+
 .am-flex-after {
   white-space: nowrap;
   -ms-flex: 0 0 auto;
@@ -58,24 +76,25 @@
   padding-left: 20rpx;
 }
 
-
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-    .news-link-item:before{
-        -webkit-transform: scaleY(0.5);
-        transform: scaleY(0.5);
-    }
+  .news-link-item:before {
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
 }
+
 @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    .news-link-item:before{
-        -webkit-transform: scaleY(0.33);
-            transform: scaleY(0.33);
-    }
+  .news-link-item:before {
+    -webkit-transform: scaleY(0.33);
+    transform: scaleY(0.33);
+  }
 }
-.news-link-items .news-link-item:first-child::before{
+
+.news-link-items .news-link-item:first-child::before {
   display: none;
 }
 
-.i-information{
+.i-information {
   display: inline-block;
   vertical-align: top;
   width: 38rpx;
@@ -83,9 +102,9 @@
   margin: 7rpx 10rpx 0 0;
 }
 
-.grid-txt-list li{
+.grid-txt-list li {
   position: relative;
-  display: inline-block; 
+  display: inline-block;
   vertical-align: top;
   width: 25%;
   height: 92rpx;
@@ -94,32 +113,33 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.grid-txt-list li:before{
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background: #E5E5E5;
+
+.grid-txt-list li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #e5e5e5;
 }
-.grid-txt-list li:nth-child(1):before,
-.grid-txt-list li:nth-child(5):before{
-    display: none;
+
+.grid-txt-list li:nth-child(1):before, .grid-txt-list li:nth-child(5):before {
+  display: none;
 }
-.grid-txt-list li:nth-child(1):after,
-.grid-txt-list li:nth-child(2):after,
-.grid-txt-list li:nth-child(3):after,
-.grid-txt-list li:nth-child(4):after{
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 1px;
-    background: #E5E5E5;
+
+.grid-txt-list li:nth-child(1):after, .grid-txt-list li:nth-child(2):after,
+.grid-txt-list li:nth-child(3):after, .grid-txt-list li:nth-child(4):after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #e5e5e5;
 }
-.grid-txt-list .txt{
+
+.grid-txt-list .txt {
   height: 100%;
   box-sizing: border-box;
   display: -webkit-box;
@@ -135,26 +155,31 @@
   align-items: center;
   text-align: center;
 }
-.per-list-cont{
-  padding: 20rpx 0;
+
+.per-list-cont {
+  padding-bottom: 20rpx;
 }
-.per-list li{
+
+.per-list li {
   display: inline-block;
   vertical-align: top;
   width: 25%;
   text-align: center;
   padding: 20rpx 0;
 }
-.per-list image{
+
+.per-list image {
   width: 92rpx;
   height: 92rpx;
 }
-.per-list .txt-h4{
+
+.per-list .txt-h4 {
   display: block;
   font-size: 28rpx;
   margin-top: 8rpx;
 }
-.per-list .txt-p{
+
+.per-list .txt-p {
   display: block;
   font-size: 24rpx;
   color: #888;
