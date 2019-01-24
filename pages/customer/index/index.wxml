@@ -56,7 +56,7 @@
           <block wx:else>
             <view class="other-side clearfix">
               <view class="tx">
-                <image src="/style/image/t-face.svg"></image>
+                <image src="/style/image/zizhu/guahao.png"></image>
               </view>
               <view class="txt">
                 <view class="ul clearfix">

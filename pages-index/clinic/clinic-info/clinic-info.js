@@ -34,7 +34,7 @@ Page(Object.assign({}, toast,{
    */
   onShow: function () {
     var medicalCard = getApp().cache.getData("selectCard");
-    if (medicalCard && medicalCard.id){
+    if (medicalCard && medicalCard.patientId){
       var member = getApp().accountServer.getMemberById(medicalCard.patientId);
       this.setData({
         medicalCard,

@@ -87,7 +87,7 @@ Page({
         list: this.data.list
       })
       setTimeout(() => {
-        this.pageScrollToBottom(id);
+        this.pageScrollToBottom();
       }, 100);
     }, null, '51yizhu');
   },
@@ -112,7 +112,7 @@ Page({
           list: this.data.list
         });
         setTimeout(() => {
-          this.pageScrollToBottom(json.data[json.data.length - 1].id);
+          this.pageScrollToBottom();
         }, 100);
       }
     }, null, '51yizhu');
@@ -126,7 +126,7 @@ Page({
       'inputValue': ''
     })
   },
-  pageScrollToBottom(id) {
+  pageScrollToBottom() {
     this.setData({ toView: 'red' });
     /*this.setData({toView: 'customer-' + id})
     wx.createSelectorQuery().select('#red').boundingClientRect((rect) => {
