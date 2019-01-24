@@ -11,6 +11,7 @@
   position: relative;
   z-index: 999999;
   background: #fff;
+  overflow: hidden;
 }
 
 .thumbnail-h-list-cont {

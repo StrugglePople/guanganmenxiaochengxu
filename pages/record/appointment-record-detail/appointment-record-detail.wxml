@@ -9,6 +9,12 @@
         <text class='am-mr-5'>{{data.patient.name}}</text>
       </view>
     </view>
+    <view class='form-fee-item am-flex-item' wx:if="{{data.schedule}}">
+      <view class='form-fee-label form-fee-label'>号别</view>
+      <view class='am-flex-after'>
+        <text>{{data.schedule.clinicLabel}}</text>
+      </view>
+    </view>
     <view class='form-fee-item am-flex-item'>
       <view class='form-fee-label form-fee-label'>科室</view>
       <view class='am-flex-after'>
