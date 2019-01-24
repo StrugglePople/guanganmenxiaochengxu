@@ -10,7 +10,7 @@
 
         <view class="other-side clearfix">
           <view class="tx">
-            <image src="/style/image/zizhu/guahao.png"></image>
+            <image src="/style/image/kefu-face.svg"></image>
           </view>
           <view class="txt">
             <view class="ul clearfix">
@@ -25,7 +25,7 @@
           <block wx:if="{{item.type==0}}">
             <view class="other-side clearfix">
               <view class="tx">
-                <image src="/style/image/zizhu/guahao.png"></image>
+                <image src="/style/image/kefu-face.svg"></image>
               </view>
               <view class="txt">
                 <view class="ul clearfix">
@@ -56,7 +56,7 @@
           <block wx:else>
             <view class="other-side clearfix">
               <view class="tx">
-                <image src="/style/image/zizhu/guahao.png"></image>
+                <image src="/style/image/kefu-face.svg"></image>
               </view>
               <view class="txt">
                 <view class="ul clearfix">

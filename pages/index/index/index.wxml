@@ -11,23 +11,23 @@
   </view>
   <view class='top-1'>
     <view class="common left" bindtap='noOpen' data-msg='正在建设中..'>
-      <image class='icon' src="/style/image/zizhu/guahao.png"></image>
-      <image class='text' src="/style/image/zizhu/guahao-text.png"></image>
+      <image class='icon' src="/style/image/zizhu/guahao.svg"></image>
+      <image class='text' src="/style/image/zizhu/guahao-text.svg"></image>
     </view>
     <navigator class="common right" hover-class="none" url='/pages-index/clinic/clinic-note/clinic-note?regType=RESERVATION'>
-      <image class='icon' src="/style/image/zizhu/guahao.png"></image>
-      <image class='text' src="/style/image/zizhu/yuyue-text.png"></image>
+      <image class='icon' src="/style/image/zizhu/guahao.svg"></image>
+      <image class='text' src="/style/image/zizhu/yuyue-text.svg"></image>
     </navigator>
   </view>
   <view class='thumbnail-h-list-cont'>
     <ul class="thumbnail-h-list wx-row">
       <li class="wx-col left" bindtap="methodNeedLogin" data-method="showPage" data-url='/pages/record/record-detial/record-detial?type=0'>
-        <image class='img-notice-bell' src="/style/image/zizhu/jiancha.png"></image>
+        <image class='img-notice-bell' src="/style/image/zizhu/jiancha.svg"></image>
         <view class='right-txt'>检查报告</view>
         <view class="division"></view>
       </li>
       <li class="wx-col" bindtap="methodNeedLogin" data-method="showPage" data-url='/pages/record/record-detial/record-detial?type=1'>
-        <image class='img-notice-bell' src="/style/image/zizhu/jianyan.png"></image>
+        <image class='img-notice-bell' src="/style/image/zizhu/jianyan.svg"></image>
         <view class='right-txt'>检验报告</view>
       </li>
     </ul>
@@ -35,37 +35,37 @@
   <view class='grid-list-cont'>
     <ul class="grid-list">
       <li bindtap='methodNeedLogin' data-method="showPage" data-url='/pages/record/appointment-record/appointment-record'>
-        <image src="/style/image/zizhu/index-1.png"></image>
+        <image src="/style/image/zizhu/index-1.svg"></image>
         <text class='txt'>预约记录</text>
       </li>
       <li bindtap="showPage" data-url='/pages/cms-about/news-list/news-list?title=就医指南'>
-        <image src="/style/image/zizhu/index-2.png"></image>
+        <image src="/style/image/zizhu/index-2.svg"></image>
         <text class='txt'>就医指南</text>
       </li>
       <li bindtap="showPage" data-url="/pages-hospital/yuanwai-daohang/yuanwai-daohang">
-        <image src="/style/image/zizhu/index-3.png"></image>
+        <image src="/style/image/zizhu/index-3.svg"></image>
         <text class='txt'>来院导航</text>
       </li>
       <li bindtap="showPage" data-url='/pages/cms-about/news-list/news-list?title=医院公告'>
-        <image src="/style/image/zizhu/index-4.png"></image>
+        <image src="/style/image/zizhu/index-4.svg"></image>
         <text class='txt'>医院公告</text>
       </li>
       <li>
         <navigator url='/pages/index/heathList/heathList'>
-          <image src="/style/image/zizhu/index-5.png"></image>
+          <image src="/style/image/zizhu/index-5.svg"></image>
           <text class='txt'>健康小工具</text>
         </navigator>
       </li>
       <li bindtap='methodNeedLogin' data-method="showPage" data-url='/pages/center/message/message?type=SYSTEM_NOTIFICATION'>
-        <image src="/style/image/zizhu/index-6.png"></image>
+        <image src="/style/image/zizhu/index-6.svg"></image>
         <text class='txt'>随访通知</text>
       </li>
       <li bindtap="noOpen" data-msg='请用app使用此功能'>
-        <image src="/style/image/zizhu/index-7.png"></image>
+        <image src="/style/image/zizhu/index-7.svg"></image>
         <text class='txt'>国际医疗</text>
       </li>
       <li bindtap="methodNeedLogin" data-method="showPage" data-url='/pages/record/bedappoint-record/bedappoint-record'>
-        <image src="/style/image/zizhu/index-8.png"></image>
+        <image src="/style/image/zizhu/index-8.svg"></image>
         <text class='txt'>床位预约查询</text>
       </li>
     </ul>

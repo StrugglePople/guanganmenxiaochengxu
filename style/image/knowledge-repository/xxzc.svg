@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>图片1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M16,0 L44,0 C52.836556,-1.623249e-15 60,7.163444 60,16 L60,44 C60,52.836556 52.836556,60 44,60 L16,60 C7.163444,60 1.082166e-15,52.836556 0,44 L0,16 C-1.082166e-15,7.163444 7.163444,1.623249e-15 16,0 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="切图-copy" transform="translate(-486.000000, -916.000000)">
+            <g id="图片1" transform="translate(486.000000, 916.000000)">
+                <g id="Group-6">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#ECDCBC" xlink:href="#path-1"></use>
+                    <path d="M30.4037012,50.0449219 C38.3586457,50.0449219 44.8074023,43.5961652 44.8074023,35.6412207 C44.8074023,27.6862762 32.5201104,9 30.4037012,9 C28.2872919,9 16,27.6862762 16,35.6412207 C16,43.5961652 22.4487567,50.0449219 30.4037012,50.0449219 Z" id="Oval" fill="#B79153" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                    <path d="M40.8535156,35.5361328 C40.0664062,40.3258464 37.336263,43.4059245 32.6630859,44.7763672" id="Path-18" stroke="#FFFFFF" stroke-width="3" opacity="0.718694196" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -79,7 +79,7 @@ Page(Object.assign({}, toast,{
 
   loadData() {
     if (this.data.selectIndex == 0 && !this.data.member) {
-      this.showZanToast('请选择就诊人');
+      this.showZanToast('请选择持卡人');
       return;
     }
     if (this.data.selectIndex == 1 && !this.data.inpatientNo) {

@@ -15,6 +15,9 @@ Page({
    */
   onLoad: function (options) {
     this.data.isSelect = options.isSelect;
+    wx.setNavigationBarTitle({
+      title: options.isSelect ? "选择持卡人" :"持卡人管理",
+    })
   },
 
   /**

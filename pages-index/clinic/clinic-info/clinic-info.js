@@ -52,7 +52,7 @@ Page(Object.assign({}, toast,{
 
   submit() {
     if (!this.data.medicalCard.name) {
-      getApp().widget.toast('请选择就诊人');
+      getApp().widget.toast('选择持卡人');
       return;
     }
 

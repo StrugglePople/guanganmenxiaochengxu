@@ -2,7 +2,7 @@
 <import src="../../template/empty.wxml" />
 <navigator url="./../../center/member-list/member-list?isSelect=true" class="banner-reg-recond">
   <block wx:if="{{!member}}">
-    <text class='h4'>选择就诊人</text>
+    <text class='h4'>选择持卡人</text>
   </block>
   <block wx:else>
     <text class='h4'>{{member.name}}</text>{{member.sex == 'MALE' ? '男': '女'}}

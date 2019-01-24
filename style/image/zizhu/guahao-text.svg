@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="102px" height="108px" viewBox="0 0 102 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>文字-今日挂号</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="WenYue-GuDianMingChaoTi-NC-W5, WenYue GuDianMingChaoTi (Non-Commercial Use)" font-size="48" font-weight="400" letter-spacing="5.06400013" line-spacing="62">
+        <text id="今日-挂号" fill="#111111">
+            <tspan x="3.43599987" y="41">今日</tspan>
+            <tspan x="3.43599987" y="103">挂号</tspan>
+        </text>
+    </g>
+</svg>

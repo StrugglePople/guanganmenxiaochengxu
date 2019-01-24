@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 12</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#E0BB7F" offset="0%"></stop>
+            <stop stop-color="#B79153" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="切图-copy" transform="translate(-668.000000, -332.000000)">
+            <g id="Group-12" transform="translate(668.000000, 332.000000)">
+                <circle id="Oval-9-Copy" fill="url(#linearGradient-1)" cx="30" cy="30" r="30"></circle>
+                <path d="M32.4272404,13.5866945 L42.9366974,39.6370063 C43.143324,40.149182 42.8956276,40.7318863 42.3834519,40.9385129 C42.1639806,41.0270541 41.92022,41.0348889 41.6955158,40.9606242 L31.8136698,37.6946747 C31.6098868,37.6273244 31.3898419,37.6273244 31.1860589,37.6946747 L21.3042129,40.9606242 C20.7798255,41.1339342 20.2142301,40.8493297 20.0409201,40.3249424 C19.9666554,40.1002382 19.9744902,39.8564777 20.0630313,39.6370063 L30.5724883,13.5866945 C30.7791149,13.0745189 31.3618193,12.8268224 31.8739949,13.0334491 C32.1258945,13.1350727 32.3256167,13.3347949 32.4272404,13.5866945 Z" id="Triangle-Copy" fill="#FFFFFF" transform="translate(31.500000, 27.000000) rotate(40.000000) translate(-31.500000, -27.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

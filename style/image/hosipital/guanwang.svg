@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="94px" height="94px" viewBox="0 0 94 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 18 Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="47" cy="47" r="47"></circle>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#C76C5E" offset="0%"></stop>
+            <stop stop-color="#DB7865" offset="76.7824769%"></stop>
+            <stop stop-color="#B2634C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="切图-copy" transform="translate(-574.000000, -1601.000000)">
+            <g id="Group-18-Copy-2" transform="translate(574.000000, 1601.000000)">
+                <g id="Path-30-+-Path-31-Copy-6-+-Path-31-Copy-7-+-Path-31-Copy-8-+-Path-29-+-Path-31-+-Path-31-Copy-+-Path-31-Copy-2-+-Path-31-Copy-3-+-Path-31-Copy-4-+-Path-31-Copy-5-+-Path-32-+-Path-32-Copy-+-Path-32-Copy-2-Mask">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#F4E0D9" xlink:href="#path-1"></use>
+                    <g id="Group-9" mask="url(#mask-2)">
+                        <g transform="translate(22.325000, 17.450000)">
+                            <path d="M21.1500008,14.1000006 L28.2000011,14.1000006 L28.2000011,67.1663891 C26.63387,69.197455 25.4588699,70.212988 24.675001,70.212988 C23.891132,70.212988 22.716132,69.197455 21.1500008,67.1663891 L21.1500008,14.1000006 Z" id="Rectangle-19-Copy-2" stroke="none" fill="#E8754D" fill-rule="nonzero"></path>
+                            <path d="M29.6100012,19.7400008 L36.6600015,19.7400008 L36.6600015,72.8063893 C35.0938703,74.8374553 33.9188702,75.8529882 33.1350013,75.8529882 C32.3511324,75.8529882 31.1761323,74.8374553 29.6100012,72.8063893 L29.6100012,19.7400008 Z" id="Rectangle-19-Copy-4" stroke="none" fill="#E8754D" fill-rule="nonzero"></path>
+                            <path d="M46.5300018,19.7400008 L53.5800021,19.7400008 L53.5800021,72.8063893 C52.013871,74.8374553 50.8388709,75.8529882 50.055002,75.8529882 C49.2711331,75.8529882 48.096133,74.8374553 46.5300018,72.8063893 L46.5300018,19.7400008 Z" id="Rectangle-19-Copy-5" stroke="none" fill="#E8754D" fill-rule="nonzero"></path>
+                            <path d="M54.9900022,15.5100006 L62.0400025,15.5100006 L62.0400025,68.5763892 C60.4738713,70.6074551 59.2988713,71.6229881 58.5150023,71.6229881 C57.7311334,71.6229881 56.5561333,70.6074551 54.9900022,68.5763892 L54.9900022,15.5100006 Z" id="Rectangle-19-Copy-6" stroke="none" fill="#E8754D" fill-rule="nonzero"></path>
+                            <path d="M63.4500025,8.46000034 L70.5000028,8.46000034 L70.5000028,61.5263889 C68.9338716,63.5574548 67.7588716,64.5729878 66.9750027,64.5729878 C66.1911337,64.5729878 65.0161337,63.5574548 63.4500025,61.5263889 L63.4500025,8.46000034 Z" id="Rectangle-19-Copy-7" stroke="none" fill="#E8754D" fill-rule="nonzero"></path>
+                            <path d="M38.0700015,22.5600009 L45.1200018,22.5600009 L45.1200018,75.6263894 C43.5538706,77.6574554 42.3788706,78.6729883 41.5950017,78.6729883 C40.8111327,78.6729883 39.6361327,77.6574554 38.0700015,75.6263894 L38.0700015,22.5600009 Z" id="Rectangle-19-Copy-3" stroke="none" fill="#E8754D" fill-rule="nonzero"></path>
+                            <path d="M16.4406007,3.75060015 L16.4406007,50.0908012 L41.9994941,66.0587372 L66.7494027,50.1240302 L66.7494027,3.75060015 L16.4406007,3.75060015 Z" id="Rectangle-18" stroke="#E8754D" stroke-width="7.5012003" fill="#F3B651" fill-rule="nonzero"></path>
+                            <text id="官" stroke="none" fill="none" font-family="STSongti-SC-Bold, Songti SC" font-size="33.8400013" font-weight="bold" fill-opacity="0.777966486">
+                                <tspan x="24.675001" y="41.6400002" fill="#6D3424">官</tspan>
+                            </text>
+                            <rect id="Rectangle-17" stroke="none" fill="url(#linearGradient-3)" fill-rule="nonzero" x="0" y="0" width="83.1900033" height="7.285" rx="3.6425"></rect>
+                            <path d="M4.23000017,6.11000034 L11.2800004,6.11000034 L11.2800004,62.5100025 C9.71386929,64.6686594 8.53886924,65.7479878 7.75500031,65.7479878 C6.97113138,65.7479878 5.79613133,64.6686594 4.23000017,62.5100025 L4.23000017,6.11000034 Z" id="Rectangle-19" stroke="none" fill="#E8754D" fill-rule="nonzero"></path>
+                            <path d="M12.6900005,8.46000034 L19.7400008,8.46000034 L19.7400008,61.5263889 C18.1738696,63.5574548 16.9988696,64.5729878 16.2150006,64.5729878 C15.4311317,64.5729878 14.2561317,63.5574548 12.6900005,61.5263889 L12.6900005,8.46000034 Z" id="Rectangle-19-Copy" stroke="none" fill="#E8754D" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

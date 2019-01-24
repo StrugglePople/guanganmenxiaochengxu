@@ -16,7 +16,7 @@ Page(Object.assign({}, loginExtentds, toast,{
   },
   onShow() {
     var userInfo = {
-      avatarUrl: "/style/image/t-face.png",
+      avatarUrl: "/style/image/t-face.svg",
       mobile: ""
     };
     if (getApp().globalData.userInfo && getApp().globalData.userInfo.avatarUrl){

@@ -17,7 +17,7 @@ Page({
       height: getApp().globalData.device.windowHeight - 60,
       regType:options.regType
     });
-    getApp().request.postNoToast('loadContentInfo', { type: 'GUAHAO' },
+    getApp().request.postWithToast('loadContentInfo', { type: 'GUAHAO' },
       (data) => {
         var WxParse = require('../../../utils/wxParse/wxParse.js');
         WxParse.wxParse('article', 'html', data.content, this, 5);

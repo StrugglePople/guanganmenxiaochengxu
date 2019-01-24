@@ -1,5 +1,4 @@
 {
-  "navigationBarTitleText": "持卡人管理",
   "usingComponents": {
     "member-card": "/components/member-card/member-card"
   }

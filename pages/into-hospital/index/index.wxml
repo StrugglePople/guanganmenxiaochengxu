@@ -6,31 +6,31 @@
   <view class='content'>
     <ul class="wx-row per-menu-list">
       <li bindtap="toHospitalView" data-type="HOSPITAL_INFO">
-        <image src="/style/image/hosipital/jianjie.png"></image>
+        <image src="/style/image/hosipital/jianjie.svg"></image>
         <text class='txt'>医院简介</text>
       </li>
       <li bindtap="toHospitalView" data-type="TRAFFIC">
-        <image src="/style/image/hosipital/jiaotong.png"></image>
+        <image src="/style/image/hosipital/jiaotong.svg"></image>
         <text class='txt'>医院交通</text>
       </li>
       <li bindtap="toHospitalView" data-type="WEBSITE">
-        <image src="/style/image/hosipital/guanwang.png"></image>
+        <image src="/style/image/hosipital/guanwang.svg"></image>
         <text class='txt'>医院官网</text>
       </li>
       <li bindtap="toHospitalView" data-type="PHONE_NUMBER">
-        <image src="/style/image/hosipital/dianhua.png"></image>
+        <image src="/style/image/hosipital/dianhua.svg"></image>
         <text class='txt'>医院电话</text>
       </li>
     </ul>
     <view class='thumbnail-h-list-cont'>
       <view class="thumbnail-h-list wx-row">
         <navigator class="wx-col left" url='/pages-hospital/yuannei-daohang/yuannei-daohang'>
-          <image class='img-notice-bell' src="/style/svg/enter-hospital/yuannei.png"></image>
+          <image class='img-notice-bell' src="/style/svg/enter-hospital/yuannei.svg"></image>
           <view class='right-txt'>院内导航</view>
           <view class="division"></view>
         </navigator>
         <navigator class="wx-col" url='/pages-hospital/yuanwai-daohang/yuanwai-daohang'>
-          <image class='img-notice-bell' src="/style/svg/enter-hospital/yuanwai.png"></image>
+          <image class='img-notice-bell' src="/style/svg/enter-hospital/yuanwai.svg"></image>
           <view class='right-txt'>院外导航</view>
         </navigator>
       </view>
@@ -40,7 +40,7 @@
 
     <view class='am-shadow-panel'>
       <view class='h4-icon'>
-        <image src="/style/svg/enter-hospital/expert-little.png" class='i-information'></image>
+        <image src="/style/svg/enter-hospital/expert-little.svg" class='i-information'></image>
         专家介绍
         <navigator url="/pages-index/clinic/dept-expert/dept-expert?type=introduce" class="right">更多</navigator>
         <!--<image src="/style/image/i-angle-r.png" class='i-angle'></image>-->
@@ -59,7 +59,7 @@
 
     <view class='am-shadow-panel'>
       <view class='h4-icon'>
-        <image src="/style/svg/enter-hospital/news-little.png" class='i-information'></image>
+        <image src="/style/svg/enter-hospital/news-little.svg" class='i-information'></image>
         最新消息
         <navigator url="/pages/cms-about/news-list/news-list?title=最新消息" class="right">更多</navigator>
         <!--<image src="/style/image/i-angle-r.png" class='i-angle'></image>-->
@@ -70,7 +70,7 @@
             <view class='am-flex-title'>{{item.title}}</view>
             <view class='am-flex-after'>{{item.publishTime}}</view>
           </view>
-          <image src="/style/image/i-angle-r.png" class='i-angle'></image>
+          <image src="/style/image/i-angle-r.svg" class='i-angle'></image>
         </view>
       </view>
     </view>

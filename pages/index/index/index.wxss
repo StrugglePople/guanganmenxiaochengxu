@@ -37,7 +37,7 @@
 
 }
 .grid-list-cont{
-  padding-top: 20rpx;
+  padding-top: 40rpx;
 }
 .grid-list li{
   display: inline-block;
