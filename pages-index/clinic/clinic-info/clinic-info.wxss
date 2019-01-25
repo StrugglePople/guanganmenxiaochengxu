@@ -1,6 +1,5 @@
 /* pages/index/clinic/clinic-info/clinic-info.wxss */
 .am-panel{
-  margin-top: -50rpx;
   position: relative;
 }
 

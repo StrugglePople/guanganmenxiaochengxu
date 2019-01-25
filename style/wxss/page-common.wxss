@@ -228,8 +228,7 @@
   line-height: normal;
 }
 .item-multi-txt .h4-lg{
-  font-size: 34rpx;
-  font-weight: 500;
+  font-size: 36rpx;
   padding-bottom: 8rpx;
 }
 .fee-panel .h5-text{
@@ -382,7 +381,7 @@
 
 .banner-reg-recond .h4 {
   margin-right: 20rpx;
-  font-size: 40rpx;
+  font-size: 36rpx;
 }
 
 .navigator-background {
@@ -517,11 +516,7 @@
 /* 记录类公用背景 end */
 /* 选择就诊卡条栏 start */
 .select-card{
-  position: static;
-  height: 190rpx;
-}
-.move-upward{
-  margin-top: -30rpx;
+  height: 108rpx;
 }
 .select-card .am-flex-after{
   position: relative;
@@ -693,5 +688,57 @@
 .attention-info .content{
   color: #999999;
 }
+/* 弹框 */
+.model-alert {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.model-alert .confirm-modal {
+  z-index: 20;
+  position: fixed;
+  left: 15%;
+  top: 40%;
+  width: 70%;
+  padding-top: 30rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  text-align: center;
+}
+
+.model-alert .modal-notice-txt {
+  color: #333;
+}
+
+.model-alert .input-wrapper {
+  position: relative;
+  vertical-align: middle;
+  height: 80rpx;
+}
+
+.model-alert .pw-input {
+  padding-top: 17rpx;
+  text-align: left;
+  padding-left: 40rpx;
+}
+
+.model-alert .btn-wrapper {
+  display: flex;
+}
+
+.model-alert .btn {
+  border-top: 1px solid #eee;
+  padding: 20rpx 0;
+  width: 50%;
+}
+
+.model-alert .confirm-btn {
+  border-left: 1px solid #eee;
+  color: green;
+}
+
 /* 注意事项 end*/
 /******************功能列表end**********************/

@@ -111,5 +111,31 @@
   color: #666;
   padding-right: 33rpx;
 }
-
+.model-alert{
+  /* background-color: rgba(0,0,0,0.3); */
+}
+.model-alert .confirm-modal {
+  top: 50%;
+  margin-top: -262rpx;
+  background-color: #f8f8f8;
+  opacity: 1;
+}
+.model-alert .modal-notice-txt{
+  font-size: 34rpx;
+  font-weight: 600;
+  padding-bottom: 10rpx;
+}
+.model-alert .input-wrapper{
+  padding:10rpx 20rpx;
+  text-align: left;
+  height: 300rpx;
+  overflow: scroll
+}
+.model-alert .btn{
+  color: #B79153;
+  font-size: 34rpx;
+}
+.model-alert .confirm-btn{
+  font-weight: bold;
+}
 /**************************健康咨询end*******************************/

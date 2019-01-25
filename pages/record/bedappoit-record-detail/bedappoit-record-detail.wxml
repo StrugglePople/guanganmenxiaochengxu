@@ -23,7 +23,7 @@
     <view class='form-fee-item am-flex-item'>
       <view class='form-fee-label form-fee-label'>预约状态</view>
       <view class='am-flex-after'>
-        <text class='am-txt-muted txt-rsmall'>{{statusList[data.status]}}</text>
+        <text class='am-txt-danger txt-rsmall'>{{statusList[data.status]}}</text>
       </view>
     </view>
   </view>

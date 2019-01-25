@@ -86,14 +86,14 @@
         <i class="i-item-angle"></i>
       </view>
     </navigator> -->
-    <navigator class='item-img-txt' url='/pages-center/novice-guide/novice-guide' hover-class='hover'>
+    <!-- <navigator class='item-img-txt' url='/pages-center/novice-guide/novice-guide' hover-class='hover'>
       <view class='am-flex-title'>
         操作指南
       </view>
       <view class='am-flex-after'>
         <i class="i-item-angle"></i>
       </view>
-    </navigator>
+    </navigator> -->
     <navigator class='item-img-txt' url='/pages/more/more' hover-class='hover'>
       <view class='am-flex-title'>
         更多

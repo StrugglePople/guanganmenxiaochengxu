@@ -54,7 +54,7 @@
       <view class="card-list list-item wx-row item-bot-line" wx:for="{{member.cards}}" wx:for-item="card" bindtap='showPage' data-url='../card-info/card-info?personId={{member.id}}&cardId={{card.id}}'>
         <view class="left wx-col" style="width:360rpx;">
           <view class="wx-row icon-content">
-            <view class="left-icon tc-light">
+            <view class="left-icon tc-light {{'ct-'+card.cardTypeVO.id}}">
               <view class="content">{{card.cardTypeVO.name}}</view>
             </view>
             <view class="right-content">

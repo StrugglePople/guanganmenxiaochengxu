@@ -1,5 +1,4 @@
 /* pages/record/record-detial/record-detial.wxss */
 .report-record-list{
   position: relative;
-  margin-top: -90rpx;
 }

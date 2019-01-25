@@ -14,7 +14,7 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      height: getApp().globalData.device.windowHeight - 60,
+      height: getApp().globalData.device.windowHeight - 30,
       regType:options.regType
     });
     getApp().request.postWithToast('loadContentInfo', { type: 'GUAHAO' },

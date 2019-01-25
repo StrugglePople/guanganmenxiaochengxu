@@ -37,12 +37,14 @@ App({
     this.init.getUserInfo((data) => {
         this.globalData.userInfo = data;
     });
+    
     //初始化账户信息
     setTimeout(()=>{
       this.init.initSession(()=>{
         getApp().cache.removeKey('selectMemberId');
         getApp().cache.removeKey('selectCard');
       });
+      // this.init.loadNote();
     });
     
 

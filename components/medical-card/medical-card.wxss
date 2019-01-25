@@ -20,6 +20,37 @@
   border-radius: 100rpx;
   font-size: 24rpx;
 }
+.member-body .name .content{
+  line-height: 32rpx;
+  height: auto;
+  transform: translate(0, -50%);
+  margin: 50rpx auto;
+  font-size: 24rpx;
+}
+
+.member-body .name.ct-721 {
+  background-color: #79bdae;
+}
+
+.member-body .name.ct-722 {
+  background-color: #799dbd;
+}
+
+.member-body .name.ct-723 {
+  background-color: #bfac6d;
+}
+
+.member-body .name.ct-1007 {
+  background-color: #af7b9c;
+}
+
+.member-body .name.ct-720 {
+  background-color: #8db981;
+}
+
+.member-body .name.ct-wuka {
+  background-color: #d69762;
+}
 
 .member-body .h4 {
   font-size: 36rpx;

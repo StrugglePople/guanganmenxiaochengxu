@@ -1,5 +1,10 @@
 <!--pages/into-hospital/floor-detail/floor-detail.wxml-->
+
+<image class="common-bg" src='/style/image/record/common-bg.png'></image>
+<view class='content'>
 <view wx:for="{{detail}}" class="floor-list">
     <view class="floor">{{item.floor}}</view>
     <view class="description">{{item.floorDesc}}</view>
 </view>
+</view>
+

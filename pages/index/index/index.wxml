@@ -1,4 +1,5 @@
 <!--pages/index/index/index.wxml-->
+<import src="../../../utils/wxParse/wxParse.wxml"/>
 <view class='index-bd' style='background:#fff'>
   <view class="index-banner">
     <swiper autoplay="true" style='height: 390rpx'>
@@ -90,4 +91,17 @@
       </view>
     </view>-->
   <!-- panel end-->
+</view>
+
+<view class='model-alert' wx:if="{{showNote}}">
+  <view class="confirm-modal">
+    <view class="modal-notice-txt">{{noteTitle}}</view>
+    <view class='input-wrapper'>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+    <view class="btn-wrapper">
+      <view class="btn left" bindtap='clickCancel'>不再显示</view>
+      <view class="btn confirm-btn" bindtap='clickConfirm'>确认</view>
+    </view>
+  </view>
 </view>

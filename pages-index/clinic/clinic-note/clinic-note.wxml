@@ -2,9 +2,9 @@
 <import src="../../../utils/wxParse/wxParse.wxml" />
 <view class="index-bd" style='padding-bottom:0;'>
   <view class='am-pdlr'>
-    <view class='h3-intro'>
+    <!-- <view class='h3-intro'>
       <text class='h3'>须知</text>
-    </view>
+    </view> -->
     <scroll-view scroll-y style="height: {{height}}px;">
       <view class='p-intro'>
         <template is="wxParse" data="{{wxParseData:article.nodes}}" />

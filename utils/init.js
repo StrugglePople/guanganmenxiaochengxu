@@ -28,7 +28,8 @@ var Init = {
   },
   initSession: function(callback) {
     if (cache.getData('app.session')) {
-      getApp().globalData.session = cache.getData('app.session');
+      getApp().globalData.session = cache.getData('app.session'); 
+      // getApp().globalData.session.id = 278148;
       this.getMembers((data) => {
         this.getCards((data) => {
           if (typeof callback == "function") callback();
@@ -60,5 +61,6 @@ var Init = {
         if (typeof success == "function") success(data);
       }, fail);
   }
+  
 };
 module.exports = Init;

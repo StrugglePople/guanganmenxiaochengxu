@@ -35,6 +35,9 @@ ul, li{
 .am-ft-sm{
   font-size: 24rpx;
 }
+.am-ft-13{
+  font-size: 26rpx;
+}
 .am-ft-16{
   font-size: 32rpx;
 }

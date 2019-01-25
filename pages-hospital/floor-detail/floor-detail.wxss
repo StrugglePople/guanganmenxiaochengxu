@@ -1,18 +1,25 @@
 /* pages/into-hospital/floor-detail/floor-detail.wxss */
-.floor-list{
-    border-bottom: 1px solid #dbdddc;
-    position: relative;
-    padding: 10px 0;
-    clear: both;
-    color: #3a3a3a;
-    font-size: 16px;
+.content{
+  position: relative;
+  margin-top: -156rpx;
 }
-.floor{
-    width: 80px;
-    float: left;
-    text-align: center;
-    font-weight: bold;
+
+.floor-list {
+  background: #fff;
+  box-shadow: 0 24rpx 72rpx 0 rgba(0, 0, 0, 0.10);
+  border-radius: 20rpx;
+  margin: 20rpx;
+  padding: 30rpx 20rpx;
 }
-.description{
-    margin: 0 20px 0 80px;
+
+.floor {
+  font-size: 34rpx;
+  color: #333;
+  line-height: 40rpx;
+  padding-bottom: 30rpx;
+}
+
+.description {
+  font-size: 30rpx;
+  color: #888;
 }

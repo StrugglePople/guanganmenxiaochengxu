@@ -15,7 +15,7 @@
 <view hidden="{{selectIndex!=0}}">
   <navigator url="./../../center/member-list/member-list?isSelect=true" class="banner-reg-recond" style='margin-top:10px;'>
     <block wx:if="{{!member}}">
-      <text class='h4'>选择持卡人</text>
+      <text class='h4'>请选择持卡人</text>
     </block>
     <block wx:else>
       <text class='h4'>{{member.name}}</text>{{member.sex == 'MALE' ? '男': '女'}}

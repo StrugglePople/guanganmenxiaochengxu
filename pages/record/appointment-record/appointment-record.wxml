@@ -3,10 +3,10 @@
 <navigator url="/pages/center/member-list/member-list?isSelect=true" class="banner-reg-recond">
   <image class="navigator-background" src='/style/image/record/select-member-bg.png'></image>
   <view class="navigator-info" wx:if="{{!member || !member.id}}">
-    <text class='h4'>选择持卡人</text>
+    <text class='h4'>请选择持卡人</text>
   </view>
-  <view class="navigator-info" wx:else>
-    <text class='h4'>{{member.name}}</text>{{member.sex == 'MALE' ? '男': '女'}}
+  <view class="navigator-info am-ft-13 color-3" wx:else>
+    <text class='h4 font-weight'>{{member.name}}</text>{{member.sex == 'MALE' ? '男': '女'}}
     <text class='muted-txt'></text>{{member.mobileNo}}
   </view>
 </navigator>

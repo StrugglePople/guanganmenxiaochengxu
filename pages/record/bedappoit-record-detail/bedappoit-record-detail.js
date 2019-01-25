@@ -8,7 +8,11 @@ Page(Object.assign({}, toast, {
    */
   data: {
     isCancelRecord: false,
-    statusList: getApp().globalData.recordStatus
+    statusList: {
+      "PASS": "预约成功",
+      "INIT": "预约中",
+      "APPOINTTING": "待确认"
+    }
 
   },
 

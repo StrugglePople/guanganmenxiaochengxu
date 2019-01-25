@@ -3,7 +3,7 @@
 <view class="reg">
   <view class='tt clearfix'>
     <view class='pic'>
-      <image src='/style/image/logo.png'></image>
+      普通
     </view>
     <view class='txt'>
       <view class='name'>

@@ -1,69 +1,102 @@
 /* pages/center/member-info/member-info.wxss */
-page{
-  background: #EEEEEE;
+
+page {
+  background: #eee;
 }
-.control-item-list{
-  background-color: #ffffff;
+
+.control-item-list {
+  background-color: #fff;
 }
-.list-item.card-list-title{
+
+.list-item.card-list-title {
   font-size: 34rpx;
 }
-.card-list-title .right{
-  color: #B79153;
+
+.card-list-title .right {
+  color: #b79153;
 }
-.list-item{
+
+.list-item {
   padding: 25rpx 30rpx;
   height: 60rpx;
   line-height: 60rpx;
   font-size: 30rpx;
 }
-.list-item .lable{
+
+.list-item .lable {
   width: 150rpx;
-  color: #888888;
+  color: #888;
 }
-.list-item .lable-input{
+
+.list-item .lable-input {
   width: 540rpx;
-  color: #333333;
+  color: #333;
 }
-.select-sex{
+
+.select-sex {
   width: 260rpx;
-  border: 1px solid #B79153;
+  border: 1px solid #b79153;
   height: 100%;
   border-radius: 30rpx;
   text-align: center;
   overflow: hidden;
 }
-.select-sex .man{
-  border-right: 1px solid #B79153;
+
+.select-sex .man {
+  border-right: 1px solid #b79153;
 }
-.select-sex .wx-col.active{
-  background-color: #B79153;
+
+.select-sex .wx-col.active {
+  background-color: #b79153;
 }
-.picker{
+
+.picker {
   height: 60rpx;
   line-height: 60rpx;
 }
-.card-list{
+
+.card-list {
   height: 100rpx;
 }
-.icon-content .left-icon{
+
+.icon-content .left-icon {
   width: 90rpx;
   height: 90rpx;
   border-radius: 50%;
-  background-color: #79BDAE;
+  background-color: #79bdae;
   text-align: center;
   font-size: 24rpx;
 }
-.icon-content .left-icon .content{
-  line-height:32rpx;
-  height:auto;
-  transform:translate(0,-50%);
-  margin:47rpx auto;
-  font-size:24rpx;
 
-
+.icon-content .left-icon.ct-721 {
+  background-color: #79bdae;
 }
-.icon-content .right-content{
-  line-height:45rpx;
-  margin-left:30rpx;
+
+.icon-content .left-icon.ct-722 {
+  background-color: #799dbd;
+}
+
+.icon-content .left-icon.ct-723 {
+  background-color: #bfac6d;
+}
+
+.icon-content .left-icon.ct-1007 {
+  background-color: #af7b9c;
+}
+
+.icon-content .left-icon.ct-720 {
+  background-color: #8db981;
+}
+
+.icon-content .left-icon .content {
+  line-height: 32rpx;
+  height: auto;
+  transform: translate(0, -50%);
+  margin: 45rpx auto;
+  font-size: 24rpx;
+}
+
+.icon-content .right-content {
+  line-height: 45rpx;
+  margin-left: 30rpx;
 }

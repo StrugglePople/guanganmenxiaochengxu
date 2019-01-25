@@ -71,7 +71,7 @@
   </button> -->
 </view>
 
-<view class='model' wx:if="{{isCancelRecord}}">
+<view class='model-alert' wx:if="{{isCancelRecord}}">
   <view class="confirm-modal">
     <view class="modal-notice-txt">输入验证码取消预约</view>
     <view class='input-wrapper'>
