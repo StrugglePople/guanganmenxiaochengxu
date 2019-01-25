@@ -76,7 +76,7 @@ ul, li{
     color: #888;
 }
 .color-2{
-    color: #E28C00;
+    color: #E28C00 !important;
 }
 .color-3{
     color: #634616;

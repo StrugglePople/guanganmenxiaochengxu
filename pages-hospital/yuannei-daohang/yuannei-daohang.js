@@ -94,7 +94,7 @@ Page({
       (data)=>{
         getApp().cache.setData("floorDetail",data);
         wx.navigateTo({
-          url: '/pages-hospital/floor-detail/floor-detail'
+          url: '/pages-hospital/floor-detail/floor-detail?name=' + e.target.dataset.id
         })
       });
 

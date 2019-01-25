@@ -534,6 +534,7 @@
 }
 .rgrecond-item .h5 {
   font-size: 32rpx;
+  color: #888888;
 }
 .rgrecond-item .p {
   color: #888;
