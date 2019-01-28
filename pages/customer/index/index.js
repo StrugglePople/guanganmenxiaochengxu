@@ -9,8 +9,8 @@ Page({
     this.setData({
       height: device.windowHeight - 50
     })
-  },
-  onShow() {
+
+
     this.setData({
       list: [],
       num: 0,
@@ -22,6 +22,9 @@ Page({
     this.setData({
       avatarUrl: avatarUrl
     })
+  },
+  onShow() {
+    
   },
   initData(node) {
     getApp().request.postHeadNoToast('kefuInit', { node: node }, null, (json) => {
@@ -140,7 +143,7 @@ Page({
     var tel = e.currentTarget.dataset.title;
     getApp().widget.confirm(tel, () => {
       wx.makePhoneCall({
-        number: tel,
+        phoneNumber: tel,
       })
     }, '联系客服', ['拨号'])
   }

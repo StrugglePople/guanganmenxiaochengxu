@@ -3,8 +3,7 @@
   <!-- <image class="common-bg select-crard-bg" src='/style/image/record/common-bg.png'></image> -->
   <image class="navigator-background" src='/style/image/record/select-member-bg.png'></image>
   <view class='am-flex-title move-upward' wx:if="{{medicalCard && medicalCard.name}}">
-    <view class='h4-lg font-weight color-3'>{{medicalCard.name}}</view>
-    <view class='color-3 am-ft-13'>{{member.sex == "MALE"?"男":"女"}} {{medicalCard.medicalCardNo}}</view>
+    <view class='h4-lg font-weight color-3'>{{medicalCard.name}} <text class='color-3 am-ft-13'>{{member.sex == "MALE"?"男":"女"}} {{medicalCard.medicalCardNo}}</text></view>
   </view>
   <view class='am-flex-title move-upward' wx:else>
     <view class='h4-lg color-3'>请选择就诊卡</view>

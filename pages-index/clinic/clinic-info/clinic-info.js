@@ -43,6 +43,9 @@ Page(Object.assign({}, toast,{
     }
     
   },
+  onHide: function() {
+    getApp().cache.removeKey("selectCard");
+  },
 
   showCardList() {
     wx.navigateTo({

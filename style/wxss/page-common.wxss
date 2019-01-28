@@ -229,7 +229,7 @@
 }
 .item-multi-txt .h4-lg{
   font-size: 36rpx;
-  padding-bottom: 8rpx;
+  /* padding-bottom: 8rpx; */
 }
 .fee-panel .h5-text{
   font-size: 32rpx;

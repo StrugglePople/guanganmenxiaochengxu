@@ -43,12 +43,15 @@ Page(Object.assign({}, toast,{
       return;
     }
     this.data.medicalCard = getApp().cache.getData("selectCard");
-    this.data.member = getApp().accountServer.getMemberById(this.data.medicalCard.patientId);
-    this.setData({
-      member:this.data.member,
-      medicalCard: this.data.medicalCard
-    })
-    this.getData(true);
+    if (this.data.medicalCard && this.data.medicalCard.id){
+      this.data.member = getApp().accountServer.getMemberById(this.data.medicalCard.patientId);
+      this.setData({
+        member: this.data.member,
+        medicalCard: this.data.medicalCard
+      })
+      this.getData(true);
+    }
+    
   },
 
   /**
