@@ -1,4 +1,5 @@
 // pages/into-hospital/hospital-view/hospital-view.js
+var WxParse = require('../../../utils/wxParse/wxParse.js');
 Page({
 
   /**
@@ -37,12 +38,12 @@ Page({
      hospitalId: getApp().globalData.hospitalIId,
      type: data 
    }, (data) => {
-     var WxParse = require('../../../utils/wxParse/wxParse.js');
      WxParse.wxParse('article', 'html', data.content, this, 5);
    }, null, 'mobile');
  },
 
   tabChange :function(e){
+    WxParse.wxParse('article', 'html', '', this, 5);
     this.getViewData(e.currentTarget.dataset.type);
     this.setData({
       type: e.currentTarget.dataset.type
