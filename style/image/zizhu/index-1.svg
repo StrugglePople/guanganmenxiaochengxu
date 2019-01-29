@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="54px" height="48px" viewBox="0 0 54 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 12 Copy 2</title>
+    <title>预约挂号记录</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <path d="M54,11.2 L0,11.2 L0,8 C-5.41083001e-16,3.581722 3.581722,8.11624501e-16 8,0 L46,0 C50.418278,-8.11624501e-16 54,3.581722 54,8 L54,11.2 Z M54,14.4 L54,40 C54,44.418278 50.418278,48 46,48 L8,48 C3.581722,48 5.41083001e-16,44.418278 0,40 L0,14.4 L54,14.4 Z" id="path-1"></path>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="切图-copy" transform="translate(-62.000000, -198.000000)">
-            <g id="Group-12-Copy-2" transform="translate(62.000000, 198.000000)">
-                <g id="Rectangle-69">
-                    <mask id="mask-2" fill="white">
-                        <use xlink:href="#path-1"></use>
-                    </mask>
-                    <use id="Mask" fill="#82BFCC" xlink:href="#path-1"></use>
-                    <rect id="Rectangle-24" stroke="#979797" stroke-width="2" fill="#61A9B9" mask="url(#mask-2)" x="-5" y="-5" width="64" height="18"></rect>
-                    <polyline id="Path-3" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero" mask="url(#mask-2)" transform="translate(28.834932, 31.103631) rotate(-10.000000) translate(-28.834932, -31.103631) " points="18.085908 28.4463949 25.772517 36.9330477 39.583955 25.2742137"></polyline>
+        <g id="首页" transform="translate(-56.000000, -854.000000)">
+            <g id="预约挂号记录" transform="translate(56.000000, 854.000000)">
+                <circle id="椭圆形" fill="#FFFFFF" fill-rule="nonzero" cx="44" cy="44" r="44"></circle>
+                <g id="Group-12-Copy-2" transform="translate(18.000000, 20.000000)">
+                    <g id="Rectangle-69">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#82BFCC" xlink:href="#path-1"></use>
+                        <rect id="Rectangle-24" stroke="#979797" stroke-width="2" fill="#61A9B9" mask="url(#mask-2)" x="-5" y="-5" width="64" height="18"></rect>
+                        <polyline id="Path-3" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero" mask="url(#mask-2)" transform="translate(28.834932, 31.103631) rotate(-10.000000) translate(-28.834932, -31.103631) " points="18.085908 28.4463949 25.772517 36.9330477 39.583955 25.2742137"></polyline>
+                    </g>
                 </g>
             </g>
         </g>

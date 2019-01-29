@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
-    <title>Combined Shape</title>
+    <title>来院导航</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
@@ -10,8 +10,11 @@
         </linearGradient>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="首页" transform="translate(-444.000000, -866.000000)" fill="url(#linearGradient-1)">
-            <path d="M474,926 C457.431458,926 444,912.568542 444,896 C444,879.431458 457.431458,866 474,866 C490.568542,866 504,879.431458 504,896 C504,912.568542 490.568542,926 474,926 Z M474,878 L462,908 L474,904 L486,908 L474,878 Z" id="Combined-Shape"></path>
+        <g id="首页" transform="translate(-429.000000, -854.000000)">
+            <g id="来院导航" transform="translate(429.000000, 854.000000)">
+                <circle id="椭圆形" fill="#FFFFFF" fill-rule="nonzero" cx="44" cy="44" r="44"></circle>
+                <path d="M44,74 C27.4314575,74 14,60.5685425 14,44 C14,27.4314575 27.4314575,14 44,14 C60.5685425,14 74,27.4314575 74,44 C74,60.5685425 60.5685425,74 44,74 Z M44,26 L32,56 L44,52 L56,56 L44,26 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+            </g>
         </g>
     </g>
 </svg>

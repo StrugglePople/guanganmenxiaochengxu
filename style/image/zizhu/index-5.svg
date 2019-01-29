@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="60px" height="52px" viewBox="0 0 60 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
-    <title>Rectangle 17 Copy</title>
+    <title>健康小工具</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <path d="M29.4529105,51.3584498 L29.2936836,51.5176767 L4.69793852,26.9219316 C-1.46527442,20.7587187 -1.46527442,10.7661762 4.69793852,4.60296324 C10.8611515,-1.5602497 20.853694,-1.5602497 27.0169069,4.60296324 L30.0017409,7.58779723 L32.9865513,4.60298687 C39.1497642,-1.56022607 49.1423067,-1.56022607 55.3055197,4.60298687 C61.4625018,10.759969 61.4625018,20.7424093 55.3055197,26.8993914 C55.3017609,26.9031501 55.2980003,26.906907 55.2942377,26.9106619 L30.1071815,52.046817 L29.4529105,51.3584498 Z" id="path-1"></path>
@@ -11,14 +11,17 @@
         </linearGradient>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="首页" transform="translate(-74.000000, -1046.000000)">
-            <g id="Rectangle-17-Copy" transform="translate(74.000000, 1046.000000)">
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <use id="Mask" fill="#D9807A" xlink:href="#path-1"></use>
-                <rect id="Rectangle-17" fill="url(#linearGradient-3)" mask="url(#mask-2)" transform="translate(48.079690, 9.920310) rotate(45.000000) translate(-48.079690, -9.920310) " x="28.0796898" y="-1.07968978" width="40" height="22"></rect>
-                <polyline id="Path-16-Copy" stroke="#FFFFFF" stroke-width="4" mask="url(#mask-2)" points="6 34 13.6474127 20 21.1636573 29.307571 27.5722409 20 35.7580134 29.307571 58 29.307571"></polyline>
+        <g id="首页" transform="translate(-56.000000, -1024.000000)">
+            <g id="健康小工具" transform="translate(56.000000, 1024.000000)">
+                <circle id="椭圆形" fill="#FFFFFF" fill-rule="nonzero" cx="44" cy="44" r="44"></circle>
+                <g id="Rectangle-17-Copy" transform="translate(14.000000, 18.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#D9807A" xlink:href="#path-1"></use>
+                    <rect id="Rectangle-17" fill="url(#linearGradient-3)" mask="url(#mask-2)" transform="translate(48.079690, 9.920310) rotate(45.000000) translate(-48.079690, -9.920310) " x="28.0796898" y="-1.07968978" width="40" height="22"></rect>
+                    <polyline id="Path-16-Copy" stroke="#FFFFFF" stroke-width="4" mask="url(#mask-2)" points="6 34 13.6474127 20 21.1636573 29.307571 27.5722409 20 35.7580134 29.307571 58 29.307571"></polyline>
+                </g>
             </g>
         </g>
     </g>

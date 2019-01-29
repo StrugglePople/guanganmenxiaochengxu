@@ -47,13 +47,12 @@
   padding: 20rpx 0;
 }
 .grid-list image{
-  width: 70rpx;
-  height: 70rpx;
+  width: 100rpx;
+  height: 100rpx;
 }
 .grid-list .txt{
   display: block;
   font-size: 28rpx;
-  margin-top: 3px;
 }
 /**************************健康咨询start*******************************/
 .h4-icon{

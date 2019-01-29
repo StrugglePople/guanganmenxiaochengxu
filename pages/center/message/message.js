@@ -9,8 +9,7 @@ Page({
     pageSize: 10,
     list: [],
     hasMore: false,
-    massageType:'',
-    hasUnread:false
+    massageType:''
   },
 
   /**
@@ -18,7 +17,6 @@ Page({
    */
   onLoad: function (options) {
     this.data.massageType = options.type;
-    this.data.hasUnread = options.hasUnread;
     this.getData(true);
   },
  
@@ -53,7 +51,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if (this.data.massageType == "USER_NOTIFICATION" && this.data.hasUnread){
+    if (this.data.massageType == "USER_NOTIFICATION"){
       this.setMessageRead();
     }
   },

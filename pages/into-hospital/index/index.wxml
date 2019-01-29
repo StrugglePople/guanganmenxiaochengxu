@@ -70,7 +70,7 @@
             <view class='am-flex-title'>{{item.title}}</view>
             <view class='am-flex-after'>{{item.publishTime}}</view>
           </view>
-          <image src="/style/image/i-angle-r.svg" class='i-angle'></image>
+          <!-- <image src="/style/image/i-angle-r.svg" class='i-angle'></image> -->
         </view>
       </view>
     </view>

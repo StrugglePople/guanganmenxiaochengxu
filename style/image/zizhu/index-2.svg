@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="48px" height="54px" viewBox="0 0 48 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
-    <title>Rectangle 22 Copy</title>
+    <title>就医指导</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient x1="134.48697%" y1="59.6922398%" x2="7.57112534%" y2="59.6922398%" id="linearGradient-1">
@@ -12,18 +12,21 @@
         <rect id="path-2" x="0" y="0" width="48" height="54" rx="8"></rect>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="切图-copy" transform="translate(-204.000000, -194.000000)">
-            <g id="Rectangle-22-Copy" transform="translate(204.000000, 194.000000)">
-                <mask id="mask-3" fill="white">
-                    <use xlink:href="#path-2"></use>
-                </mask>
-                <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
-                <rect id="Rectangle-22" fill="#8CA9B8" mask="url(#mask-3)" x="0" y="-6" width="14" height="68"></rect>
-                <rect id="Rectangle-25-Copy" fill="#FFFFFF" mask="url(#mask-3)" x="10" y="-10" width="4" height="74"></rect>
-                <rect id="Rectangle-26-Copy-5" fill="#FFFFFF" mask="url(#mask-3)" x="-6" y="8" width="18" height="4"></rect>
-                <rect id="Rectangle-26-Copy-4" fill="#FFFFFF" mask="url(#mask-3)" x="-6" y="24" width="18" height="4"></rect>
-                <rect id="Rectangle-26-Copy-3" fill="#FFFFFF" mask="url(#mask-3)" x="-6" y="38" width="18" height="4"></rect>
-                <path d="M46.7123625,38 C40.1217387,48.283279 33.3005438,53.7194484 26.2487779,54.3085079 C19.1970119,54.8975675 28.7300554,55.965358 54.8479085,57.5118792 L46.7123625,38 Z" id="Path-17" fill="#8CA9B8" mask="url(#mask-3)"></path>
+        <g id="首页" transform="translate(-242.000000, -854.000000)">
+            <g id="就医指导" transform="translate(242.000000, 854.000000)">
+                <circle id="椭圆形" fill="#FFFFFF" fill-rule="nonzero" cx="44" cy="44" r="44"></circle>
+                <g id="Rectangle-22-Copy" transform="translate(20.000000, 17.000000)">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <rect id="Rectangle-22" fill="#8CA9B8" mask="url(#mask-3)" x="0" y="-6" width="14" height="68"></rect>
+                    <rect id="Rectangle-25-Copy" fill="#FFFFFF" mask="url(#mask-3)" x="10" y="-10" width="4" height="74"></rect>
+                    <rect id="Rectangle-26-Copy-5" fill="#FFFFFF" mask="url(#mask-3)" x="-6" y="8" width="18" height="4"></rect>
+                    <rect id="Rectangle-26-Copy-4" fill="#FFFFFF" mask="url(#mask-3)" x="-6" y="24" width="18" height="4"></rect>
+                    <rect id="Rectangle-26-Copy-3" fill="#FFFFFF" mask="url(#mask-3)" x="-6" y="38" width="18" height="4"></rect>
+                    <path d="M46.7123625,38 C40.1217387,48.283279 33.3005438,53.7194484 26.2487779,54.3085079 C19.1970119,54.8975675 28.7300554,55.965358 54.8479085,57.5118792 L46.7123625,38 Z" id="Path-17" fill="#8CA9B8" mask="url(#mask-3)"></path>
+                </g>
             </g>
         </g>
     </g>
