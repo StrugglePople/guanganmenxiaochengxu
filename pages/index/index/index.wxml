@@ -12,11 +12,11 @@
   </view>
   <view class='top-1'>
     <view class="common left" bindtap='noOpen' data-msg='正在建设中..'>
-      <image class='icon' src="/style/image/zizhu/guahao.svg"></image>
+      <image class='icon' src="/style/image/zizhu/guahao.png"></image>
       <image class='text' src="/style/image/zizhu/guahao-text.svg"></image>
     </view>
     <navigator class="common right" hover-class="none" url='/pages-index/clinic/clinic-note/clinic-note?regType=RESERVATION'>
-      <image class='icon' src="/style/image/zizhu/guahao.svg"></image>
+      <image class='icon' src="/style/image/zizhu/yuyue.png"></image>
       <image class='text' src="/style/image/zizhu/yuyue-text.svg"></image>
     </navigator>
   </view>

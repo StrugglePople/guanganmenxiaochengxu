@@ -60,20 +60,29 @@ Page(Object.assign({}, toast,{
     }
 
     let param = this.getClinicParam();
-    getApp().request.post('commitReg', this, { param: param}, (data) => {
+    wx.showLoading({
+      title: '请求中...',
+      mask: true
+    })
+    let guahaoDateTime = new Date().getTime();
+    getApp().request.post('commitReg', false, { param: param}, (data) => {
+      wx.hideLoading();
       var zhpTradeId = data.apply.zhpTradeId;
       wx.redirectTo({
         url: '/pages/record/appointment-record-detail/appointment-record-detail?zhpTradeId=' + zhpTradeId,
       })
-      // if (this.data.regType == 'RESERVATION') {
-      //   wx.redirectTo({
-      //     url: '../../../record/appointment-record-detail/appointment-record-detail?zhpTradeId=' + zhpTradeId,
-      //   })
-      // } else {
-      //   wx.redirectTo({
-      //     url: '../../../record/reg-record-detail/reg-record-detail?zhpTradeId=' + zhpTradeId + '&source=' + this.data.source,
-      //   })
-      // }
+    }, (obj)=>{
+      let nowDateTime = new Date().getTime();
+      let intervalTime = nowDateTime - guahaoDateTime;
+      intervalTime = intervalTime > 8000 ? 0 : 8000 - intervalTime;
+      setTimeout(() => {
+        wx.hideLoading();
+        let msg = '网络拥堵,请稍后再试';
+        if (obj) {
+          msg = obj.msg;
+        }
+        getApp().widget.toastTxt(msg);
+      }, intervalTime)
     })
   },
   
