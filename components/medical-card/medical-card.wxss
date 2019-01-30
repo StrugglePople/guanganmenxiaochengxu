@@ -27,7 +27,9 @@
   margin: 50rpx auto;
   font-size: 24rpx;
 }
-
+.member-body .name .content.narrow {
+  width: 66rpx;
+}
 .member-body .name.ct-721 {
   background-color: #79bdae;
 }

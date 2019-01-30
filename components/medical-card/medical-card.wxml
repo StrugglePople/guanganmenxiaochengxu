@@ -2,7 +2,7 @@
 <!--components/member-card/member-card.wxml-->
 <view class='bd member-body'>
   <view class="name {{'ct-'+item.cardTypeVO.id}}">
-    <view class="content">{{item.cardTypeVO.name}}</view>
+    <view class="content {{item.cardTypeVO.name.length==4?'narrow':''}}">{{item.cardTypeVO.name}}</view>
   </view>
   <view class='h4'>{{item.name}}
 

@@ -55,7 +55,7 @@
         <view class="left wx-col" style="width:360rpx;">
           <view class="wx-row icon-content">
             <view class="left-icon tc-light {{'ct-'+card.cardTypeVO.id}}">
-              <view class="content">{{card.cardTypeVO.name}}</view>
+              <view class="content {{card.cardTypeVO.name.length==4?'narrow':''}}">{{card.cardTypeVO.name}}</view>
             </view>
             <view class="right-content">
               <view class="font-14">{{card.name}}</view>

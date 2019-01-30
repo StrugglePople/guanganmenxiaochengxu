@@ -95,6 +95,9 @@ page {
   margin: 45rpx auto;
   font-size: 24rpx;
 }
+.icon-content .left-icon .content.narrow {
+  width: 66rpx;
+}
 
 .icon-content .right-content {
   line-height: 45rpx;
