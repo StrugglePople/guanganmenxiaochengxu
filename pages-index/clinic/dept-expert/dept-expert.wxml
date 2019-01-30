@@ -40,7 +40,7 @@
             <text class='small'>{{item.titleDesc}}</text>
           </view>
         </view>
-        <view class='p' style="max-height: 72rpx;overflow:hidden">擅长：{{item.speciality || '暂无'}}</view>
+        <view class='p nowrap' style="max-height: 72rpx;overflow:hidden">擅长：{{item.speciality || '暂无'}}</view>
       </view>
     </view>
   </view>

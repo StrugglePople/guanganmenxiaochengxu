@@ -19,7 +19,7 @@
       <view class='content-title has-left-badge'>
         <text>执业点</text>
       </view>
-      <view class='content-content color-1'>
+      <view class='content-content'>
         <text wx:if="{{doctor.location}}">{{doctor.location}}</text>
       </view>
     </block>
@@ -27,7 +27,7 @@
       <view class='content-title has-left-badge'>
         <text>擅长</text>
       </view>
-      <view class='content-content color-1'>
+      <view class='content-content'>
         <text>{{doctor.speciality}}</text>
       </view>
     </block>
@@ -35,7 +35,7 @@
       <view class='content-title has-left-badge'>
         <text>简介</text>
       </view>
-      <view class='content-content color-1'>
+      <view class='content-content'>
         <text>{{doctor.introduction}}</text>
       </view>
     </block>

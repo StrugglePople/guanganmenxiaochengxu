@@ -175,6 +175,12 @@
   color: #a5a5a5;
   margin-top: 6rpx;
 }
+.item-img-multitxt .p.nowrap{
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+
 .span-auxiliary-gray{
   background: #DAD8D8;
   color: #fff;
