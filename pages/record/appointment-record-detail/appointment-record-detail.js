@@ -74,7 +74,8 @@ Page(Object.assign({}, toast, {
     var param = {
       businessNo: this.data.data.zhpTradeId,
       accountId: getApp().globalData.session.id,
-      verifyCode: this.data.verCode
+      verifyCode: this.data.verCode,
+      from: getApp().globalData.from
     }
     getApp().widget.confirm('是否取消预约？', () => {
       getApp().request.post('cancelYuyue', true, {

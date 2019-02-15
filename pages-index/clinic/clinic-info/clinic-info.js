@@ -99,6 +99,7 @@ Page(Object.assign({}, toast,{
     regParam.clinicFee = this.data.schedule.price;
     regParam.hisPlanId = this.data.schedule.hisPlanId;
     regParam.noHisPlanId = this.data.schedule.hisPlanId;
+    regParam.from = getApp().globalData.from;
     if (this.data.medicalCard.cardTypeVO.name != "身份证"){
       regParam.medicalCardId = this.data.medicalCard.id;
       regParam.medicalCardNo = this.data.medicalCard.medicalCardNo;

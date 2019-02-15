@@ -72,6 +72,7 @@ Component({
         param.accountId = getApp().globalData.session.id;
         param.businessNo = this.properties.businessNo;
       }
+      param.from = getApp().globalData.from;
       getApp().request.post(this.properties.urlId, true, param, (json) => {
         toastTxt("获取验证码成功");
         // this.triggerEvent('tost', { title: json.errMsg })

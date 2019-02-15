@@ -8,6 +8,7 @@ var config = {
   userInfo: null,
   session: null,
   tjsession: null,
+  from:8,
   recordStatus: {
     "PASS": "预约成功",
     "INIT": "预约中",
