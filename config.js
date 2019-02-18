@@ -1,8 +1,8 @@
 var config = {
   mode: 'debug', //  debug , product
   innerAudioContext: null,
-  appid: 'wxe79ea86026141aef',
-  hospitalName: '浙江大学附属儿童医院',
+  appid: 'wx598296333b152b00',
+  hospitalName: '中国中医科学院广安门医院',
   hospitalId: 10097,
   selectHospitalId: 10097,
   userInfo: null,
