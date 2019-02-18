@@ -56,9 +56,9 @@
     </view>
   </view>
   <view class='ft b-sh-t'>
-    <view class='form-fee-item am-flex-item'>
-      <view class='am-flex-title form-fee-label'>交易单号</view>
-      <view class='am-flex-after'>{{data.zhpTradeId}}</view>
+    <view class='trade-name-id'>
+      <view class='trade-name form-fee-label'>交易单号</view>
+      <view class='trade-id'>{{data.zhpTradeId}}</view>
     </view>
   </view>
 </view>
