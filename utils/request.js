@@ -28,6 +28,7 @@ const url_product = {
   zixun: "http://hera.ehujia.com:8000/hera-web"
 }
 const urlIds = {
+  wxSession: '/mobiles/wechat/token',
   //登录
   doLogin: '/account.weixin.login.hsr',
   getPaperTypes: '/patient.paper.type.hsr',
@@ -181,7 +182,7 @@ var commomPost = (urlId, hasLoading, data, requestParam, success, fail, head, sh
               duration: 2000
             })
           }
-          if (typeof fail == "function") fail();
+          if (typeof fail == "function") fail(res.data);
         }
       } else {
         if (hasLoading) {
