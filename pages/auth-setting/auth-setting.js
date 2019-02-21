@@ -80,7 +80,7 @@ Page({
     });
     getApp().request.post('doLogin', "登陆中", {
         openId: getApp().globalData.userInfo.openId,
-        mobile: getApp().globalData.userInfo.mobile,
+        mobileNo: getApp().globalData.userInfo.mobile,
         // openId: "fsafsafdsfeerre",
         // mobileNo: "15067127499",
         origin: 1
