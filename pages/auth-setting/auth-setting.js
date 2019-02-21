@@ -19,7 +19,7 @@ Page({
   },
 
   shouquan() {
-    // this.wxLogin();
+    this.wxLogin();
   },
 
   wxLogin(success) {
@@ -29,17 +29,15 @@ Page({
     wx.login({
       success: (res) => {
         if (res.code) {
-          getApp().request.postWithToast('wxSession', {
+          getApp().request.post('wxSession', true, {
               appid: getApp().globalData.appid,
               resCode: res.code
-            }, null,
-            (json) => {
-              if (json.success) {
-                getApp().cache.setData('openId', json.data.openid);
-                getApp().cache.setData('session_key', json.data.session_key);
-                if (success) {
-                  success();
-                }
+            },
+            (data) => {
+              getApp().cache.setData('openId', data.openid);
+              getApp().cache.setData('session_key', data.session_key);
+              if (success) {
+                success();
               }
             })
         }
@@ -48,17 +46,17 @@ Page({
   },
 
   getPhoneNumber(e) {
-    // if (!getApp().cache.getData('session_key')) {
-    //   this.wxLogin(()=> {
-    //     this.getPhoneNumber2(e);
-    //   })
-    //   return;
-    // }
+    if (!getApp().cache.getData('session_key')) {
+      this.wxLogin(()=> {
+        this.getPhoneNumber2(e);
+      })
+      return;
+    }
     this.getPhoneNumber2(e);
   },
 
   getPhoneNumber2(e) {
-    /*var session_key = getApp().cache.getData('session_key')
+    var session_key = getApp().cache.getData('session_key')
     var WXBizDataCrypt = require('../../utils/WXBizDataCrypt.js');
     var pc = new WXBizDataCrypt(getApp().globalData.appid, session_key);
     var data = pc.decryptData(e.detail.encryptedData, e.detail.iv);
@@ -66,12 +64,12 @@ Page({
     userInfo.openId = getApp().cache.getData('openId');
     userInfo.mobile = data.phoneNumber || data.purePhoneNumber;
     getApp().globalData.userInfo = userInfo;
-    getApp().cache.setData('userInfo', userInfo);*/
+    getApp().cache.setData('userInfo', userInfo);
 
-    var userInfo = getApp().globalData.userInfo || {};
-    userInfo.mobile = "15067127499"; //18858285384
-    getApp().globalData.userInfo = userInfo;
-    getApp().cache.setData('userInfo', userInfo)
+    // var userInfo = getApp().globalData.userInfo || {};
+    // userInfo.mobile = "15067127499"; //18858285384
+    // getApp().globalData.userInfo = userInfo;
+    // getApp().cache.setData('userInfo', userInfo)
     this.login();
   },
 
@@ -81,10 +79,10 @@ Page({
       mask: true
     });
     getApp().request.post('doLogin', "登陆中", {
-        // openId: getApp().globalData.userInfo.openId,
-        // mobile: getApp().globalData.userInfo.mobile,
-        openId: "fsafsafdsfeerre",
-        mobileNo: "15067127499",
+        openId: getApp().globalData.userInfo.openId,
+        mobile: getApp().globalData.userInfo.mobile,
+        // openId: "fsafsafdsfeerre",
+        // mobileNo: "15067127499",
         origin: 1
       },
       (data) => {

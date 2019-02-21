@@ -40,7 +40,6 @@ Page(Object.assign({}, loginExtentds, toast,{
       this.setData({
         barcode: url,
         accounts: accounts,
-        mobile: data.session.mobile,
         isShow: false
       })
     }

@@ -13,10 +13,10 @@
   <text style='font-size:28rpx;color:#777777;'>•只有授权绑定了手机号才能享受服务</text>
 </view>
 <view style='height:40rpx'></view>
-<!--
+
 <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class='am-btn' bindtap='submit'>
   绑定手机号登录
-</button>-->
-<button bindtap="getPhoneNumber" class='am-btn'>
-绑定手机号登录
 </button>
+<!-- <button bindtap="getPhoneNumber" class='am-btn'>
+绑定手机号登录
+</button> -->

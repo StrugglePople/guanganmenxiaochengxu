@@ -28,7 +28,7 @@ const url_product = {
   zixun: "http://hera.ehujia.com:8000/hera-web"
 }
 const urlIds = {
-  wxSession: '/mobiles/wechat/token',
+  wxSession: '/account.weixin.jscode2session.hsr',
   //登录
   doLogin: '/account.weixin.login.hsr',
   getPaperTypes: '/patient.paper.type.hsr',
@@ -142,7 +142,8 @@ var commomPost = (urlId, hasLoading, data, requestParam, success, fail, head, sh
   data.hospitalId = getApp().globalData.hospitalId;
   var header = {
     'content-type': 'application/json',
-    'hospitalId': 10097
+    'hospitalId': getApp().globalData.hospitalId,
+    'from' : getApp().globalData.from
   };
   if (head){
     header['content-type']  = "application/x-www-form-urlencoded";
