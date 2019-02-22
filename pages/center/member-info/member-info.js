@@ -8,7 +8,8 @@ Page(Object.assign({}, loginExtentds, {
    */
   data: {
     member: {},
-    buttonName: '确认'
+    buttonName: '确认',
+    nowDate: getApp().date.format(new Date())
   },
 
   /**
