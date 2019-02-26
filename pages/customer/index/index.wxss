@@ -243,13 +243,12 @@
 .ft-kf .input-text input {
   position: relative;
   /* float: left; */
-  /* width: 370rpx; */
-  margin-left: 12rpx;
-  margin-top: 10rpx;
   font-size: 32rpx;
   border: none;
   z-index: 879;
-  height: 54rpx;
+  height:72rpx;
+  line-height:72rpx;
+  padding-left: 5px;
   padding-top: 0;
 }
 .ft-kf .input-text i {

@@ -30,6 +30,11 @@ Page({
     getApp().request.post('message', hasLoading, param, (data) => {
       var hasMore = false;
       this.data.pageIndex++;
+      if (data && data.length > 0){
+        for (var i = 0; i < data.length; i++) {
+          data[i].content0 = data[i].content.split('|')[0];
+        }
+      }
       this.data.list = this.data.list.concat(data);
       hasMore = data && data.length == this.data.pageSize;
       this.setData({
@@ -68,5 +73,18 @@ Page({
     getApp().request.post("setMessageRead", false, {
       accountId: getApp().globalData.session.id
     });
+  },
+  showMessgaDetail: function(e){
+    var index = e.currentTarget.dataset.index,
+        message = this.data.list[index];
+    if (message.type == "SYSTEM_NOTIFICATION") {
+      let arr = message.content.split('|');
+      if (arr.length > 1) {
+        getApp().cache.setData('sourceURL', arr[1]);
+        wx.navigateTo({
+          url: '/pages/more/web-view/web-view?title=随访通知'
+        })
+      }
+    }
   }
 })

@@ -15,10 +15,10 @@
       <image class='icon' src="/style/image/zizhu/guahao.png"></image>
       <image class='text' src="/style/image/zizhu/guahao-text.svg"></image>
     </view>
-    <navigator class="common right" hover-class="none" url='/pages-index/clinic/clinic-note/clinic-note?regType=RESERVATION'>
+    <view class="common right" hover-class="none" bindtap="methodNeedLogin" data-method="showPage" data-url='/pages-index/clinic/clinic-note/clinic-note?regType=RESERVATION' >
       <image class='icon' src="/style/image/zizhu/yuyue.png"></image>
       <image class='text' src="/style/image/zizhu/yuyue-text.svg"></image>
-    </navigator>
+    </view>
   </view>
   <view class='thumbnail-h-list-cont'>
     <ul class="thumbnail-h-list wx-row">
