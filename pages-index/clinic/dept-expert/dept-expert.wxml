@@ -7,10 +7,10 @@
 <block wx:if="{{searchDepts}}">
   <view class='search-lside'>
     <view class='index-list'>
-      <block wx:for="{{searchDepts}}">
+      <block>
         <!-- <view class='index'>{{item.key}}</view> -->
         <ul>
-          <li class="{{item.id == selectDept.id ? 'active' : ''}}" bindtap="clickDept" data-dept="{{item.id}}">{{item.deptName}}</li>
+          <li wx:for="{{searchDepts}}" class="{{item.id == selectDept.id ? 'active' : ''}}" bindtap="clickDept" data-dept="{{item.id}}">{{item.deptName}}</li>
         </ul>
       </block>
     </view>

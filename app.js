@@ -16,6 +16,8 @@ App({
   initObject() {
     var cache = require('/utils/cache.js');
     this.cache = cache;
+    // var crypto = require('/utils/lib/crypto-js.min.js');
+    // this.crypto = crypto;
     //请求对象，getApp().request 获取
     var request = require('utils/request.js');
     request.init(this.globalData.mode);

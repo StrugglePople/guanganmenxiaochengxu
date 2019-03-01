@@ -13,10 +13,10 @@ const url_debug = {
   '51yizhu': 'http://wxtest.zhicall.cn/51yizhu-web',
   wss: 'wss://mobiles.zhicall.cn/mobile-web',
   lianfan: 'http://host:6445',
-  zixun:"http://hera.ehujia.com:8000/hera-web"
+  zixun: "http://hera.ehujia.com:8000/hera-web"
 }
 const url_product = {
-  mobile: 'http://app.njch.com.cn:8091/mobile-web',
+  mobile: 'https://gamplus.zhicall.cn/mobile-web',
   pay: 'https://pays.zhicall.cn/pay-proxy',
   cms: 'https://mng.zhicall.cn/cms-web',
   media: 'https://mobiles.zhicall.cn/media',
@@ -25,7 +25,8 @@ const url_product = {
   '51yizhu': 'https://51yizhu.zhicall.cn/51yizhu-web',
   wss: 'wss://mobiles.zhicall.cn/mobile-web',
   lianfan: 'http://host:6445',
-  zixun: "http://hera.ehujia.com:8000/hera-web"
+  // zixun: "http://hera.ehujia.com:8000/hera-web"
+  zixun: "https://gamplus.zhicall.cn/hera-web"
 }
 const urlIds = {
   wxSession: '/account.weixin.jscode2session.hsr',
@@ -35,11 +36,11 @@ const urlIds = {
   getCarousel: '/outerInterface/carousel/getByHospitalId',
   //个人中心
   getMembers: '/patient.list.hsr',
-  addMember:"/patient.bind.hsr",
-  updateMember:"/patient.update.hsr",
-  deleteMember:"/patient.unbind.hsr",
-  addCard:"/medcard.bind.hsr",
-  deleteCard:"/medcard.unbind.hsr",
+  addMember: "/patient.bind.hsr",
+  updateMember: "/patient.update.hsr",
+  deleteMember: "/patient.unbind.hsr",
+  addCard: "/medcard.bind.hsr",
+  deleteCard: "/medcard.unbind.hsr",
   getCards: '/medcard.list.hsr',
   loadContentInfo: '/more.hospital.note.info.hsr',
   getAppointDeptList: '/schedule.dept.list.hsr',
@@ -47,33 +48,33 @@ const urlIds = {
   expertListByDept: '/guiding.dept.doctors.info.hsr',
   getScheduleForExpert: '/schedule.dept.doctor.sch.no.hsr',
   getDeptDetailInfo: '/schedule.dept.doctor.sch.no.hsr',
-  
+
   //预约挂号
-  commitReg:"/guahao.apply.lockIn.hsr",
-  cancelYuyue:"/guahao.apply.cancel.hsr",
-  cancelAppointVerCode:"/guahao.apply.cancel.verifycode.hsr",
+  commitReg: "/guahao.apply.lockIn.hsr",
+  cancelYuyue: "/guahao.apply.cancel.hsr",
+  cancelAppointVerCode: "/guahao.apply.cancel.verifycode.hsr",
   //记录类
   getAppointmentOrRegOnline: "/guahao.record.list.online.hsr",
   regDetail: "/guahao.record.detail.online.hsr",
-  getBedAppointment:"/gamInpatientBed.records.hsr",
+  getBedAppointment: "/gamInpatientBed.records.hsr",
   //走进医院
-  guideDepts:"/guiding.depts.info.hsr",
+  guideDepts: "/guiding.depts.info.hsr",
   expertList: '/guiding.famous.doctors.info.hsr',
 
   //检查检验
-  getCheckup:"/report.check.hsr",
-  getCheckInspect:"/report.assay.hsr",
+  getCheckup: "/report.check.hsr",
+  getCheckInspect: "/report.assay.hsr",
 
   getAllExpertsHasSchedule: '/mobile/hospital/reg/experts/-1',
   /*cms*/
   cmsGetByType: '/resident/healthNews/catalogs/get/10097',
   getByCatalog: '/resident/healthNews/{?}',
-  getNewDetail:"/resident/healthNews/detail/get/{?}",
+  getNewDetail: "/resident/healthNews/detail/get/{?}",
 
 
   newsGetById: '/outerInterface/news/getById',
   getByCatalogType: '/outerInterface/news/getByCatalogType',
-  
+
   deptsList: '/mobile/hospital/guidingDoctor/depts',
   getAllDepts2: '/mobile/hospital/100352/static/dept/info',
   deptExperts: '/mobile/hospital/guidingDoctor/dept/experts',
@@ -93,7 +94,7 @@ const urlIds = {
   kefuData: '/smartcs/robot/reply',
   kefuAnswer: '/smartcs/robot/answer',
   //more
-  submitFeedBack:"/more.suggestion.feedback.add.hsr",
+  submitFeedBack: "/more.suggestion.feedback.add.hsr",
   getFaqs: "/more.common.question.info.hsr"
 };
 
@@ -140,13 +141,16 @@ var commomPost = (urlId, hasLoading, data, requestParam, success, fail, head, sh
     data = {}
   };
   data.hospitalId = getApp().globalData.hospitalId;
+  if (!head){
+    data = encryptByAES(JSON.stringify(data));
+  }
   var header = {
     'content-type': 'application/json',
     'hospitalId': getApp().globalData.hospitalId,
-    'from' : getApp().globalData.from
+    'from': getApp().globalData.from
   };
-  if (head){
-    header['content-type']  = "application/x-www-form-urlencoded";
+  if (head) {
+    header['content-type'] = "application/x-www-form-urlencoded";
   }
   var session = getApp().globalData.session;
   if (session && session.token) {
@@ -159,18 +163,21 @@ var commomPost = (urlId, hasLoading, data, requestParam, success, fail, head, sh
     header: header,
     success: (res) => {
       if (res.statusCode == 200) {
+        if (typeof res.data === "string") {
+          res.data = JSON.parse(decryptByAes(res.data));
+        }
         if (hasLoading) {
           wx.hideLoading();
         }
-        if (head){
-          if(res.data.success){
+        if (head) {
+          if (res.data.success) {
             res.data.code = 0;
-            if(head == "cms"){
+            if (head == "cms") {
               res.data.value = res.data;
-            }else{
+            } else {
               res.data.value = res.data.data;
             }
-            
+
           }
         }
         if (res.data.code == 0) {
@@ -214,7 +221,46 @@ var commomPost = (urlId, hasLoading, data, requestParam, success, fail, head, sh
     }
   })
 }
-
+var CryptoJS = require('/lib/crypto-js.min.js');
+var formatYMD = (date, type)=>{
+  const formatLength = function (data) {
+    return data - 0 < 10 ? "0" + data : data;
+  };
+  let offset = date.getTimezoneOffset() * 60000;
+  date = new Date(date.getTime() + offset + 3600000 * 8);
+  const year = formatLength(date.getFullYear());
+  const month = formatLength(date.getMonth() + 1);
+  const day = formatLength(date.getDate());
+  return year + type + month + type + day;
+}
+//  aes 加密
+var encryptByAES = (message) => {
+  const formatDate = formatYMD(new Date(), "");
+  let key = formatDate + '10097@zk';
+  let iv = formatDate + '10097@kz';
+  key = CryptoJS.enc.Latin1.parse(key);
+  iv = CryptoJS.enc.Latin1.parse(iv);
+  let srcs = CryptoJS.enc.Utf8.parse(message);
+  let encrypted = CryptoJS.AES.encrypt(srcs, key, {
+    iv: iv,
+    padding: CryptoJS.pad.ZeroPadding
+  });
+  return encrypted.toString();
+}
+//  aes 解密
+var decryptByAes = (ciphertext) => {
+  const formatDate = formatYMD(new Date(), "");
+  let key = formatDate + '10097@zk';
+  let iv = formatDate + '10097@kz';
+  key = CryptoJS.enc.Latin1.parse(key);
+  iv = CryptoJS.enc.Latin1.parse(iv);
+  let decrypted = CryptoJS.AES.decrypt(ciphertext, key, {
+    iv: iv,
+    padding: CryptoJS.pad.ZeroPadding
+  });
+  let aaa = CryptoJS.enc.Utf8.stringify(decrypted);
+  return aaa;
+}
 
 
 var post = (urlId, hasLoading, data, success, fail) => {
@@ -232,7 +278,7 @@ var postHeadWithToast = (urlId, data, requestParam, success, fail, head) => {
   exports.commomPost(urlId, true, data, requestParam, success, fail, head);
 }
 
-var postHeadNoToast = (urlId, data, requestParam, success, fail, head,) => {
+var postHeadNoToast = (urlId, data, requestParam, success, fail, head, ) => {
   exports.commomPost(urlId, false, data, requestParam, success, fail, head);
 }
 

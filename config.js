@@ -1,5 +1,5 @@
 var config = {
-  mode: 'debug', //  debug , product
+  mode: 'product', //  debug , product
   innerAudioContext: null,
   appid: 'wx598296333b152b00',
   hospitalName: '中国中医科学院广安门医院',
