@@ -141,7 +141,7 @@ var commomPost = (urlId, hasLoading, data, requestParam, success, fail, head, sh
     data = {}
   };
   data.hospitalId = getApp().globalData.hospitalId;
-  if (!head){
+  if (!head && getApp().globalData.mode == "product"){
     data = encryptByAES(JSON.stringify(data));
   }
   var header = {
