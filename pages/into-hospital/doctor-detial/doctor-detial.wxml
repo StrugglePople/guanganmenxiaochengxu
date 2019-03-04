@@ -2,7 +2,7 @@
 <view class="reg">
   <view class='tt clearfix'>
     <view class='pic'>
-      <image style='border-radius:140rpx;' src='{{doctor.src}}' binderror='showHiddenDoctor'  ></image> 
+      <image style='border-radius:140rpx;' src='{{doctor.picName}}' binderror='showHiddenDoctor'  ></image> 
     </view>
    <view class='txt'>
       <view class='name'>

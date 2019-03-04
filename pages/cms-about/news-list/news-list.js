@@ -8,7 +8,7 @@ Page({
   data: {
     moreList: [],
     pageNumber: 1,
-    hasMore: false,
+    hasMore: true,
     loading: false,
     loadingComplete: false,
     viewName: '健康资讯',
@@ -47,6 +47,9 @@ Page({
 
   },
   ajaxDataList: function () {
+    this.setData({
+      loading: true
+    });
     getApp().request.postHeadNoToast('getByCatalog', {
       hospitalId: getApp().globalData.hospitalId,
       pageNum: this.data.pageNumber,
@@ -62,9 +65,16 @@ Page({
       }
       list = this.data.moreList.concat(list);
       this.setData({
-        moreList: list
+        moreList: list,
+        hasMore: this.data.hasMore,
+        loading: false
       })
-      }, null, 'zixun');
+      }, ()=>{
+        this.setData({
+          hasMore: false,
+          loading: false
+        })
+      }, 'zixun');
   },
   toDetialView: function (e) {
     // var url = 'https://mng.zhicall.cn/news/index.html?newsId=' + even.currentTarget.dataset.newsId;
@@ -120,9 +130,6 @@ Page({
     if (this.data.hasMore) {
       this.data.pageNumber++;
       this.ajaxDataList();
-      this.data.loading = true;
-    } else {
-      this.data.loadingComplete = true;
-    }
+    } 
   }
 })

@@ -16,7 +16,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var typeStr = {
+      'USER_NOTIFICATION': "消息中心",
+      'SYSTEM_NOTIFICATION': "随访通知"
+    };
     this.data.massageType = options.type;
+    wx.setNavigationBarTitle({
+      title: typeStr[options.type],
+    })
     this.getData(true);
   },
  

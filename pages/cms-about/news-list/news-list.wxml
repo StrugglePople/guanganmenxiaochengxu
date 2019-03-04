@@ -17,7 +17,7 @@
     </view>
 
     <view class="loading" hidden="{{!loading}}">正在载入更多...</view>
-    <view class="loading complete" hidden="{{!loadingComplete}}">已加载全部</view>
+    <view class="loading complete" hidden="{{hasMore}}">已加载全部</view>
   </scroll-view>
 
 </view>
