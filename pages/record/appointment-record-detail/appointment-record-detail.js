@@ -68,6 +68,10 @@ Page(Object.assign({}, toast, {
     })
   },
   confirmCancelRecord() {
+    if (!this.data.verCode){
+      getApp().widget.toastTxt("请输入验证码");
+      return;
+    }
     this.setData({
       isCancelRecord: false
     })

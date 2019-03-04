@@ -75,7 +75,7 @@
   <view class="confirm-modal">
     <view class="modal-notice-txt">输入验证码取消预约</view>
     <view class='input-wrapper'>
-      <input class="pw-input" type="number" value='{{verCode}}' placeholder='请输入验证码' bindinput='getVerCode' />
+      <input class="pw-input" type="number" placeholder='请输入验证码' bindinput='getVerCode' />
       <get-vertify mobile="{{phoneNumber}}" url-id="cancelAppointVerCode" business-no="{{data.zhpTradeId}}"></get-vertify>
     </view>
     <view class="btn-wrapper">
