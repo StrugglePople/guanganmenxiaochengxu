@@ -59,7 +59,7 @@ Page({
     getApp().request.post('expertList', false, { unit:8 },
       (data) => {
         for(var item of data){
-          item.src = getApp().request.url.mobile + '/mobile/image/hospital/' + getApp().globalData.hospitalId + '/expert/' + item.picName;
+          item.src = item.picName.indexOf('http') > -1 ? item.picName + '?' + new Date().getTime() : getApp().request.url.mobile + '/mobile/image/hospital/' + getApp().globalData.hospitalId + '/expert/' + item.picName;
         }
         this.setData({
           expertList: data
@@ -93,7 +93,6 @@ Page({
     var data = this.data.expertList;
     for (var i = 0; i < data.length; i++) {
       if (data[i].id == id - 0) {
-        data[i].src = getApp().request.url.mobile + '/mobile/image/hospital/' + getApp().globalData.hospitalId + '/expert/' + data[i].picName;
         getApp().cache.setData('static.doctor', data[i]);
         break;
       }
