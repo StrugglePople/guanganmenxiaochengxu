@@ -29,8 +29,8 @@
         <view class="lable">出生日期</view>
         <view class="lable-input">
           <picker mode="date" end="{{nowDate}}" binclass="address-wrapper" bindchange="bindDateChange" style='height: 100%;width:100%;line-height:88rpx' value="{{member.birthday}}">
-            <view class="picker">
-              {{member.birthday ? member.birthday: '出生日期'}}
+            <view class="picker {{member.birthday ? '': 'wait-select'}}">
+              {{member.birthday ? member.birthday: '请选择出生日期'}}
             </view>
           </picker>
         </view>
