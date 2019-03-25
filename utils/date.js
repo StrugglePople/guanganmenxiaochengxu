@@ -64,7 +64,8 @@ var getPreMonth = (date,n=1) => {
   if (month2 < 10) {
     month2Str = '0' + month2;
   }
-  let t2 = year2 + '-' + month2Str + "-" + arr[2];
+  // let t2 = year2 + '-' + month2Str + "-" + arr[2];
+  let t2 = year2 + '-' + month2Str + "-01";
   return t2;
 }
 

@@ -38,10 +38,10 @@
   <view hidden='{{selectIndex == 0}}' class='bg-light' style='font-size:32rpx;'>
     <block>
       <view class='content-title has-left-badge'>
-        <text>执业点</text>
+        <text>出诊时间</text>
       </view>
       <view class='content-content'>
-        <text wx:if="{{doctor.location}}">{{doctor.location}}</text>
+        <text wx:if="{{doctor.outpatientDesc}}">{{doctor.outpatientDesc}}</text>
       </view>
     </block>
     <block>

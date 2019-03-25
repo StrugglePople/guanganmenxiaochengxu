@@ -1,5 +1,6 @@
 <!--pages/center/card-list/card-list.wxml-->
-<block wx:if="{{medicalCards && medicalCards.length > 0}}">
+<import src="../../template/empty.wxml" />
+<block wx:if="{{members && members.length > 0}}">
   <view style='height:40rpx'></view>
   <block wx:for="{{members}}" wx:for-item="member">
     <view class='am-panel am-panel-per' wx:for="{{member.cards}}" bindtap='chooseCards' data-card="{{item}}">
@@ -7,4 +8,7 @@
     </view>
   </block>
 
+</block>
+<block wx:else>
+    <template is="empty" data="{{text: '没有就诊卡'}}"></template>
 </block>
