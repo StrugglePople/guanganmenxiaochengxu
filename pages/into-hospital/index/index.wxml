@@ -48,8 +48,8 @@
       <view class="per-list-cont">
         <ul class="per-list">
           <li wx:for="{{expertList}}" wx:for-item="item" data-id="{{item.id}}" bindtap="toDoctorDetialView">
-            <image src="{{item.src}}" style="border-radius: 92rpx" class='img-face-lg' wx:if="{{item.picName}}"></image>
-            <image src='/style/svg/expert.svg' class='img-face-lg' wx:else></image>
+            <image wx:if="{{item.picName}}" src="{{item.picName}}" style="border-radius: 92rpx" class='img-face-lg'></image>
+            <image wx:else src='/style/svg/expert.svg' class='img-face-lg'></image>
             <text class='txt-h4'>{{item.name}}</text>
             <!-- <text class='txt-p'>{{item.underDepts[0].name}}</text> -->
           </li>

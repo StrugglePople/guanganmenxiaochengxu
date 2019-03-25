@@ -90,12 +90,6 @@ Page({
     },
       url = this.data.type == "yuyue" ? "expertListBySchedule" : "expertListByDept";
     getApp().request.post(url, hasLoading, param, (data) => {
-      for (var item of data) {
-        if (!item.picName) {
-          item.picName = item.id + '';
-        }
-        item.src = item.picName.indexOf('http') > -1 ? item.picName + '?' + new Date().getTime() : getApp().request.url.mobile + '/mobile/image/hospital/' + getApp().globalData.hospitalId + '/expert/' + item.picName;
-      }
       this.setData({
         doctors: data
       })

@@ -3,8 +3,8 @@
 <view class="reg">
   <view class='tt clearfix'>
     <view class='pic'>
-      <image src='{{doctor.src}}' style='border-radius: 140rpx' binderror='showHiddenDoctor' wx:if="{{hiddenDefaultDoctor}}"></image>
-      <image src='/style/svg/expert.svg' wx:if="{{!hiddenDefaultDoctor}}"></image>
+      <image wx:if="{{doctor.picName}}" src='{{doctor.picName}}' style='border-radius: 140rpx'></image>
+      <image  wx:else src='/style/svg/expert.svg'></image>
     </view>
     <view class='txt'>
       <view class='name'>

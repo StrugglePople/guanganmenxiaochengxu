@@ -32,7 +32,7 @@
       <!-- item-img-multitxt-->
       <view class='item-img-multitxt' wx:for="{{doctors}}" bindtap='doctorSchedule' data-id="{{item.id}}" wx:key="id">
         <!-- <text class='img-face-lg img-face-lg-primary'>普通</text> -->
-        <image src="{{item.src}}" class='img-face-lg img-face-lg-primary' binderror='imageError' data-index='{{index}}' wx:if="{{!item.hiddenDefaultDoctor}}"></image>
+        <image wx:if="{{item.picName}}" src="{{item.picName}}" class='img-face-lg img-face-lg-primary' data-index='{{index}}'></image>
         <image src='/style/svg/expert.svg' class='img-face-lg' wx:else></image>
         <view class='am-flex-item'>
           <view class='am-flex-title'>
