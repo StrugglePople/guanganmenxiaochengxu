@@ -34,10 +34,10 @@
                     <text><text wx:if="{{item.data.length > 1}}">{{idx + 1}}.</text> {{item1.question}}</text>
                     <i class="i-item-angle" wx:if="{{item1.id > 0}}"></i>
                   </view>
-                  <view class='li link-active' bindtap='call' data-title="4006898803" wx:if="{{item.isFirst}}">
+                  <!-- <view class='li link-active' bindtap='call' data-title="4006898803" wx:if="{{item.isFirst}}">
                     <text>人工客服\t\t4006898803</text>
                     <i class="i-item-angle"></i>
-                  </view>
+                  </view> -->
                 </view>
               </view>
             </view>
